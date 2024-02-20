@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Stack>
         <AspectRatio sx={{height: "calc(100vh - 75px)", width: "100%", overflow:"hidden"}} objectFit="cover">
-          <Image src={"/group_photo.JPG"} alt={"group of people"} layout="fill"/>
+          <Image src={"/group_photo.JPG"} alt={"group of people"} fill/>
           <Box
             sx={{
               position: 'absolute',

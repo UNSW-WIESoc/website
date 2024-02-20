@@ -9,7 +9,7 @@ export default function NavBar() {
     <Sheet sx={{height: 75}}>
       <Stack width="100%" height="100%" boxShadow="md" direction="row" alignItems="center" pl={2}>
         <Link href="/">
-          <Image src={"/wiesoc-logo-navbar.svg"} alt={"wiesoc-logo"} width={300} height={75}/>
+          <Image src={"/wiesoc_logo_long.svg"} alt={"wiesoc-logo"} width={300} height={75}/>
         </Link>
         <Stack direction="row" spacing={8} ml={5}>
           <Typography level="title-lg" component={Link} href="/about-us" sx={{textDecoration: "none"}}>
