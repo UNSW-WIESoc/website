@@ -19,20 +19,20 @@ export default function ThemeRegistry({
                                       }: ThemeRegistryProps) {
   const path = usePathname();
 
+  // default font family is Inter
   const theme = extendTheme({
-    // fontFamily: {
-    //   display: ttCommonsPro.style.fontFamily,
-    //   body: ttCommonsPro.style.fontFamily,
-    // },
-    // colorSchemes: {
-    //   dark: {
-    //     palette: {
-    //       background: {
-    //         body: path === "/" ? "var(--joy-palette-neutral-800, #171A1C)" : undefined
-    //       }
-    //     }
-    //   }
-    // }
+    colorSchemes: {
+      light: {
+        palette: {
+          // background: {
+          //   body: path === "/" ? "var(--joy-palette-neutral-800, #171A1C)" : undefined
+          // },
+          // primaryBlue: {
+          //   primary: '#93AED3'
+          // }
+        }
+      }
+    }
   });
 
   return (
