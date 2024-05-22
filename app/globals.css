@@ -4,3 +4,115 @@ body {
   margin: 0;
   height: 100%;
 }
+
+/* STLYE GUIDE FOR COLOURS, BACKGROUND COLOURS, TYPOGRAPHY, SHADOWS, BORDER RADIUSES */
+
+/* COLOURS */
+.graphite {
+  color: #33373D;
+}
+
+.dark-blue {
+  color: #063776;
+}
+
+.medium-blue {
+  color: #93AED3;
+}
+
+.light-blue {
+  color: #D1DFF1;
+}
+
+.purple {
+  color: #9396D3;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+/* BACKGROUND COLOURS */
+.bg-graphite {
+  background-color: #33373D;
+}
+
+.bg-dark-blue {
+  background-color: #063776;
+}
+
+.bg-medium-blue {
+  background-color: #93AED3;
+}
+
+.bg-light-blue {
+  background-color: #D1DFF1;
+}
+
+.bg-purple {
+  background-color: #9396D3;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+/* TYPOGRAPHY */
+.title {
+  font-size: 72pt;
+  font-weight: 700;
+  color: #33373D;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 50pt;
+  font-weight: 700;
+  color: #33373D;
+  text-align: center;
+}
+
+.h2 {
+  font-size: 30pt;
+  font-weight: 700;
+  color: #33373D;
+  text-align: center;
+}
+
+.h3 {
+  font-size: 20pt;
+  font-weight: 700;
+  color: #33373D;
+  text-align: center;
+}
+
+.body-lg {
+  font-size: 20pt;
+  font-weight: 400;
+  color: #33373D;
+  text-align: justify;
+}
+
+.body {
+  font-size: 16pt;
+  font-weight: 400;
+  color: #33373D;
+  text-align: justify;
+}
+
+.subtitle {
+  font-size: 12pt;
+  font-weight: 400;
+  color: #33373D;
+  text-align: center;
+}
+
+/* SHADOWS */
+.shadow {
+  box-shadow: 0px 4px 8px rgb(6, 55, 118, 0.25);
+}
+
+/* BORDER RADIUSES */
+.border-round {
+  border-radius: 10px;
+}

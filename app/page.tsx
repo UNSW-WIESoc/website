@@ -34,7 +34,7 @@ export default function Home() {
           justifyContent="center"
           spacing={8}
         >
-          <Typography level="h3" fontSize="72px" sx={{color:"#FFFFFF", textAlign: 'center'}}>
+          <Typography level="title">
             UNSW Women In Engineering
           </Typography>
           <Typography level="title-lg" fontSize="30px" sx={{color:"#FFFFFF"}}>

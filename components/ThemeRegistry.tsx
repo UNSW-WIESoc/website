@@ -1,12 +1,15 @@
 "use client";
 
 import React from 'react';
-// import localFont from 'next/font/local';
 import { usePathname } from 'next/navigation';
 import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 
-// const ttCommonsPro = localFont({ src: '../TT_Commons_Pro_Variable.woff2' });
+declare module '@mui/joy/styles' {
+  interface TypographySystemOverrides {
+    title: true;
+  }
+}
 
 type ThemeRegistryProps = {
   children: React.ReactNode;
@@ -21,19 +24,35 @@ export default function ThemeRegistry({
 
   // default font family is Inter
   const theme = extendTheme({
-    colorSchemes: {
-      light: {
-        palette: {
-          // background: {
-          //   body: path === "/" ? "var(--joy-palette-neutral-800, #171A1C)" : undefined
-          // },
-          // primaryBlue: {
-          //   primary: '#93AED3'
-          // }
-        }
+    // colorSchemes: {
+    //   light: {
+    //     palette: {
+    //       // background: {
+    //       //   body: path === "/" ? "var(--joy-palette-neutral-800, #171A1C)" : undefined
+    //       // },
+    //       // primaryBlue: {
+    //       //   primary: '#93AED3'
+    //       // }
+    //     }
+    //   }
+    // },
+    typography: {
+      title: {
+        fontSize: '7rem',
+        fontWeight: '700',
+        color: '#33373D',
+        textAlign: 'center',
+      },
+      h1: {
+        fontSize: '50pt',
+        fontWeight: '700',
+        color: '#33373D',
+        textAlign: 'center',
       }
-    }
+    },
   });
+
+  
 
   return (
     <CssVarsProvider theme={theme}>
