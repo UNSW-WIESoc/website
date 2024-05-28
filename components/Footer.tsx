@@ -1,10 +1,7 @@
 import { Box, Typography, Stack, Sheet } from '@mui/joy';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Url } from 'next/dist/shared/lib/router/router';
 import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
-import { LinkedIn } from '@mui/icons-material';
-
 
 export default function Footer() {
   const darkBlue = '#063776';
@@ -14,19 +11,19 @@ export default function Footer() {
     <Sheet>
       <Box sx={{backgroundColor:'#D1E2F8', padding: '60px'}}>
         <center>
-          <Typography level='h2' sx={{fontWeight: '500', fontColor: '#33373D'}}>Join Us Here</Typography>
-          <Stack direction='row' justifyContent='center' spacing={10} sx={{color: darkBlue, padding: '40px'}}>
+          <Typography level='h2' sx={{fontWeight: '500', color: '#33373D'}}>Join Us Here</Typography>
+          <Stack direction='row' justifyContent='center' spacing={10} sx={{padding: '40px'}}>
             <Box component={Link} href={'https://www.facebook.com/wieunsw/'} target='_blank' style={{textDecoration: 'none'}}>
               <FacebookIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography level='body-md'>Facebook</Typography>
+              <Typography level='body-md' sx={{color: darkBlue}}>Facebook</Typography>
             </Box>
             <Box component={Link} href={'https://www.instagram.com/wieunsw/'} target='_blank' style={{textDecoration: 'none'}}>
               <InstagramIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography level='body-md'>Instagram</Typography>
+              <Typography level='body-md' sx={{color: darkBlue}}>Instagram</Typography>
             </Box>
             <Box component={Link} href={'https://au.linkedin.com/company/unsw-wiesoc'} target='_blank' style={{textDecoration: 'none'}}>
               <LinkedInIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography level='body-md'>LinkedIn</Typography>
+              <Typography level='body-md' sx={{color: darkBlue}}>LinkedIn</Typography>
             </Box>
           </Stack>
           <Box sx={{padding: '30px'}}>

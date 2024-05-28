@@ -27,8 +27,8 @@ function NavItem({title, navigateTo} : NavProps) {
       </Typography>
     </Stack>
   )
-
 }
+
 export default function NavBar() {
   return (
     <Sheet sx={{height: 75}}>
