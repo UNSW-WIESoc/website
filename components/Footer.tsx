@@ -26,9 +26,10 @@ export default function Footer() {
               <Typography level='body-md' sx={{color: darkBlue}}>LinkedIn</Typography>
             </Box>
           </Stack>
-          <Box sx={{padding: '30px'}}>
+          <Stack direction="column" spacing={2} sx={{padding: '30px'}}>
             <Typography>Have more questions? Contact us here:</Typography>
-          </Box>
+            <Typography>some_email@wiesoc.com.au</Typography>
+          </Stack>
         </center>
       </Box>
       <Box sx={{backgroundColor:'#063776', padding: '10px 50px'}}>
