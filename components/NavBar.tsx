@@ -1,9 +1,7 @@
-import { Box, Sheet, Stack, Typography, autocompleteClasses } from '@mui/joy';
+import { Sheet, Stack, Typography } from '@mui/joy';
 import Image from 'next/image';
 import Link from 'next/link';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
 import { Url } from 'next/dist/shared/lib/router/router';
 
 interface NavProps {
@@ -13,7 +11,7 @@ interface NavProps {
 
 function NavItem({title, navigateTo} : NavProps) {
   return (
-    <Box component={Link} href={navigateTo} 
+    <Stack component={Link} href={navigateTo}
       sx={{
       alignContent: 'center',
       width: '100%',
@@ -21,11 +19,13 @@ function NavItem({title, navigateTo} : NavProps) {
       textDecoration: 'none', 
       '&:hover': {bgcolor: '#D1E2F8', opacity: '40%'}
     }}>
-      <Typography level='title-md' 
+      <Typography
+        level='title-md'
+        margin='auto'
         sx={{textAlign: 'center'}}>
         {title}
       </Typography>
-    </Box>
+    </Stack>
   )
 
 }
@@ -44,10 +44,16 @@ export default function NavBar() {
           <NavItem title='Careers' navigateTo='/jobs-board'/>
           <NavItem title='Contact Us' navigateTo='/contact-us'/>
         </Stack>
-        <Stack direction='row' spacing={2} mx={3}>
-          <Link href='https://www.facebook.com/wieunsw/' target='_blank'><FacebookIcon/></Link>
-          <Link href='https://www.instagram.com/wieunsw/?hl=en' target='_blank'><InstagramIcon/></Link>
-          <Link href='https://au.linkedin.com/company/unsw-wiesoc' target='_blank'><LinkedInIcon/></Link>
+        <Stack direction='row' spacing={3} mx={3}>
+          <Link href='https://www.facebook.com/wieunsw/' target='_blank'>
+            <FacebookIcon color='#33373D' width={25} height={25}/>
+          </Link>
+          <Link href='https://www.instagram.com/wieunsw/?hl=en' target='_blank'>
+            <InstagramIcon color='#33373D' width={25} height={25}/>
+          </Link>
+          <Link href='https://au.linkedin.com/company/unsw-wiesoc' target='_blank'>
+            <LinkedInIcon color='#33373D' width={25} height={25}/>
+          </Link>
         </Stack>
       </Stack>
     </Sheet>
