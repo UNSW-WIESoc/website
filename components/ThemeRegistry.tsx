@@ -11,6 +11,7 @@ declare module '@mui/joy/styles' {
     'subtitle-lg': true;
     body: true;
     subtitle: true;
+    'subtitle-light': true;
   }
 }
 
@@ -39,38 +40,38 @@ export default function ThemeRegistry({
 
       // defining custom levels
       'title-lg': {
-        fontSize: '6rem',
+        fontSize: '4.5rem',
         fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px',
         lineHeight: '1.7',
-        margin: '40px 0px'
+        margin: '30px 0px'
       },
       title: { 
         fontSize: '3rem',
         fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px',
         lineHeight: '1.7',
-        margin: '40px 0px'
+        margin: '30px 0px'
       },
       h1: {
         fontSize: '2rem',
         fontWeight: '700',
         color: '#33373D',
         textAlign: 'center',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px',
         lineHeight: '1.7',
         margin: '30px 0px'
       },
       h2: {
         fontSize: '2rem',
-        fontWeight: '600',
+        fontWeight: '500',
         color: '#33373D',
         textAlign: 'center',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px',
         lineHeight: '1.7',
         margin: '30px 0px'
       },
@@ -78,7 +79,7 @@ export default function ThemeRegistry({
         fontSize: '1.2rem',
         fontWeight: '400',
         color: '#33373D',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px',
         lineHeight: '1.7'
       },
       'subtitle-lg': {
@@ -86,13 +87,13 @@ export default function ThemeRegistry({
         fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px'
       },
       body: {
         fontSize: '1rem',
         fontWeight: '400',
         color: '#33373D',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px',
         lineHeight: '1.7'
       },
       subtitle: {
@@ -100,7 +101,14 @@ export default function ThemeRegistry({
         fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.4px'
+      },
+      'subtitle-light': {
+        fontSize: '1rem',
+        fontWeight: '500',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px'
       }
     },
   });

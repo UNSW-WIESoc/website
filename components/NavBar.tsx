@@ -20,7 +20,7 @@ function NavItem({title, navigateTo} : NavProps) {
       '&:hover': {bgcolor: '#D1E2F8', opacity: '40%'}
     }}>
       <Typography
-        level='subtitle'
+        level='subtitle-light'
         margin='auto'
         sx={{textAlign: 'center'}}>
         {title}
@@ -31,7 +31,7 @@ function NavItem({title, navigateTo} : NavProps) {
 
 export default function NavBar() {
   return (
-    <Sheet sx={{height: 75}}>
+    <Sheet sx={{height: 85}}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2}>
         <Link href='/'>
           <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={250}/>
