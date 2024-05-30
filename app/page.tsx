@@ -13,8 +13,8 @@ function CoverImage() {
         left: 0,
         width: '100%',
         height: '100%',
-        bgcolor: '#93AED3',
-        opacity: '0.7',
+        bgcolor: '#3C639A',
+        opacity: '0.6',
       }}
     />
     <Stack
