@@ -1,12 +1,19 @@
 "use client";
 
 import React from 'react';
-// import localFont from 'next/font/local';
 import { usePathname } from 'next/navigation';
 import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 
-// const ttCommonsPro = localFont({ src: '../TT_Commons_Pro_Variable.woff2' });
+declare module '@mui/joy/styles' {
+  interface TypographySystemOverrides {
+    title: true;
+    'subtitle-lg': true;
+    body: true;
+    subtitle: true;
+    'subtitle-light': true;
+  }
+}
 
 type ThemeRegistryProps = {
   children: React.ReactNode;
@@ -21,20 +28,91 @@ export default function ThemeRegistry({
 
   // default font family is Inter
   const theme = extendTheme({
-    colorSchemes: {
-      light: {
-        palette: {
-          // background: {
-          //   body: path === "/" ? "var(--joy-palette-neutral-800, #171A1C)" : undefined
-          // },
-          // primaryBlue: {
-          //   primary: '#93AED3'
-          // }
-        }
-      }
-    }
-  });
+    typography: {
+      // removing default levels
+      h3: undefined,
+      h4: undefined,
+      'title-md': undefined,
+      'title-sm': undefined,
+      'body-md': undefined,
+      'body-sm': undefined,
+      'body-xs': undefined,
 
+      // defining custom levels
+      'title-lg': {
+        fontSize: '4.5rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px',
+        lineHeight: '1.7',
+        margin: '30px 0px'
+      },
+      title: { 
+        fontSize: '3rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px',
+        lineHeight: '1.7',
+        margin: '30px 0px'
+      },
+      h1: {
+        fontSize: '2rem',
+        fontWeight: '700',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px',
+        lineHeight: '1.7',
+        margin: '30px 0px'
+      },
+      h2: {
+        fontSize: '2rem',
+        fontWeight: '500',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px',
+        lineHeight: '1.7',
+        margin: '30px 0px'
+      },
+      'body-lg': {
+        fontSize: '1.2rem',
+        fontWeight: '400',
+        color: '#33373D',
+        letterSpacing: '0.4px',
+        lineHeight: '1.7'
+      },
+      'subtitle-lg': {
+        fontSize: '1.2rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px'
+      },
+      body: {
+        fontSize: '1rem',
+        fontWeight: '400',
+        color: '#33373D',
+        letterSpacing: '0.4px',
+        lineHeight: '1.7'
+      },
+      subtitle: {
+        fontSize: '1rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px'
+      },
+      'subtitle-light': {
+        fontSize: '1rem',
+        fontWeight: '500',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.4px'
+      }
+    },
+  });
+  
   return (
     <CssVarsProvider theme={theme}>
       <CssBaseline />

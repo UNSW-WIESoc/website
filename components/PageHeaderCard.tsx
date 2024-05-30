@@ -33,7 +33,7 @@ export default function PageHeaderCard({imagePath, pageTitle} : PageHeaderCardPr
           justifyContent='center'
           spacing={8}
         >
-          <Typography level='h3' fontSize='50px' sx={{color:'#FFFFFF', textAlign: 'center'}}>
+          <Typography level='title' className='light-white'>
             {pageTitle}
           </Typography>
         </Stack>
