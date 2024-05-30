@@ -47,10 +47,6 @@ export default function AboutUs() {
 
             
   return (
-    /* intro here */
-
-    /** the card component next  */
-    /** use box for blue stuff and then stack the card components horizontally inside, use  */
     <Box justifyContent='center'>
       <Box justifyContent='center'>
         <Typography level="h3" fontSize="30px" py={5} sx={{textAlign:'center', color:'#33373D'}}>
