@@ -7,13 +7,13 @@ function CoverImage() {
     <AspectRatio sx={{width: '100%', overflow:'hidden'}} objectFit='cover'>
     <Image src={'/landing-page/2024_group_photo.JPG'} alt={'group of people'} fill/>
     <Box
+      className='bg-dark-blue'
       sx={{
         position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
         height: '100%',
-        bgcolor: '#3C639A',
         opacity: '0.6',
       }}
     />
