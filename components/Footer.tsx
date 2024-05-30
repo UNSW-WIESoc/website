@@ -9,35 +9,35 @@ export default function Footer() {
 
   return (
     <Sheet>
-      <Box sx={{backgroundColor:'#D1E2F8', padding: '60px'}}>
+      <Box className='bg-light-blue' py={4}>
         <center>
-          <Typography level='h2' sx={{fontWeight: '500', color: '#33373D'}}>Join Us Here</Typography>
-          <Stack direction='row' justifyContent='center' spacing={10} sx={{padding: '40px'}}>
+          <Typography level='h2'>Join Us Here</Typography>
+          <Stack direction='row' justifyContent='center' spacing={10}>
             <Box component={Link} href={'https://www.facebook.com/wieunsw/'} target='_blank' style={{textDecoration: 'none'}}>
               <FacebookIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography level='body-md' sx={{color: darkBlue}}>Facebook</Typography>
+              <Typography className='dark-blue' level='body'>Facebook</Typography>
             </Box>
             <Box component={Link} href={'https://www.instagram.com/wieunsw/'} target='_blank' style={{textDecoration: 'none'}}>
               <InstagramIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography level='body-md' sx={{color: darkBlue}}>Instagram</Typography>
+              <Typography className='dark-blue' level='body'>Instagram</Typography>
             </Box>
             <Box component={Link} href={'https://au.linkedin.com/company/unsw-wiesoc'} target='_blank' style={{textDecoration: 'none'}}>
               <LinkedInIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography level='body-md' sx={{color: darkBlue}}>LinkedIn</Typography>
+              <Typography className='dark-blue' level='body'>LinkedIn</Typography>
             </Box>
           </Stack>
-          <Stack direction="column" spacing={2} sx={{padding: '30px'}}>
-            <Typography>Have more questions? Contact us here:</Typography>
-            <Typography>some_email@wiesoc.com.au</Typography>
+          <Stack direction="column" spacing={2} py={7}>
+            <Typography level='body'>Have more questions? Contact us here:</Typography>
+            <Typography level='body'>some_email@wiesoc.com.au</Typography>
           </Stack>
         </center>
       </Box>
-      <Box sx={{backgroundColor:'#063776', padding: '10px 50px'}}>
+      <Box className='bg-dark-blue' py={2} px={4}>
         <Stack direction='row' sx={{alignItems: 'center'}}>
           <Image src={'/wiesoc_logo_short.svg'} alt={'wiesoc-logo'} height={60} width={60}/>
-          <Box sx={{margin: '15px'}}>
-            <Typography level='body-md' sx={{color: '#F6FAF9', fontWeight: '700'}}>UNSW</Typography>
-            <Typography level='body-md' sx={{color: '#93AED3', fontWeight: '700'}}>Women In Engineering Society</Typography>
+          <Box p={1}>
+            <Typography level='subtitle' className='light-white' sx={{textAlign: 'left'}}>UNSW</Typography>
+            <Typography level='subtitle' className='medium-blue' sx={{textAlign: 'left'}}>Women In Engineering Society</Typography>
           </Box>
         </Stack>
       </Box>
