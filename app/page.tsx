@@ -5,7 +5,7 @@ import Image from 'next/image';
 function CoverImage() {
   return (
     <AspectRatio sx={{width: '100%', overflow:'hidden'}} objectFit='cover'>
-    <Image src={'/2024_group_photo.JPG'} alt={'group of people'} fill/>
+    <Image src={'/landing-page/2024_group_photo.JPG'} alt={'group of people'} fill/>
     <Box
       sx={{
         position: 'absolute',

@@ -4,7 +4,7 @@ import PageHeaderCard from "@/components/PageHeaderCard";
 export default function Program() {
   return (
     <Stack>
-      <PageHeaderCard imagePath={'/2024_group_photo.JPG'} pageTitle={'Programs'}/>
+      <PageHeaderCard imagePath={'/landing-page/2024_group_photo.JPG'} pageTitle={'Programs'}/>
       PROGRAMS
     </Stack>
   );
