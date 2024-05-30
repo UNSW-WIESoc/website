@@ -39,46 +39,45 @@ export default function ThemeRegistry({
 
       // defining custom levels
       'title-lg': {
-        fontSize: '6.5rem',
+        fontSize: '6rem',
         fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.6px',
         lineHeight: '1.7',
-        margin: '40px'
+        margin: '40px 0px'
       },
       title: { 
-        fontSize: '4rem',
-        fontWeight: '700',
+        fontSize: '3rem',
+        fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.6px',
         lineHeight: '1.7',
-        margin: '40px'
+        margin: '40px 0px'
       },
       h1: {
-        fontSize: '2.5rem',
+        fontSize: '2rem',
         fontWeight: '700',
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.6px',
         lineHeight: '1.7',
-        margin: '30px'
+        margin: '30px 0px'
       },
       h2: {
-        fontSize: '2.5rem',
-        fontWeight: '400',
+        fontSize: '2rem',
+        fontWeight: '600',
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.6px',
         lineHeight: '1.7',
-        margin: '30px'
+        margin: '30px 0px'
       },
       'body-lg': {
         fontSize: '1.2rem',
         fontWeight: '400',
         color: '#33373D',
-        textAlign: 'justify',
         letterSpacing: '0.6px',
         lineHeight: '1.7'
       },
@@ -88,14 +87,11 @@ export default function ThemeRegistry({
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.6px',
-        lineHeight: '1.7',
-        margin: '20px'
       },
       body: {
         fontSize: '1rem',
         fontWeight: '400',
         color: '#33373D',
-        textAlign: 'justify',
         letterSpacing: '0.6px',
         lineHeight: '1.7'
       },
@@ -105,8 +101,6 @@ export default function ThemeRegistry({
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.6px',
-        lineHeight: '1.7',
-        margin: '10px'
       }
     },
   });
