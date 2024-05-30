@@ -7,6 +7,8 @@ export default function Home() {
   We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n \
   (The intro could probably mention something about women or all genders?)"
 
+  const stat1 = "2000+\nmembers"
+
   return (
     <Box justifyContent='center'>
       <AspectRatio sx={{width: "100%", overflow:"hidden"}} objectFit="cover">
@@ -30,38 +32,33 @@ export default function Home() {
             width: '100%',
             height: '100%',
           }}
-          alignItems="center"
           justifyContent="center"
-          spacing={8}
         >
-          <Typography level="title">
+          <Typography className='light-white' level='title-lg'>
             UNSW Women In Engineering
           </Typography>
-          <Typography level="title-lg" fontSize="30px" sx={{color:"#FFFFFF"}}>
+          <Typography className='light-white' level='h2'>
             Connect • Engage • Inspire
           </Typography>
         </Stack>
       </AspectRatio>
       <Box mx='auto' my={15} width='1000px' height='100%'>
-        <Typography level="h2" pb={3}>About Us</Typography>
+        <Typography level='h1'>About Us</Typography>
         <Stack direction='row' spacing={8}>
           <Box width="500px">
-            <Typography level="body-lg" pb={3}>{aboutUsText}</Typography>
+            <Typography level="body" pb={3}>{aboutUsText}</Typography>
             <Stack direction="row" width="100%" height="100%">
               <Box width="100%" textAlign='center'>
-                <PersonIcon sx={{fontSize: '4rem', color: '#93AED3'}}/>
-                <Typography level="body-md" fontWeight="600" textColor="#063776">2000+</Typography>
-                <Typography level="body-md" fontWeight="600" textColor="#063776">members</Typography>
+                <PersonIcon className='medium-blue' sx={{fontSize: '4rem'}}/>
+                <Typography level="subtitle" className='dark-blue'>{stat1}</Typography>
               </Box>
               <Box width="100%" textAlign='center'>
-                <PersonIcon sx={{fontSize: '4rem', color: '#93AED3'}}/>
-                <Typography level="body-md" fontWeight="600" textColor="#063776">2000+</Typography>
-                <Typography level="body-md" fontWeight="600" textColor="#063776">members</Typography>
+                <PersonIcon className='medium-blue' sx={{fontSize: '4rem'}}/>
+                <Typography level="subtitle" className='dark-blue'>{stat1}</Typography>
               </Box>
               <Box width="100%" textAlign='center'>
-                <PersonIcon sx={{fontSize: '4rem', color: '#93AED3'}}/>
-                <Typography level="body-md" fontWeight="600" textColor="#063776">2000+</Typography>
-                <Typography level="body-md" fontWeight="600" textColor="#063776">members</Typography>
+                <PersonIcon className='medium-blue' sx={{fontSize: '4rem'}}/>
+                <Typography level="subtitle" className='dark-blue'>{stat1}</Typography>
               </Box>
             </Stack>
           </Box>

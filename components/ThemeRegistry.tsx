@@ -8,6 +8,9 @@ import CssBaseline from '@mui/joy/CssBaseline';
 declare module '@mui/joy/styles' {
   interface TypographySystemOverrides {
     title: true;
+    'subtitle-lg': true;
+    body: true;
+    subtitle: true;
   }
 }
 
@@ -24,36 +27,90 @@ export default function ThemeRegistry({
 
   // default font family is Inter
   const theme = extendTheme({
-    // colorSchemes: {
-    //   light: {
-    //     palette: {
-    //       // background: {
-    //       //   body: path === "/" ? "var(--joy-palette-neutral-800, #171A1C)" : undefined
-    //       // },
-    //       // primaryBlue: {
-    //       //   primary: '#93AED3'
-    //       // }
-    //     }
-    //   }
-    // },
     typography: {
-      title: {
-        fontSize: '7rem',
+      // removing default levels
+      h3: undefined,
+      h4: undefined,
+      'title-md': undefined,
+      'title-sm': undefined,
+      'body-md': undefined,
+      'body-sm': undefined,
+      'body-xs': undefined,
+
+      // defining custom levels
+      'title-lg': {
+        fontSize: '6.5rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7',
+        margin: '40px'
+      },
+      title: { 
+        fontSize: '4rem',
         fontWeight: '700',
         color: '#33373D',
         textAlign: 'center',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7',
+        margin: '40px'
       },
       h1: {
-        fontSize: '50pt',
+        fontSize: '2.5rem',
         fontWeight: '700',
         color: '#33373D',
         textAlign: 'center',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7',
+        margin: '30px'
+      },
+      h2: {
+        fontSize: '2.5rem',
+        fontWeight: '400',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7',
+        margin: '30px'
+      },
+      'body-lg': {
+        fontSize: '1.2rem',
+        fontWeight: '400',
+        color: '#33373D',
+        textAlign: 'justify',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7'
+      },
+      'subtitle-lg': {
+        fontSize: '1.2rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7',
+        margin: '20px'
+      },
+      body: {
+        fontSize: '1rem',
+        fontWeight: '400',
+        color: '#33373D',
+        textAlign: 'justify',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7'
+      },
+      subtitle: {
+        fontSize: '1rem',
+        fontWeight: '600',
+        color: '#33373D',
+        textAlign: 'center',
+        letterSpacing: '0.6px',
+        lineHeight: '1.7',
+        margin: '10px'
       }
     },
   });
-
   
-
   return (
     <CssVarsProvider theme={theme}>
       <CssBaseline />
