@@ -11,13 +11,13 @@ export default function PageHeaderCard({imagePath, pageTitle} : PageHeaderCardPr
       <AspectRatio sx={{width: '100%', height: '300px', position: 'relative',  overflow:'hidden'}} objectFit='cover'>
         <Image src={imagePath} alt='page-header-image' fill objectFit='cover'/>
         <Box
+          className='bg-dark-blue'
           sx={{
             position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
             height: '300px',
-            bgcolor: '#3C639A',
             opacity: '0.6',
           }}
         />
@@ -33,7 +33,7 @@ export default function PageHeaderCard({imagePath, pageTitle} : PageHeaderCardPr
           justifyContent='center'
           spacing={8}
         >
-          <Typography level='h3' fontSize='50px' sx={{color:'#FFFFFF', textAlign: 'center'}}>
+          <Typography level='title' className='light-white'>
             {pageTitle}
           </Typography>
         </Stack>
