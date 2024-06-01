@@ -26,7 +26,7 @@ export default function ProgramsCard({
                                        link
                                      }: ProgramsCardProps) {
   return (
-    <Card variant='outlined' sx={{'width': '65%', 'box-shadow': '0 3px 10px rgb(0 0 0 / 0.2)'}}>
+    <Card variant='outlined' className='shadow' sx={{'width': '65%'}}>
       <CardOverflow>
         <AspectRatio ratio='3'>
           <Image
