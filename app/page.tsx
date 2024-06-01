@@ -1,7 +1,7 @@
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import PersonIcon from '@mui/icons-material/Groups';
 import Image from 'next/image';
-import IconText from "@/components/IconText";
+import LabelledIcon from "@/components/LabelledIcon";
 
 function CoverImage() {
   return (
@@ -52,9 +52,9 @@ function AboutUsOverview() {
         <Box width="500px">
           <Typography level="body" pb={3}>{aboutUsText}</Typography>
           <Stack direction="row" width="100%" height="100%" justifyContent='center' spacing={6}>
-            <IconText icon='/landing-page/People.svg' text='2000+ members'/>
-            <IconText icon='/landing-page/People.svg' text='2000+ members'/>
-            <IconText icon='/landing-page/People.svg' text='2000+ members'/>
+            <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
+            <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
+            <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
           </Stack>
         </Box>
         <Box width='500px'>

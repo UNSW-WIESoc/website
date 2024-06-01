@@ -6,7 +6,7 @@ export interface IconTextProps {
   text: string;
 }
 
-export default function IconText({icon, text}: IconTextProps) {
+export default function LabelledIcon({icon, text}: IconTextProps) {
   return (<Stack>
       <Box width={110} textAlign='center' px='10px'>
         <Image src={icon} alt='icon' height={60} width={60}/>

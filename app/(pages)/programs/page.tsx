@@ -1,7 +1,7 @@
 import {Box, Stack, Typography} from '@mui/joy';
 import PageHeaderCard from "@/components/PageHeaderCard";
 import ProgramsCard from "@/components/ProgramsCard";
-import {IconTextProps} from "@/components/IconText";
+import {IconTextProps} from "@/components/LabelledIcon";
 
 export default function Program() {
   const protegeDescription =

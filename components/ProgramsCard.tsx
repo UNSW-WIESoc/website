@@ -1,6 +1,6 @@
 import {AspectRatio, Card, CardContent, CardOverflow, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
-import IconText, {IconTextProps} from "@/components/IconText";
+import LabelledIcon, {IconTextProps} from "@/components/LabelledIcon";
 import OutlineButton from "@/components/OutlineButton";
 
 
@@ -45,10 +45,10 @@ export default function ProgramsCard({
             {description}
           </Typography>
           <Stack direction='row' alignItems='center' spacing={4} py={4}>
-            <IconText icon={icon1.icon} text={icon1.text}/>
-            <IconText icon={icon2.icon} text={icon2.text}/>
-            <IconText icon={icon3.icon} text={icon3.text}/>
-            <IconText icon={icon4.icon} text={icon4.text}/>
+            <LabelledIcon icon={icon1.icon} text={icon1.text}/>
+            <LabelledIcon icon={icon2.icon} text={icon2.text}/>
+            <LabelledIcon icon={icon3.icon} text={icon3.text}/>
+            <LabelledIcon icon={icon4.icon} text={icon4.text}/>
           </Stack>
           <OutlineButton text='Learn More' link={link}/>
         </Stack>
