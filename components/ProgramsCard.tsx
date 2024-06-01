@@ -1,14 +1,32 @@
 import {AspectRatio, Card, CardContent, CardOverflow, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
+import IconText, {IconTextProps} from "@/components/IconText";
+import OutlineButton from "@/components/OutlineButton";
+
 
 interface ProgramsCardProps {
   imagePath: string;
   cardTitle: string;
   description: string;
+  icon1: IconTextProps;
+  icon2: IconTextProps;
+  icon3: IconTextProps;
+  icon4: IconTextProps;
+  link: string
 }
-export default function ProgramsCard({imagePath, cardTitle, description} : ProgramsCardProps) {
+
+export default function ProgramsCard({
+                                       imagePath,
+                                       cardTitle,
+                                       description,
+                                       icon1,
+                                       icon2,
+                                       icon3,
+                                       icon4,
+                                       link
+                                     }: ProgramsCardProps) {
   return (
-    <Card variant='outlined' sx={{ width: '60%' }}>
+    <Card variant='outlined' sx={{'width': '65%', 'box-shadow': '0 3px 10px rgb(0 0 0 / 0.2)'}}>
       <CardOverflow>
         <AspectRatio ratio='3'>
           <Image
@@ -19,19 +37,22 @@ export default function ProgramsCard({imagePath, cardTitle, description} : Progr
         </AspectRatio>
       </CardOverflow>
       <CardContent>
-        <Stack direction='column' alignItems='center'>
-          <Typography fontSize='30px' pb={3} pt={2} fontWeight={450}>
+        <Stack direction='column' alignItems='center' pb={2}>
+          <Typography level='h2'>
             {cardTitle}
           </Typography>
-          <Typography fontSize="16px">
+          <Typography level='body'>
             {description}
           </Typography>
-          <Stack direction='row' alignItems='center' spacing={1}>
+          <Stack direction='row' alignItems='center' spacing={4} py={4}>
+            <IconText icon={icon1.icon} text={icon1.text}/>
+            <IconText icon={icon2.icon} text={icon2.text}/>
+            <IconText icon={icon3.icon} text={icon3.text}/>
+            <IconText icon={icon4.icon} text={icon4.text}/>
           </Stack>
+          <OutlineButton text='Learn More' link={link}/>
         </Stack>
       </CardContent>
-      <CardOverflow variant='soft' sx={{ bgcolor: 'background.level1' }}>
-      </CardOverflow>
     </Card>
   );
 }

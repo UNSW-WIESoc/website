@@ -1,37 +1,34 @@
-import { Sheet, Stack, Typography } from '@mui/joy';
+import {Sheet, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import Link from 'next/link';
 import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
-import { Url } from 'next/dist/shared/lib/router/router';
+import {Url} from 'next/dist/shared/lib/router/router';
 
 interface NavProps {
   title: string;
   navigateTo: Url;
 }
 
-function NavItem({title, navigateTo} : NavProps) {
-  return (
-    <Stack component={Link} href={navigateTo}
-      sx={{
-      alignContent: 'center',
-      width: '100%',
-      height: '100%',
-      textDecoration: 'none', 
-      '&:hover': {bgcolor: '#D1E2F8', opacity: '40%'}
-    }}>
+function NavItem({title, navigateTo}: NavProps) {
+  return (<Stack component={Link} href={navigateTo}
+                 sx={{
+                   alignContent: 'center',
+                   width: '100%',
+                   height: '100%',
+                   textDecoration: 'none',
+                   '&:hover': {bgcolor: '#D1E2F8', opacity: '40%'}
+                 }}>
       <Typography
         level='subtitle-light'
         margin='auto'
         sx={{textAlign: 'center'}}>
         {title}
       </Typography>
-    </Stack>
-  )
+    </Stack>)
 }
 
 export default function NavBar() {
-  return (
-    <Sheet sx={{height: 85}}>
+  return (<Sheet sx={{height: 85}}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2}>
         <Link href='/'>
           <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={250}/>
@@ -41,7 +38,7 @@ export default function NavBar() {
           <NavItem title='Events' navigateTo='/events'/>
           <NavItem title='Programs' navigateTo='/programs'/>
           <NavItem title='Sponsors' navigateTo='/sponsors'/>
-          <NavItem title='Careers' navigateTo='/jobs-board'/>
+          <NavItem title='Careers' navigateTo='/careers'/>
           <NavItem title='Contact Us' navigateTo='/contact-us'/>
         </Stack>
         <Stack direction='row' spacing={3} mx={3}>
@@ -56,6 +53,5 @@ export default function NavBar() {
           </Link>
         </Stack>
       </Stack>
-    </Sheet>
-  )
+    </Sheet>)
 }

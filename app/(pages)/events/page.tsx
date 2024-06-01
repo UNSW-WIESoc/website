@@ -1,9 +1,10 @@
 import { Stack } from '@mui/joy';
+import PageHeaderCard from "@/components/PageHeaderCard";
 
 export default function Events() {
   return (
     <Stack>
-      EVENTS
+      <PageHeaderCard imagePath={'/events/header.jpg'} pageTitle={'Events'}/>
     </Stack>
   );
 }
