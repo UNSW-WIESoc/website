@@ -1,5 +1,5 @@
-import {Button, Typography} from "@mui/joy";
-import Link from "next/link";
+import {Button, Typography} from '@mui/joy';
+import Link from 'next/link';
 
 interface OutlineButtonProps {
   text: string;

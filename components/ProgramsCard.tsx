@@ -1,7 +1,7 @@
 import {AspectRatio, Card, CardContent, CardOverflow, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
-import LabelledIcon, {IconTextProps} from "@/components/LabelledIcon";
-import OutlineButton from "@/components/OutlineButton";
+import LabelledIcon, {IconTextProps} from '@/components/LabelledIcon';
+import OutlineButton from '@/components/OutlineButton';
 
 
 interface ProgramsCardProps {

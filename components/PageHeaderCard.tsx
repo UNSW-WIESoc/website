@@ -1,5 +1,5 @@
-import {AspectRatio, Box, Stack, Typography} from "@mui/joy";
-import Image from "next/image";
+import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
+import Image from 'next/image';
 
 
 interface PageHeaderCardProps {

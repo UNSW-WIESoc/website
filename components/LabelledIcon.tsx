@@ -1,5 +1,5 @@
-import {Box, Stack, Typography} from "@mui/joy";
-import Image from "next/image";
+import {Box, Stack, Typography} from '@mui/joy';
+import Image from 'next/image';
 
 export interface IconTextProps {
   icon: string;
