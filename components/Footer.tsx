@@ -26,7 +26,7 @@ export default function Footer() {
               <Typography className='dark-blue' level='body'>LinkedIn</Typography>
             </Box>
           </Stack>
-          <Stack direction="column" spacing={2} py={7}>
+          <Stack direction='column' spacing={2} py={7}>
             <Typography level='body'>Have more questions? Contact us here:</Typography>
             <Typography level='body'>some_email@wiesoc.com.au</Typography>
           </Stack>

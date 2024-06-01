@@ -1,5 +1,5 @@
-import {AspectRatio, Box, Stack, Typography} from "@mui/joy";
-import Image from "next/image";
+import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
+import Image from 'next/image';
 
 
 interface PageHeaderCardProps {
@@ -8,8 +8,8 @@ interface PageHeaderCardProps {
 }
 export default function PageHeaderCard({imagePath, pageTitle} : PageHeaderCardProps) {
   return (
-      <AspectRatio sx={{width: '100%', height: '300px', position: 'relative',  overflow:'hidden'}} objectFit='cover'>
-        <Image src={imagePath} alt='page-header-image' fill objectFit='cover'/>
+      <AspectRatio ratio='700/150' sx={{width: '100%', height: '300px', position: 'relative',  overflow:'hidden'}} objectFit='cover'>
+        <Image src={imagePath} alt='page-header-image' layout='fill'/>
         <Box
           className='bg-dark-blue'
           sx={{
