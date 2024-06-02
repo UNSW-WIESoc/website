@@ -1,10 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   padding: 0;
   margin: 0;
   height: 100%;
+}
+
+/* STLYE GUIDE FOR COLOURS, BACKGROUND COLOURS, SHADOWS, BORDER RADIUSES */
+
+/* COLOURS */
+.graphite {
+  color: #33373D !important;
+}
+
+.dark-blue {
+  color: #063776 !important;
+}
+
+.medium-blue {
+  color: #93AED3 !important;
+}
+
+.light-blue {
+  color: #D1DFF1 !important;
+}
+
+.purple {
+  color: #9396D3 !important;
+}
+
+.light-white {
+  color: #F6FAF9 !important;
+}
+
+.white {
+  color: #FFFFFF !important;
+}
+
+/* BACKGROUND COLOURS */
+.bg-graphite {
+  background-color: #33373D !important;
+}
+
+.bg-dark-blue {
+  background-color: #063776 !important;
+}
+
+.bg-medium-blue {
+  background-color: #93AED3 !important;
+}
+
+.bg-light-blue {
+  background-color: #D1DFF1 !important;
+}
+
+.bg-purple {
+  background-color: #9396D3 !important;
+}
+
+.bg-light-white {
+  background-color: #F6FAF9 !important;
+}
+
+.bg-white {
+  background-color: #FFFFFF !important;
+}
+
+/* SHADOWS */
+.shadow {
+  box-shadow: 0px 4px 8px rgb(6, 55, 118, 0.25);
+}
+
+/* BORDER RADIUSES */
+.border-round {
+  border-radius: 10px;
 }
