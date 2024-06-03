@@ -8,7 +8,8 @@ interface PageHeaderCardProps {
 }
 export default function PageHeaderCard({imagePath, pageTitle} : PageHeaderCardProps) {
   return (
-      <AspectRatio ratio='700/150' sx={{width: '100%', height: '300px', position: 'relative',  overflow:'hidden'}} objectFit='cover'>
+      <AspectRatio ratio='700/150' objectFit='cover'
+                   sx={{width: '100%', height: '300px', position: 'relative', overflow:'hidden'}}>
         <Image src={imagePath} alt='page-header-image' layout='fill'/>
         <Box
           className='bg-dark-blue'
