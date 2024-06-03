@@ -23,7 +23,7 @@ export default function ProtegeProgram() {
         <Stack direction='row' spacing={3} sx={{ margin: '0 auto' }}>
           <Stack direction='column' spacing={2} sx={{ width: '50%' }}>
             <Box>
-              <Image src={'/programs/Learning.svg'} alt='icon' height={60} width={60}/>
+              <Image src={'/programs/protege-program/Spoons.jpg'} alt='icon' height={300} width={450}/>
             </Box>
             <Box>
               <Typography level='h4' sx={{ mb: 1 }}>
