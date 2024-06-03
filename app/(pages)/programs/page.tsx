@@ -5,9 +5,11 @@ import {IconTextProps} from "@/components/LabelledIcon";
 import HeadingBodyText from "@/components/HeadingBodyText";
 
 export default function Program() {
-  const bodyText = 'Our Industry Mentoring Program and Protege Program can cater to your personal and professional development.'
+  const bodyText =
+    'Our Industry Mentoring Program and Protege Program can cater to your personal and professional development.'
 
-  const protegeDescription = 'This program helps new students adapt to engineering by pairing them with older student mentors.'
+  const protegeDescription =
+    'This program helps new students adapt to engineering by pairing them with older student mentors.'
 
   const protegeIcon1: IconTextProps = {
     icon: '/programs/Graduate.svg', text: 'Student Mentors',
@@ -25,7 +27,8 @@ export default function Program() {
     icon: '/programs/BookStack.svg', text: 'Settle into University',
   };
 
-  const impDescription = 'This program helps new students adapt to engineering by pairing them with industry mentors.'
+  const impDescription =
+    'This program helps new students adapt to engineering by pairing them with industry mentors.'
 
   const impIcon1: IconTextProps = {
     icon: '/programs/WomanProfile.svg', text: 'Industry Mentors',
@@ -43,10 +46,10 @@ export default function Program() {
     icon: '/programs/ConnectedPeople.svg', text: 'Make Connections',
   };
 
-  return (<Box>
+  return (
+    <Box>
       <PageHeaderCard imagePath={'/programs/header.jpg'} pageTitle={'Programs'}/>
-      <HeadingBodyText heading='Annual Programs'
-                       body={bodyText}/>
+      <HeadingBodyText heading='Annual Programs' body={bodyText} color='graphite'/>
       <Stack direction='column' alignItems='center' spacing={10} pb={10}>
         <ProgramsCard imagePath='/programs/protege_card.jpg' cardTitle='Protege Program'
                       description={protegeDescription} icon1={protegeIcon1} icon2={protegeIcon2} icon3={protegeIcon3}
@@ -55,5 +58,6 @@ export default function Program() {
                       description={impDescription} icon1={impIcon1} icon2={impIcon2} icon3={impIcon3}
                       icon4={impIcon4} link='/industry-mentoring-program'/>
       </Stack>
-    </Box>);
+    </Box>
+  );
 }
