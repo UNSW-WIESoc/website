@@ -1,5 +1,7 @@
-import {Box, Grid, Stack, Typography} from '@mui/joy';
+import {Box, Stack, Typography} from '@mui/joy';
 import PageHeaderCard from "@/components/PageHeaderCard";
+import Image from 'next/image';
+
 
 export default function ProtegeProgram() {
 
@@ -21,7 +23,7 @@ export default function ProtegeProgram() {
         <Stack direction='row' spacing={3} sx={{ margin: '0 auto' }}>
           <Stack direction='column' spacing={2} sx={{ width: '50%' }}>
             <Box>
-              Image
+              <Image src={'/programs/Learning.svg'} alt='icon' height={60} width={60}/>
             </Box>
             <Box>
               <Typography level='h4' sx={{ mb: 1 }}>
