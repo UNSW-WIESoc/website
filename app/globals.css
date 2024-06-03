@@ -57,6 +57,10 @@ body {
   background-color: #9396D3 !important;
 }
 
+.bg-purple:hover {
+  background-color: #777AD5 !important;
+}
+
 .bg-light-white {
   background-color: #F6FAF9 !important;
 }
@@ -77,4 +81,8 @@ body {
 /* BORDER RADIUSES */
 .border-round {
   border-radius: 10px;
+}
+
+.button-border-round {
+  border-radius: 15px;
 }

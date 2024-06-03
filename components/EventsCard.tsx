@@ -1,3 +1,5 @@
+import '../app/globals.css';
+
 import AspectRatio from '@mui/joy/AspectRatio';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
@@ -6,9 +8,9 @@ import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import Button from '@mui/joy/Button';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import Stack from '@mui/material/Stack';
-import '../app/globals.css';
+import { FacebookIcon } from '@/components/SocialMediaIcons';
+
 
 // Hardedcoded for now
 // TODO (rbeccahsu): Work on integrating website with Contentful
@@ -37,11 +39,10 @@ export default function EventsCard() {
             href='https://fb.me/e/6IzxSbHFH'
             target='_blank'
             rel='noopener noreferrer'
-            startDecorator={<FacebookIcon />}
+            startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
+            className='bg-purple button-border-round'
             sx={{ 
               width: 1/3, 
-              bgcolor: '#9396D3', 
-              '&:hover': { backgroundColor: '#777AD5' },
               mt: 2,
               mx: 'auto'
             }}
