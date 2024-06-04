@@ -28,9 +28,9 @@ export default function EventsCard() {
         </AspectRatio>
       </CardOverflow>
       <CardContent>
-        <Stack alignItems='center' py={1} spacing={2}>
+        <Stack alignItems='center' py={1} spacing={1}>
           <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>WIESoc Study Lounge</Typography>
-          <Typography level='body' textAlign='center'>Wednesday 17th April, 12:00 - 14:00</Typography>
+          <Typography level='body' textAlign='center'>Wednesday 17 April 12pm - 2pm</Typography>
           <Button 
             component='a' 
             href='https://fb.me/e/6IzxSbHFH'

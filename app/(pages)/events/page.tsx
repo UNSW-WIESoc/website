@@ -13,8 +13,8 @@ export default function Events() {
       <Grid
         container
         justifyContent='center'
-        sx={{ 'width': {xs: '100%', sm: '90%', md: '80%', lg: '75%'} }}
-        spacing={8}
+        sx={{ 'width': {xs: '100%', sm: '90%', md: '80%', lg: '70%'} }}
+        spacing={10}
         mb={10}
       >
         {Array.from(Array(6)).map((_, index) => (
