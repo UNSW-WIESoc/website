@@ -18,11 +18,9 @@ import { FacebookIcon } from '@/components/SocialMediaIcons';
 export default function EventsCard() {
   return (
     <Card 
-      variant='outlined' 
-      className='shadow-hover'
-      sx={{
-        width: 600,
-      }}
+      variant='outlined'
+      className='shadow-hover border-round'
+      sx= {{ 'width': '600px' }}
     >
       <CardOverflow>
         <AspectRatio objectFit='contain'>
@@ -30,24 +28,19 @@ export default function EventsCard() {
         </AspectRatio>
       </CardOverflow>
       <CardContent>
-        <Typography level='h3' fontSize='xl' mt={1}>WIESoc Study Lounge</Typography>
-        <Typography level='body-sm'>Wednesday 17th April, 12:00 - 14:00</Typography>
-
-        <Stack>
+        <Stack alignItems='center' py={1} spacing={2}>
+          <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>WIESoc Study Lounge</Typography>
+          <Typography level='body' textAlign='center'>Wednesday 17th April, 12:00 - 14:00</Typography>
           <Button 
             component='a' 
             href='https://fb.me/e/6IzxSbHFH'
             target='_blank'
-            rel='noopener noreferrer'
             startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
             className='bg-purple button-border-round'
-            sx={{ 
-              width: 1/3, 
-              mt: 2,
-              mx: 'auto'
-            }}
             >
-            View Event
+              <Typography p={0.5}>
+                View Event
+              </Typography>
             </Button>
         </Stack>
       </CardContent>

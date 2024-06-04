@@ -12,7 +12,7 @@ export default function HeadingBodyText({heading, body, color}: HeadingBodyTextP
       <Typography className={color} level='h1' pt={3}>
         {heading}
       </Typography>
-      <Typography className={color} level='body' textAlign='center' px={3} sx={{'text-wrap': 'wrap'}}>
+      <Typography className={color} level='body' textAlign='center' px={3} sx={{'textWrap': 'wrap'}}>
         {body}
       </Typography>
     </Stack>
