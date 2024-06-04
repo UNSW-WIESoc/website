@@ -19,7 +19,7 @@ export default function ProgramsCard({
                                        imagePath, cardTitle, description, icon1, icon2, icon3, icon4, link
                                      }: ProgramsCardProps) {
   return (
-    <Card variant='outlined' className='shadow' sx={{ 'width': {xs: '90%', md: '65%'} }}>
+    <Card variant='outlined' className='shadow-hover' sx={{ 'width': {xs: '90%', md: '65%'} }}>
       <CardOverflow>
         <AspectRatio ratio='3'>
           <Image
