@@ -49,7 +49,7 @@ export default function AboutUs() {
   return (
     <Sheet>
       <center>
-      <Typography level="h3" fontSize='30px' className="graphite" py={5} sx={{textAlign:'center'}}>
+      <Typography level='h3' fontSize='30px' className='graphite' py={5} sx={{textAlign:'center'}}>
           About WIESoc
         </Typography>
         <Typography fontSize='20px' pb={10} px={18}>
@@ -57,8 +57,8 @@ export default function AboutUs() {
         </Typography>
       </center>
       <Sheet>
-        <Box className="bg-medium-blue" sx={{height: 744, width: '100%'}}>
-        <Typography level='h4' fontSize='30px' className="light-white" pb={3} pt={3} sx={{textAlign: 'center'}}>
+        <Box className='bg-medium-blue' sx={{height: 744, width: '100%'}}>
+        <Typography level='h4' fontSize='30px' className='light-white' pb={3} pt={3} sx={{textAlign: 'center'}}>
             What We Do 
           </Typography>
         <Stack direction='row' spacing={8} pb={2} alignItems='center' justifyContent='center'>
