@@ -1,5 +1,7 @@
 import { Stack, Box, Typography, Card, CardOverflow, AspectRatio, CardContent,Sheet } from '@mui/joy';
 import Image from 'next/image';
+import PageHeaderCard from "@/components/PageHeaderCard";
+
 
 interface cardProps {
   picture: string;
@@ -48,6 +50,9 @@ export default function AboutUs() {
             
   return (
     <Sheet>
+    <Stack>
+      <PageHeaderCard imagePath={'/about-us/header.jpg'} pageTitle={'About Us'}/>
+    </Stack>
       <center>
       <Typography level='h3' fontSize='30px' className='graphite' py={5} sx={{textAlign:'center'}}>
           About WIESoc
