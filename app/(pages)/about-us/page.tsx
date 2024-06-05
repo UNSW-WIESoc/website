@@ -7,9 +7,9 @@ interface cardProps {
   cardText: string;
 }
 
-function AboutusCard({picture, cardName, cardText}: cardProps) {
+function AboutUsCard({picture, cardName, cardText}: cardProps) {
   return (
-      <Card variant='plain' sx={{ width:'585px', height:'566px', bgcolor:'F5F5F5', boxShadow: 3 }}>
+      <Card className='light-wight' variant='plain' sx={{ width:'585px', height:'566px', boxShadow: 3 }}>
         <CardOverflow>
           <AspectRatio ratio='2'>
             <Image 
@@ -47,21 +47,22 @@ export default function AboutUs() {
 
             
   return (
-    <Box justifyContent='center'>
-      <Box justifyContent='center'>
-        <Typography level="h3" fontSize='30px' py={5} sx={{textAlign:'center', color:'#33373D'}}>
+    <Sheet>
+      <center>
+      <Typography level="h3" fontSize='30px' className="graphite" py={5} sx={{textAlign:'center'}}>
           About WIESoc
         </Typography>
         <Typography fontSize='20px' pb={10} px={18}>
           {aboutWIEsocText}
         </Typography>
-      </Box>
-      <Sheet variant='solid' sx={{height: 744, width: '100%', backgroundColor:'#93AED3'}}>
-          <Typography level='h4' fontSize='30px' pb={3} pt={3} sx={{color:'#FFFFFF', textAlign: 'center'}}>
+      </center>
+      <Sheet>
+        <Box className="bg-medium-blue" sx={{height: 744, width: '100%'}}>
+        <Typography level='h4' fontSize='30px' className="light-white" pb={3} pt={3} sx={{textAlign: 'center'}}>
             What We Do 
           </Typography>
         <Stack direction='row' spacing={8} pb={2} alignItems='center' justifyContent='center'>
-          <AboutusCard picture='/eventsCard.png' 
+          <AboutUsCard picture='/eventsCard.png' 
                       cardName='Events' 
                       cardText='WIESoc hold many events throughout the year, 
                           with a great mix of industry and social events. Come and 
@@ -69,16 +70,15 @@ export default function AboutUs() {
           />
 
 
-          <AboutusCard picture='/programsCard.png' 
+          <AboutUsCard picture='/programsCard.png' 
                       cardName='Programs' 
                       cardText='Our Industry Mentoring Program and Protege Program 
                           can cater to you personal and professional development'
           />           
         </Stack>
-
+        </Box>
       </Sheet>
-
-    </Box>
+    </Sheet>
 
   );
 }
