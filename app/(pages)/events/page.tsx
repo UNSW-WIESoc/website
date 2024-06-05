@@ -1,8 +1,8 @@
 import EventsCard from '@/components/EventsCard';
 
 import {Grid, Stack, Typography} from '@mui/joy';
-import PageHeaderCard from "@/components/PageHeaderCard";
-import HeadingBodyText from "@/components/HeadingBodyText";
+import PageHeaderCard from '@/components/PageHeaderCard';
+import HeadingBodyText from '@/components/HeadingBodyText';
 
 export default function Events() {
   return (

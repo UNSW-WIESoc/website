@@ -1,8 +1,8 @@
 import {Box, Stack} from '@mui/joy';
-import PageHeaderCard from "@/components/PageHeaderCard";
-import ProgramsCard from "@/components/ProgramsCard";
-import {IconTextProps} from "@/components/LabelledIcon";
-import HeadingBodyText from "@/components/HeadingBodyText";
+import PageHeaderCard from '@/components/PageHeaderCard';
+import ProgramsCard from '@/components/ProgramsCard';
+import {IconTextProps} from '@/components/LabelledIcon';
+import HeadingBodyText from '@/components/HeadingBodyText';
 
 export default function Program() {
   const bodyText =
