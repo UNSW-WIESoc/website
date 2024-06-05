@@ -1,5 +1,5 @@
 import { Stack } from '@mui/joy';
-import PageHeaderCard from "@/components/PageHeaderCard";
+import PageHeaderCard from '@/components/PageHeaderCard';
 
 export default function ContactUs() {
   return (

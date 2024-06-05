@@ -75,7 +75,7 @@ body {
 }
 
 .shadow-hover:hover {
-  box-shadow: 0px 4px 8px rgb(6, 55, 118, 0.25);
+  box-shadow: 0 4px 8px rgb(6, 55, 118, 0.25);
 }
 
 /* BORDER RADIUSES */
@@ -84,5 +84,5 @@ body {
 }
 
 .button-border-round {
-  border-radius: 15px;
+  border-radius: 20px;
 }
