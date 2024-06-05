@@ -10,7 +10,7 @@ export default function PageHeaderCard({imagePath, pageTitle} : PageHeaderCardPr
   return (
       <AspectRatio ratio='700/150' objectFit='cover'
                    sx={{width: '100%', height: '300px', position: 'relative', overflow:'hidden'}}>
-        <Image src={imagePath} alt='page-header-image' layout='fill'/>
+        <Image src={imagePath} alt='page-header-image' fill/>
         <Box
           className='bg-dark-blue'
           sx={{
