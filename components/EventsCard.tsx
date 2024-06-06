@@ -17,13 +17,13 @@ import { FacebookIcon } from '@/components/SocialMediaIcons';
 
 export default function EventsCard() {
   return (
-    <Card 
+    <Card
       variant='outlined'
       className='shadow-hover border-round'
-      sx= {{ 'width': '600px' }}
+      sx={{width: '600px'}}
     >
       <CardOverflow>
-        <AspectRatio objectFit='contain'>
+        <AspectRatio objectFit='contain' sx={{ minWidth: '300px' }}>
           <Image src={'/event_banner.JPG'} alt={'group of people'} fill/>
         </AspectRatio>
       </CardOverflow>
@@ -38,10 +38,10 @@ export default function EventsCard() {
             startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
             className='bg-purple button-border-round'
             >
-              <Typography p={0.5}>
-                View Event
-              </Typography>
-            </Button>
+            <Typography p={0.5}>
+              View Event
+            </Typography>
+          </Button>
         </Stack>
       </CardContent>
     </Card>

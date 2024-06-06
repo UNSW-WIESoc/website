@@ -1,7 +1,8 @@
-import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
-import PersonIcon from '@mui/icons-material/Groups';
+import {AspectRatio, Box, Stack, Typography, Grid} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
+import HeadingBodyText from '@/components/HeadingBodyText';
+import EventsCard from '@/components/EventsCard';
 
 function CoverImage() {
   return (
@@ -40,10 +41,8 @@ function CoverImage() {
 }
 
 function AboutUsOverview() {
-  const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n \
-  We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n'
-
-  const stat1 = '2000+\nmembers'
+  const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n\n \
+  We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.'
 
   return (
     <Box mx='auto' my={15} width='1000px' height='100%'>
@@ -68,11 +67,41 @@ function AboutUsOverview() {
   );
 }
 
+function EventsCarousel() {
+  const eventText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
+  return (
+    <Box className='bg-medium-blue'>
+      <HeadingBodyText heading='Upcoming Events' body={eventText} color='light-white'/>
+      <Box sx={{display: 'flex', justifyContent: 'center'}}>
+        <Stack
+          width={{xs: '90%', sm: '90%', md: '80%', lg: '70%', xl: '60%'}}
+          direction='row'
+          pb={10}
+          spacing={3}
+          sx={{
+            overflow: 'scroll',
+            scrollSnapType: 'x mandatory',
+            '& > *': {
+              scrollSnapAlign: 'start',
+            },
+            '::-webkit-scrollbar': { display: 'none'}
+          }}
+        >
+          {Array(6).fill(0).map((_, index) => (
+            <EventsCard key={index}/>
+          ))}
+        </Stack>
+      </Box>
+    </Box>
+  );
+}
+
 export default function Home() {
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview/>
+      <EventsCarousel/>
     </Box>
   );
 }
