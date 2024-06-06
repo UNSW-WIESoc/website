@@ -56,7 +56,7 @@ export default function AboutUs() {
       </Stack>
       <HeadingBodyText heading='About WIESoc' body={aboutWIEsocText} color='graphite'/>
       <Sheet>
-        <Stack className='bg-medium-blue' sx={{height: '100%', width: '100%'}} alignItems='center' pb={10$}>
+        <Stack className='bg-medium-blue' sx={{height: '100%', width: '100%'}} alignItems='center' pb={10}>
           <Typography level='h1' className='white' textAlign='center' py={2}>
             What We Do
           </Typography>
