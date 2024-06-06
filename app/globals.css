@@ -70,6 +70,10 @@ body {
 }
 
 /* SHADOWS */
+.shadow {
+  box-shadow: 0 4px 8px rgb(6, 55, 118, 0.25);
+}
+
 .shadow-hover {
   transition: box-shadow 0.3s ease;
 }
