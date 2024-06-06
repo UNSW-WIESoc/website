@@ -13,7 +13,7 @@ interface cardProps {
 
 function AboutUsCard({picture, cardName, cardText,link}: cardProps) {
   return (
-      <Card className='shadow-hover' variant='plain' sx={{ width: {xs: '90%'}}}>
+      <Card className='shadow-hover' variant='plain' sx={{ width: {xs: '90%'}, height: { md:'600px'}}}>
         <CardOverflow>
           <AspectRatio ratio='2'>
             <Image 
@@ -59,13 +59,13 @@ export default function AboutUs() {
       </Stack>
       <HeadingBodyText heading='About WIESoc' body={aboutWIEsocText} color='graphite'/>
       <Sheet>
-        <Box className='bg-medium-blue' sx={{height: '100%', width: '100%'}}>
+        <Stack className='bg-medium-blue' sx={{height: '100%', width: '100%'}} justifyContent='center'>
           <Typography level='h1' className='white' textAlign='center' pt={5} >
               What We Do 
           </Typography>
           <Grid container 
                     justifyContent='flex-end'
-                    sx={{ 'width': {xs: '100%', sm: '100%'} }}
+                    sx={{ 'width': '100%' }}
                     pb={2}
                     alignItems='center'
           >
@@ -73,7 +73,6 @@ export default function AboutUs() {
               xs={24} sm={12} md={6}
               display='flex'
               justifyContent='center'
-              alignItems='center'
               pb={5}
             >
               <AboutUsCard picture='/eventsCard.png' 
@@ -99,7 +98,7 @@ export default function AboutUs() {
               />    
             </Grid>
           </Grid>
-        </Box>
+        </Stack>
       </Sheet>
     </Sheet>
 
