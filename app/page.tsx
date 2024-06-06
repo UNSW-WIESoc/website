@@ -2,6 +2,7 @@ import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import PersonIcon from '@mui/icons-material/Groups';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
+import OutlineButton from '@/components/OutlineButton';
 
 function CoverImage() {
   return (
@@ -68,11 +69,28 @@ function AboutUsOverview() {
   );
 }
 
+function SponsorsPreview() {
+  return (
+    <Box mx='auto'>
+      <Box>
+        <Typography level='h4'>MEET OUR SPONSORS</Typography>
+      </Box>
+      <Stack direction='row' spacing={5}>
+        <Image src={'/landing-page/sponsors_logo_atlassian.svg'} alt='Atlassian' width='100' height='100' />
+        <Image src={'/landing-page/sponsors_logo_janestreet.svg'} alt='Jane Street' width='100' height='100' />
+        <Image src={'/landing-page/sponsors_logo_sydneywater.svg'} alt='Sydney Water' width='100' height='100' />
+      </Stack>
+      <OutlineButton text='Learn More' link='/sponsors' />
+    </Box>
+  )
+}
+
 export default function Home() {
   return (
     <Box justifyContent='center'>
       <CoverImage/>
-      <AboutUsOverview/>
+      <AboutUsOverview />
+      <SponsorsPreview />
     </Box>
   );
 }
