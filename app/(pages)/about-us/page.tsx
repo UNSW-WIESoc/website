@@ -45,11 +45,11 @@ function AboutUsCard({picture, cardName, cardText,link}: cardProps) {
 }
 export default function AboutUs() {
 
-  const aboutWIEsocText = 'We are a UNSW student-run society that facilitates members from all \n \
-                          disciplines of engineering. We run many social and industry events \n \
-                          throughout the year as well as two programs dedicated to mentoring \n \
-                          and interpersonal development. Our society provides a supportive network \n \
-                          for all our members, whether past, present or future students, to advocate \n \
+  const aboutWIEsocText = 'We are a UNSW student-run society that facilitates members from all \
+                          disciplines of engineering. We run many social and industry events \
+                          throughout the year as well as two programs dedicated to mentoring \
+                          and interpersonal development. Our society provides a supportive network \
+                          for all our members, whether past, present or future students, to advocate \
                           gender acceptance and equality in all facets of the engineering industry.'
             
   return (
