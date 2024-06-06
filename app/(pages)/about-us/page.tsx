@@ -25,7 +25,7 @@ function AboutUsCard({image, cardName, cardText, link}: cardProps) {
       </CardOverflow>
 
       <CardContent>
-        <Stack direction='column' alignItems='center' sx={{height: '100%'}}>
+        <Stack direction='column' alignItems='center' sx={{height: '100%'}} px={1}>
           <Typography level='h2' my={3} textAlign='center'>
             {cardName}
           </Typography>
