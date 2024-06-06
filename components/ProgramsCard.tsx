@@ -1,4 +1,4 @@
-import {AspectRatio, Card, CardContent, CardOverflow, Stack, Typography} from '@mui/joy';
+import {AspectRatio, Card, CardContent, CardOverflow, Grid, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon, {IconTextProps} from '@/components/LabelledIcon';
 import OutlineButton from '@/components/OutlineButton';
@@ -16,17 +16,10 @@ interface ProgramsCardProps {
 }
 
 export default function ProgramsCard({
-                                       imagePath,
-                                       cardTitle,
-                                       description,
-                                       icon1,
-                                       icon2,
-                                       icon3,
-                                       icon4,
-                                       link
+                                       imagePath, cardTitle, description, icon1, icon2, icon3, icon4, link
                                      }: ProgramsCardProps) {
   return (
-    <Card variant='outlined' className='shadow' sx={{'width': '65%'}}>
+    <Card variant='outlined' className='shadow-hover' sx={{ 'width': {xs: '90%', md: '65%'} }}>
       <CardOverflow>
         <AspectRatio ratio='3'>
           <Image
@@ -38,18 +31,36 @@ export default function ProgramsCard({
       </CardOverflow>
       <CardContent>
         <Stack direction='column' alignItems='center' pb={2}>
-          <Typography level='h2'>
+          <Typography level='h2' textAlign='center'>
             {cardTitle}
           </Typography>
-          <Typography level='body'>
+          <Typography level='body' textAlign='center'>
             {description}
           </Typography>
-          <Stack direction='row' alignItems='center' spacing={4} py={4}>
-            <LabelledIcon icon={icon1.icon} text={icon1.text}/>
-            <LabelledIcon icon={icon2.icon} text={icon2.text}/>
-            <LabelledIcon icon={icon3.icon} text={icon3.text}/>
-            <LabelledIcon icon={icon4.icon} text={icon4.text}/>
-          </Stack>
+          <Grid container spacing={2} py={3} display='flex'
+                justifyContent='center'
+                alignItems='center' sx={{flexGrow: 1}}>
+            <Grid xs={6} md={3} display='flex'
+                  justifyContent='center'
+                  alignItems='center'>
+              <LabelledIcon icon={icon1.icon} text={icon1.text}/>
+            </Grid>
+            <Grid xs={6} md={3} display='flex'
+                  justifyContent='center'
+                  alignItems='center'>
+              <LabelledIcon icon={icon2.icon} text={icon2.text}/>
+            </Grid>
+            <Grid xs={6} md={3} display='flex'
+                  justifyContent='center'
+                  alignItems='center'>
+              <LabelledIcon icon={icon3.icon} text={icon3.text}/>
+            </Grid>
+            <Grid xs={6} md={3} display='flex'
+                  justifyContent='center'
+                  alignItems='center'>
+              <LabelledIcon icon={icon4.icon} text={icon4.text}/>
+            </Grid>
+          </Grid>
           <OutlineButton text='Learn More' link={link}/>
         </Stack>
       </CardContent>

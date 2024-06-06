@@ -1,36 +1,42 @@
-import { Stack, Box, Typography, Card, CardOverflow, AspectRatio, CardContent,Sheet } from '@mui/joy';
+import { Stack, Box, Typography, Card, CardOverflow, Grid, AspectRatio, CardContent,Sheet } from '@mui/joy';
 import Image from 'next/image';
-import PageHeaderCard from "@/components/PageHeaderCard";
-
+import PageHeaderCard from '@/components/PageHeaderCard';
+import HeadingBodyText from '@/components/HeadingBodyText';
+import OutlineButton from '@/components/OutlineButton';
 
 interface cardProps {
   picture: string;
   cardName: string;
   cardText: string;
+  link: string;
 }
 
-function AboutUsCard({picture, cardName, cardText}: cardProps) {
+function AboutUsCard({picture, cardName, cardText,link}: cardProps) {
   return (
-      <Card className='light-wight' variant='plain' sx={{ width:'585px', height:'566px', boxShadow: 3 }}>
+      <Card className='shadow-hover' variant='plain' sx={{ width: {xs: '90%'}}}>
         <CardOverflow>
           <AspectRatio ratio='2'>
             <Image 
             src={picture}
             alt=''
+            fill
             />
           </AspectRatio>
         </CardOverflow>
 
         <CardContent>
           <Stack direction='column' alignItems='center'>
-            <Typography fontSize='30px' pb={3} pt={2} fontWeight='530'
-              sx={{textAlign:'center'}}>
+            <Typography level='h2'
+              textAlign='center'>
               {cardName}
             </Typography>
-            <Typography fontSize='16px' px={2} fontWeight='250'
-              sx={{textAlign:'center'}}>
+            <Typography level='body' pb={3}
+              textAlign='center'>
               {cardText}
             </Typography>
+            <Box sx={{ mb: 3 }}> 
+            <OutlineButton text='Learn More' link={link} />
+          </Box>
           </Stack>
         </CardContent>
       </Card>
@@ -45,42 +51,54 @@ export default function AboutUs() {
                           and interpersonal development. Our society provides a supportive network \n \
                           for all our members, whether past, present or future students, to advocate \n \
                           gender acceptance and equality in all facets of the engineering industry.'
-
-
             
   return (
     <Sheet>
-    <Stack>
-      <PageHeaderCard imagePath={'/about-us/header.jpg'} pageTitle={'About Us'}/>
-    </Stack>
-      <center>
-      <Typography level='h3' fontSize='30px' className='graphite' py={5} sx={{textAlign:'center'}}>
-          About WIESoc
-        </Typography>
-        <Typography fontSize='20px' pb={10} px={18}>
-          {aboutWIEsocText}
-        </Typography>
-      </center>
+      <Stack justifyContent='center'>
+        <PageHeaderCard imagePath={'/about-us/header.jpg'} pageTitle={'About Us'}/>
+      </Stack>
+      <HeadingBodyText heading='About WIESoc' body={aboutWIEsocText} color='graphite'/>
       <Sheet>
-        <Box className='bg-medium-blue' sx={{height: 744, width: '100%'}}>
-        <Typography level='h4' fontSize='30px' className='light-white' pb={3} pt={3} sx={{textAlign: 'center'}}>
-            What We Do 
+        <Box className='bg-medium-blue' sx={{height: '100%', width: '100%'}}>
+          <Typography level='h1' className='white' textAlign='center' pt={5} >
+              What We Do 
           </Typography>
-        <Stack direction='row' spacing={8} pb={2} alignItems='center' justifyContent='center'>
-          <AboutUsCard picture='/eventsCard.png' 
-                      cardName='Events' 
-                      cardText='WIESoc hold many events throughout the year, 
-                          with a great mix of industry and social events. Come and 
-                          join us for our upcoming events'
-          />
-
-
-          <AboutUsCard picture='/programsCard.png' 
-                      cardName='Programs' 
-                      cardText='Our Industry Mentoring Program and Protege Program 
-                          can cater to you personal and professional development'
-          />           
-        </Stack>
+          <Grid container 
+                    justifyContent='flex-end'
+                    sx={{ 'width': {xs: '50%', sm: '100%', md: '100%', lg: '100%', xl: '100%'}, pb:8 }}
+                    pb={2}
+                    alignItems='center'
+          >
+            <Grid
+              xs={24} sm={12} md={6}
+              display='flex'
+              justifyContent='center'
+              alignItems='center'
+              pb={5}
+            >
+              <AboutUsCard picture='/eventsCard.png' 
+                        cardName='Events' 
+                        cardText='WIESoc hold many events throughout the year, 
+                            with a great mix of industry and social events. Come and 
+                            join us for our upcoming events'
+                        link='/events'
+              />
+            </Grid>
+            <Grid
+              xs={24} sm={12} md={6}
+              display='flex'
+              justifyContent='center'
+              alignItems='center'
+              pb={5}
+            >
+              <AboutUsCard picture='/programsCard.png' 
+                        cardName='Programs' 
+                        cardText='Our Industry Mentoring Program and Protege Program 
+                            can cater to you personal and professional development'
+                        link='/programs'
+              />    
+            </Grid>
+          </Grid>
         </Box>
       </Sheet>
     </Sheet>
