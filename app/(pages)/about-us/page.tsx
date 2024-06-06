@@ -65,7 +65,7 @@ export default function AboutUs() {
           </Typography>
           <Grid container 
                     justifyContent='flex-end'
-                    sx={{ 'width': {xs: '50%', sm: '100%', md: '100%', lg: '100%', xl: '100%'}, pb:8 }}
+                    sx={{ 'width': {xs: '100%', sm: '100%'} }}
                     pb={2}
                     alignItems='center'
           >
