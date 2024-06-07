@@ -1,8 +1,7 @@
 import {AspectRatio, Box, Stack, Typography, Grid} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
-import HeadingBodyText from '@/components/HeadingBodyText';
-import EventsCard from '@/components/EventsCard';
+import EventsCarousel from '@/components/Carousel/EventsCarousel';
 
 function CoverImage() {
   return (
@@ -67,41 +66,12 @@ function AboutUsOverview() {
   );
 }
 
-function EventsCarousel() {
-  const eventText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
-  return (
-    <Box className='bg-medium-blue'>
-      <HeadingBodyText heading='Upcoming Events' body={eventText} color='light-white'/>
-      <Box sx={{display: 'flex', justifyContent: 'center'}}>
-        <Stack
-          width={{xs: '90%', sm: '90%', md: '80%', lg: '70%', xl: '60%'}}
-          direction='row'
-          pb={10}
-          spacing={3}
-          sx={{
-            overflow: 'scroll',
-            scrollSnapType: 'x mandatory',
-            '& > *': {
-              scrollSnapAlign: 'start',
-            },
-            '::-webkit-scrollbar': { display: 'none'}
-          }}
-        >
-          {Array(6).fill(0).map((_, index) => (
-            <EventsCard key={index}/>
-          ))}
-        </Stack>
-      </Box>
-    </Box>
-  );
-}
-
 export default function Home() {
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview/>
-      <EventsCarousel/>
+      <EventsCarousel heading='Upcoming Events' body='WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!' slides={Array(6).fill(0)}/>
     </Box>
   );
 }
