@@ -1,48 +1,46 @@
-import { Stack, Box, Typography, Card, CardOverflow, Grid, AspectRatio, CardContent,Sheet } from '@mui/joy';
+import {AspectRatio, Card, CardContent, CardOverflow, Grid, Sheet, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import OutlineButton from '@/components/OutlineButton';
 
 interface cardProps {
-  picture: string;
+  image: string;
   cardName: string;
   cardText: string;
   link: string;
 }
 
-function AboutUsCard({picture, cardName, cardText,link}: cardProps) {
-  return (
-      <Card className='shadow-hover' variant='plain' sx={{ width: {xs: '90%'}, height: { md:'600px'}}}>
-        <CardOverflow>
-          <AspectRatio ratio='2'>
-            <Image 
-            src={picture}
-            alt=''
+function AboutUsCard({image, cardName, cardText, link}: cardProps) {
+  return (<Card className='shadow-hover' variant='plain'
+                sx={{width: '100%', height: {sm: '500px', md: '540px', lg: '580px'}}}>
+      <CardOverflow>
+        <AspectRatio ratio='2'>
+          <Image
+            src={image}
+            alt='people'
             fill
-            />
-          </AspectRatio>
-        </CardOverflow>
+          />
+        </AspectRatio>
+      </CardOverflow>
 
-        <CardContent>
-          <Stack direction='column' alignItems='center'>
-            <Typography level='h2'
-              textAlign='center'>
-              {cardName}
-            </Typography>
-            <Typography level='body' pb={3}
-              textAlign='center'>
-              {cardText}
-            </Typography>
-            <Box sx={{ mb: 3 }}> 
-            <OutlineButton text='Learn More' link={link} />
-          </Box>
+      <CardContent>
+        <Stack direction='column' alignItems='center' sx={{height: '100%'}} px={1}>
+          <Typography level='h2' my={3} textAlign='center'>
+            {cardName}
+          </Typography>
+          <Typography level='body' textAlign='center'>
+            {cardText}
+          </Typography>
+          <Stack py={3} direction='column' justifyContent='flex-end' sx={{height: '100%'}}>
+            <OutlineButton text='Learn More' link={link}/>
           </Stack>
-        </CardContent>
-      </Card>
-  );
+        </Stack>
+      </CardContent>
+    </Card>);
 
 }
+
 export default function AboutUs() {
 
   const aboutWIEsocText = 'We are a UNSW student-run society that facilitates members from all \
@@ -51,51 +49,50 @@ export default function AboutUs() {
                           and interpersonal development. Our society provides a supportive network \
                           for all our members, whether past, present or future students, to advocate \
                           gender acceptance and equality in all facets of the engineering industry.'
-            
-  return (
-    <Sheet>
+
+  return (<Sheet>
       <Stack justifyContent='center'>
         <PageHeaderCard imagePath={'/about-us/header.jpg'} pageTitle={'About Us'}/>
       </Stack>
       <HeadingBodyText heading='About WIESoc' body={aboutWIEsocText} color='graphite'/>
       <Sheet>
-        <Stack className='bg-medium-blue' sx={{height: '100%', width: '100%'}} justifyContent='center'>
-          <Typography level='h1' className='white' textAlign='center' pt={5} >
-              What We Do 
+        <Stack className='bg-medium-blue' sx={{height: '100%', width: '100%'}} alignItems='center' pb={10}>
+          <Typography level='h1' className='white' textAlign='center' py={2}>
+            What We Do
           </Typography>
-          <Grid container 
-                    justifyContent='flex-end'
-                    sx={{ 'width': '100%' }}
-                    pb={2}
-                    alignItems='center'
+          <Grid container
+                spacing={10}
+                justifyContent='flex-end'
+                sx={{width: {xs: '100%', md: '90%'}}}
+                alignItems='center'
           >
             <Grid
-              xs={24} sm={12} md={6}
+              xs={24} sm={6} md={6}
               display='flex'
               justifyContent='center'
               pb={5}
             >
-              <AboutUsCard picture='/eventsCard.png' 
-                        cardName='Events' 
-                        cardText='WIESoc hold many events throughout the year, 
+              <AboutUsCard image='/eventsCard.png'
+                           cardName='Events'
+                           cardText='WIESoc hold many events throughout the year,
                             with a great mix of industry and social events. Come and 
                             join us for our upcoming events'
-                        link='/events'
+                           link='/events'
               />
             </Grid>
             <Grid
-              xs={24} sm={12} md={6}
+              xs={24} sm={6} md={6}
               display='flex'
               justifyContent='center'
               alignItems='center'
               pb={5}
             >
-              <AboutUsCard picture='/programsCard.png' 
-                        cardName='Programs' 
-                        cardText='Our Industry Mentoring Program and Protege Program 
+              <AboutUsCard image='/programsCard.png'
+                           cardName='Programs'
+                           cardText='Our Industry Mentoring Program and Protege Program
                             can cater to you personal and professional development'
-                        link='/programs'
-              />    
+                           link='/programs'
+              />
             </Grid>
           </Grid>
         </Stack>
