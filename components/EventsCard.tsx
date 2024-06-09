@@ -4,7 +4,6 @@ import AspectRatio from '@mui/joy/AspectRatio';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
-import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import Button from '@mui/joy/Button';
@@ -20,10 +19,10 @@ export default function EventsCard() {
     <Card
       variant='outlined'
       className='shadow-hover border-round'
-      sx={{width: '600px'}}
+      sx={{minWidth: '300px', maxWidth: '600px'}}
     >
       <CardOverflow>
-        <AspectRatio objectFit='contain' sx={{ minWidth: '300px' }}>
+        <AspectRatio objectFit='contain'>
           <Image src={'/event_banner.JPG'} alt={'group of people'} fill/>
         </AspectRatio>
       </CardOverflow>
@@ -38,7 +37,7 @@ export default function EventsCard() {
             startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
             className='bg-purple button-border-round'
             >
-            <Typography p={0.5}>
+            <Typography level='subtitle' className='white' p={0.5}>
               View Event
             </Typography>
           </Button>

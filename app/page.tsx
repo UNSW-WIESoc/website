@@ -40,8 +40,8 @@ function CoverImage() {
 }
 
 function AboutUsOverview() {
-  const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n\n \
-  We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.'
+  const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n \
+  We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n'
 
   return (
     <Box mx='auto' my={15} width='1000px' height='100%'>
@@ -67,11 +67,12 @@ function AboutUsOverview() {
 }
 
 export default function Home() {
+  const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview/>
-      <EventsCarousel heading='Upcoming Events' body='WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!' slides={Array(6).fill(0)}/>
+      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={Array(6).fill(0)} size='large'/>
     </Box>
   );
 }

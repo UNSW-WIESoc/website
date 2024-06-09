@@ -1,14 +1,10 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback } from 'react';
 import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined';
-import IconButton from '@mui/joy/IconButton';
 import { Box } from '@mui/joy';
 
 export const usePrevNextButtons = (emblaApi: any, onButtonClick: any) => {
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
-
   const onPrevButtonClick = useCallback(() => {
     if (!emblaApi) return
     emblaApi.scrollPrev()
@@ -21,38 +17,28 @@ export const usePrevNextButtons = (emblaApi: any, onButtonClick: any) => {
     if (onButtonClick) onButtonClick(emblaApi)
   }, [emblaApi, onButtonClick])
 
-  const onSelect = useCallback((emblaApi: { canScrollPrev: () => any; canScrollNext: () => any; }) => {
-    setPrevBtnDisabled(!emblaApi.canScrollPrev())
-    setNextBtnDisabled(!emblaApi.canScrollNext())
-  }, [])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    onSelect(emblaApi)
-    emblaApi.on('reInit', onSelect).on('select', onSelect)
-  }, [emblaApi, onSelect])
-
   return {
-    prevBtnDisabled,
-    nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick
   }
 }
 
-export function PrevButton(onClick: any, disabled: boolean) {
-  return (
-    <Box p={1} sx={{cursor: 'pointer'}} onClick={onClick} aria-label='Previous Button'>
-      <ExpandCircleDownOutlinedIcon className='light-white' sx={{transform: 'rotate(0.25turn)', fontSize: '3rem'}}/>
-    </Box>
-  )
+type ArrowButtonProps = {
+  type: 'prev' | 'next';
+  onButtonClick: () => void;
 }
 
-export function NextButton(onClick: any, disabled: boolean) {
+export function CarouselArrowButton({type, onButtonClick} : ArrowButtonProps) {
+  const rotation = type == 'prev' ? 'rotate(0.25turn)' : 'rotate(-0.25turn)'
   return (
-    <Box p={1} sx={{cursor: 'pointer'}} onClick={onClick} aria-label='Previous Button' >
-    <ExpandCircleDownOutlinedIcon className='light-white' sx={{transform: 'rotate(-0.25turn)', fontSize: '3rem'}}/>
-  </Box>
+    <Box
+      p={5}
+      display={{xs: 'none', sm: 'none', md: 'block'}}
+      sx={{cursor: 'pointer'}}
+      onClick={onButtonClick}
+      aria-label={type == 'prev' ? 'previous-button' : 'next-button'}
+    >
+      <ExpandCircleDownOutlinedIcon className='light-white' sx={{transform: rotation, fontSize: '3rem'}}/>
+    </Box>
   )
 }
