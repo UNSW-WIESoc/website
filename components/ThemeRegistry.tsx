@@ -12,6 +12,7 @@ declare module '@mui/joy/styles' {
     body: true;
     subtitle: true;
     'subtitle-light': true;
+    'h2-blue': true;
   }
 }
 
@@ -109,7 +110,14 @@ export default function ThemeRegistry({
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.4px'
-      }
+      },
+      'h2-blue': {
+        fontSize: '45px',
+        fontWeight: '550',
+        color: '#3C639A',
+        textAlign: 'center',
+        letterSpacing: '0.43px'
+      },
     },
   });
   
