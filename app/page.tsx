@@ -1,4 +1,4 @@
-import {AspectRatio, Box, Stack, Typography, Grid} from '@mui/joy';
+import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
 import EventsCarousel from '@/components/Carousel/EventsCarousel';
