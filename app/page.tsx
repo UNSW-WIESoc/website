@@ -3,6 +3,7 @@ import PersonIcon from '@mui/icons-material/Groups';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
 import OutlineButton from '@/components/OutlineButton';
+import HorizontalLine from "@/components/HorizontalLine";
 
 function CoverImage() {
   return (
@@ -71,26 +72,50 @@ function AboutUsOverview() {
 
 function SponsorsPreview() {
   return (
-    <Box mx='auto'>
-      <Box>
-        <Typography level='h4'>MEET OUR SPONSORS</Typography>
+      <Box mx='auto' textAlign='center' width='100%' mb={10}>
+          <HorizontalLine color='#93AED3' height={2} width={1000}/>
+          <Box m={3}>
+              <Typography level='subtitle'>MEET OUR SPONSORS</Typography>
+          </Box>
+          <Stack direction='row' spacing={5} justifyContent='center' alignItems='center' my={5}>
+              <Box className='relative' style={{width: '200px', height: 'auto'}}>
+                  <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200}
+                         height={100}/>
+              </Box>
+              <Box className='relative' style={{width: '200px', height: 'auto'}}>
+                  <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={200} height={100}/>
+              </Box>
+              <Box className='relative' style={{width: '200px', height: 'auto'}}>
+                  <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={200}
+                         height={100}/>
+              </Box>
+              <Box className='relative' style={{width: '200px', height: 'auto'}}>
+                  <Image src={'/sponsors/sydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={200}
+                         height={100}/>
+              </Box>
+          </Stack>
+          <Box sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'relative',
+              width: '100%'
+          }}>
+              <Box sx={{ position: 'absolute', zIndex: 10 }}>
+                  <OutlineButton text='View All' link='/sponsors'/>
+              </Box>
+              <HorizontalLine color='#93AED3' height={2} width={1000}/>
+          </Box>
       </Box>
-      <Stack direction='row' spacing={5}>
-        <Image src={'/landing-page/sponsors_logo_atlassian.svg'} alt='Atlassian' width='100' height='100' />
-        <Image src={'/landing-page/sponsors_logo_janestreet.svg'} alt='Jane Street' width='100' height='100' />
-        <Image src={'/landing-page/sponsors_logo_sydneywater.svg'} alt='Sydney Water' width='100' height='100' />
-      </Stack>
-      <OutlineButton text='Learn More' link='/sponsors' />
-    </Box>
   )
 }
 
 export default function Home() {
-  return (
-    <Box justifyContent='center'>
-      <CoverImage/>
-      <AboutUsOverview />
-      <SponsorsPreview />
-    </Box>
-  );
+    return (
+        <Box justifyContent='center'>
+            <CoverImage/>
+            <AboutUsOverview/>
+            <SponsorsPreview/>
+        </Box>
+    );
 }
