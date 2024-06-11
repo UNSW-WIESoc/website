@@ -47,7 +47,7 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
               <Box
                 mr={2}
                 sx={{flex: size == 'large'
-                    ? {xs: '0 0 350px', sm: '0 0 400px', md: '0 0 500px', lg: '0 0 600px'}
+                    ? {xs: '0 0 300px', sm: '0 0 400px', md: '0 0 500px', lg: '0 0 600px'}
                     : '0 0 300px'
                 }}>
                 <EventsCard key={index}/>
