@@ -1,7 +1,7 @@
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
-import PersonIcon from '@mui/icons-material/Groups';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
+import EventsCarousel from '@/components/Carousel/EventsCarousel';
 
 function CoverImage() {
   return (
@@ -43,8 +43,6 @@ function AboutUsOverview() {
   const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n \
   We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n'
 
-  const stat1 = '2000+\nmembers'
-
   return (
     <Box mx='auto' my={15} width='1000px' height='100%'>
       <Typography level='h1' textAlign={'left'}>About Us</Typography>
@@ -69,10 +67,12 @@ function AboutUsOverview() {
 }
 
 export default function Home() {
+  const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview/>
+      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={Array(6).fill(0)} size='large'/>
     </Box>
   );
 }

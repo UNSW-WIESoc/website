@@ -81,7 +81,8 @@ export default function ThemeRegistry({
         fontWeight: '400',
         color: '#33373D',
         letterSpacing: '0.4px',
-        lineHeight: '1.7'
+        lineHeight: '1.7',
+        whiteSpace: 'pre-line'
       },
       'subtitle-lg': {
         fontSize: '1.2rem',
@@ -95,7 +96,8 @@ export default function ThemeRegistry({
         fontWeight: '400',
         color: '#33373D',
         letterSpacing: '0.4px',
-        lineHeight: '1.7'
+        lineHeight: '1.7',
+        whiteSpace: 'pre-line'
       },
       subtitle: {
         fontSize: '1rem',
