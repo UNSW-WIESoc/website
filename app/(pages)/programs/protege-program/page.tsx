@@ -23,7 +23,7 @@ export default function ProtegeProgram() {
         <Stack direction='row' spacing={3} sx={{ margin: '0 auto' }}>
           <Stack direction='column' spacing={2} sx={{ width: '50%' }}>
             <Box>
-              <Image src={'/programs/protege-program/Spoons.jpg'} alt='icon' height={300} width={450}/>
+              <Image src={'/programs/protege-program/MeetOthers.svg'} alt='icon' height={422} width={567}/>
             </Box>
             <Box>
               <Typography level='h4' sx={{ mb: 1 }}>
@@ -34,7 +34,7 @@ export default function ProtegeProgram() {
               </Typography>
             </Box>
             <Box>
-              Image
+              <Image src={'/programs/protege-program/FosterFriendships.svg'} alt='icon' height={422} width={567}/>
             </Box>
           </Stack>
           <Stack direction='column' spacing={2} sx={{ width: '50%' }}>
@@ -47,7 +47,7 @@ export default function ProtegeProgram() {
               </Typography>
             </Box>
             <Box>
-              Image
+              <Image src={'/programs/protege-program/EaseTheTransition.svg'} alt='icon' height={422} width={567}/>
             </Box>
             <Box>
               <Typography level='h4' sx={{ mb: 1 }}>
