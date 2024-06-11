@@ -2,6 +2,7 @@ import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import PersonIcon from '@mui/icons-material/Groups';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
+import ProgramsComponent from '@/components/ProgramsComponent';
 
 function CoverImage() {
   return (
@@ -68,11 +69,28 @@ function AboutUsOverview() {
   );
 }
 
+function ProgramsOverview() {
+  return (
+    <Stack
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={4} //double check later - randomly guessed it 
+        paddingBottom='120px' //double check later - randomly guessed it 
+      >
+        <ProgramsComponent frontTitle="Industry Mentoring Program" frontImageSrc="/landing-page/Industry_Mentoring_Program.svg" backContent="Back content" />
+        <ProgramsComponent frontTitle="WIE Connect" frontImageSrc="/landing-page/WIE_Connect.svg" backContent="Back content" />
+      </Stack>
+  );
+}
+
+
 export default function Home() {
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview/>
+      <ProgramsOverview/>
     </Box>
   );
 }
