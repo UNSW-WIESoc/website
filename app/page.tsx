@@ -72,10 +72,12 @@ function AboutUsOverview() {
 
 function SponsorsPreview() {
   return (
-    <Box mx='auto' textAlign='center' width='100%' mb={10}>
-      <HorizontalLine color='#93AED3' height='2' width='1000'/>
-      <Box m={3}>
-        <Typography level='subtitle'>MEET OUR SPONSORS</Typography>
+    <Box mx='auto' textAlign='center' width='100%' mb={10} justifyContent='center'>
+      <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <HorizontalLine color='#93AED3' height={1} width={1000} />
+      </Box>
+      <Box m={2}>
+        <Typography level='subtitle-lg'>MEET OUR SPONSORS</Typography>
       </Box>
       <Stack direction='row' spacing={10} justifyContent='center' alignItems='center' my={5}>
         <Box className='relative' sx={{width: '150', height: 'auto'}}>
@@ -98,11 +100,11 @@ function SponsorsPreview() {
           alignItems: 'center',
           position: 'relative',
           width: '100%'
-      }}>
-        <Box sx={{ position: 'absolute', zIndex: 10 }}>
-          <OutlineButton text='View All' link='/sponsors'/>
+        }}>
+        <Box sx={{ position: 'absolute', zIndex: 5 }}>
+          <OutlineButton text='View All' link='/sponsors' />
         </Box>
-        <HorizontalLine color='#93AED3' height='2' width='1000'/>
+        <HorizontalLine color='#93AED3' height={1} width={1000} />
       </Box>
     </Box>
   )
