@@ -72,41 +72,39 @@ function AboutUsOverview() {
 
 function SponsorsPreview() {
   return (
-      <Box mx='auto' textAlign='center' width='100%' mb={10}>
-          <HorizontalLine color='#93AED3' height={2} width={1000}/>
-          <Box m={3}>
-              <Typography level='subtitle'>MEET OUR SPONSORS</Typography>
-          </Box>
-          <Stack direction='row' spacing={5} justifyContent='center' alignItems='center' my={5}>
-              <Box className='relative' style={{width: '200px', height: 'auto'}}>
-                  <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200}
-                         height={100}/>
-              </Box>
-              <Box className='relative' style={{width: '200px', height: 'auto'}}>
-                  <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={200} height={100}/>
-              </Box>
-              <Box className='relative' style={{width: '200px', height: 'auto'}}>
-                  <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={200}
-                         height={100}/>
-              </Box>
-              <Box className='relative' style={{width: '200px', height: 'auto'}}>
-                  <Image src={'/sponsors/sydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={200}
-                         height={100}/>
-              </Box>
-          </Stack>
-          <Box sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              position: 'relative',
-              width: '100%'
-          }}>
-              <Box sx={{ position: 'absolute', zIndex: 10 }}>
-                  <OutlineButton text='View All' link='/sponsors'/>
-              </Box>
-              <HorizontalLine color='#93AED3' height={2} width={1000}/>
-          </Box>
+    <Box mx='auto' textAlign='center' width='100%' mb={10}>
+      <HorizontalLine color='#93AED3' height='2' width='1000'/>
+      <Box m={3}>
+        <Typography level='subtitle'>MEET OUR SPONSORS</Typography>
       </Box>
+      <Stack direction='row' spacing={10} justifyContent='center' alignItems='center' my={5}>
+        <Box className='relative' sx={{width: '150', height: 'auto'}}>
+          <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
+        </Box>
+        <Box className='relative' sx={{width: '150', height: 'auto'}}>
+          <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
+        </Box>
+        <Box className='relative' sx={{width: '100', height: 'auto'}}>
+          <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={150} height={100} />
+        </Box>
+        <Box className='relative' sx={{width: '150', height: 'auto'}}>
+          <Image src={'/sponsors/sydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={100} height={75} />
+        </Box>
+      </Stack>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          position: 'relative',
+          width: '100%'
+      }}>
+        <Box sx={{ position: 'absolute', zIndex: 10 }}>
+          <OutlineButton text='View All' link='/sponsors'/>
+        </Box>
+        <HorizontalLine color='#93AED3' height='2' width='1000'/>
+      </Box>
+    </Box>
   )
 }
 

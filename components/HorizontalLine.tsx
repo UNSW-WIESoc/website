@@ -1,4 +1,10 @@
-export default function HorizontalLine({ color, height, width }) {
+export interface HorizontalLineProps {
+  color: string;
+  height: string;
+  width: string
+}
+
+export default function HorizontalLine({ color, height, width }: HorizontalLineProps) {
   return (
     <hr
       style={{
