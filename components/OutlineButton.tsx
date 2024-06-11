@@ -8,8 +8,8 @@ interface OutlineButtonProps {
 
 export default function OutlineButton({text, link}: OutlineButtonProps) {
   return (<Link href={link} passHref>
-      <Button variant='outlined' className='medium-blue'
-              sx={{'border-color': '#93AED3', 'border-radius': '20px', 'border-width': '2px'}}>
+      <Button variant='outlined' className='medium-blue button-border-round'
+              sx={{'borderColor': '#93AED3', 'borderWidth': '2px'}}>
         <Typography level='subtitle' className='medium-blue' px={1}>
           {text}
         </Typography>
