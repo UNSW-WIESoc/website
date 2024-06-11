@@ -78,8 +78,51 @@ function ProgramsOverview() {
         spacing={4} //double check later - randomly guessed it 
         paddingBottom='120px' //double check later - randomly guessed it 
       >
-        <ProgramsComponent frontTitle="Industry Mentoring Program" frontImageSrc="/landing-page/Industry_Mentoring_Program.svg" backContent="Back content" />
-        <ProgramsComponent frontTitle="WIE Connect" frontImageSrc="/landing-page/WIE_Connect.svg" backContent="Back content" />
+        <ProgramsComponent 
+          frontTitle="Industry Mentoring Program" 
+          frontImageSrc="/landing-page/Industry_Mentoring_Program.svg" 
+          backContent={[
+            {
+              icon: "/programs/Graduate.svg",
+              iconText: "Student Mentors",
+            },
+            {
+              icon: "/programs/Friendship.svg",
+              iconText: "Foster Friendships",
+            },
+            {
+              icon: "/programs/Location.svg",
+              iconText: "Checkpoint Events",
+            },
+            {
+              icon: "/programs/BookStack.svg",
+              iconText: "Settle into University",
+            },
+          ]}
+          link=''
+          description='This program helps new students adapt to engineering by pairing them with older student mentors.'
+        />
+
+        <ProgramsComponent 
+          frontTitle="WIE Connect" 
+          frontImageSrc="/landing-page/WIE_Connect.svg" 
+          backContent={[
+            {
+              icon: "/programs/Graduate.svg",
+              iconText: "Student Mentors",
+            },
+            {
+              icon: "/programs/Friendship.svg",
+              iconText: "Foster Friendships",
+            },
+            {
+              icon: "/programs/Location.svg",
+              iconText: "Checkpoint Events",
+            },
+          ]}
+          link=''
+          description='hello'
+        />
       </Stack>
   );
 }
