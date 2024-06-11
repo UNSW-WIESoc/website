@@ -71,7 +71,23 @@ function AboutUsOverview() {
 
 function ProgramsOverview() {
   return (
-    <Stack
+    <Box
+      style={{ 
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}
+    >
+      <Typography className={'graphite'} level='h1'>
+        Programs
+      </Typography>
+      <Typography className={'graphite'} level='body'
+        style={{ textAlign: 'center',
+          paddingBottom: '40px' //double check later - randomly guessed it 
+        }}
+      >
+        Our Industry Mentoring Program and Protege Program can cater to your personal and professional development.
+      </Typography>
+      <Stack
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -109,21 +125,23 @@ function ProgramsOverview() {
           backContent={[
             {
               icon: "/programs/Graduate.svg",
-              iconText: "Student Mentors",
+              iconText: "not sure",
             },
             {
               icon: "/programs/Friendship.svg",
-              iconText: "Foster Friendships",
+              iconText: "which icons",
             },
             {
               icon: "/programs/Location.svg",
-              iconText: "Checkpoint Events",
+              iconText: "go here",
             },
           ]}
           link=''
-          description='hello'
+          description='hello world'
         />
       </Stack>
+    </Box>
+    
   );
 }
 
