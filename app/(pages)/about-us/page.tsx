@@ -1,8 +1,9 @@
-import {AspectRatio, Card, CardContent, CardOverflow, Grid, Sheet, Stack, Typography} from '@mui/joy';
+import {AspectRatio, Card, CardContent, CardOverflow, Grid, Sheet, Stack, Typography, Container} from '@mui/joy';
 import Image from 'next/image';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import OutlineButton from '@/components/OutlineButton';
+import { BorderRight } from '@mui/icons-material';
 
 interface cardProps {
   image: string;
@@ -10,6 +11,9 @@ interface cardProps {
   cardText: string;
   link: string;
 }
+
+const teamRoles = ['President', 'Secretary', 'Treasurer', 'EDI Officer', 'Arc Delegate', 'VP of Events', 'VP of Public Relations', 'VP of IT', 'VP of HR'];
+const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashishtha', 'Nityaa Jaidka', 'Kieren Nguyen', 'Sophia De Bellis', 'Rebecca Hsu', 'Tara Hercz'];
 
 function AboutUsCard({image, cardName, cardText, link}: cardProps) {
   return (<Card className='shadow-hover' variant='plain'
@@ -39,6 +43,35 @@ function AboutUsCard({image, cardName, cardText, link}: cardProps) {
       </CardContent>
     </Card>);
 
+}
+
+function OurTeamProfiles() {
+  return(
+    <Container sx={{width: '75%', paddingBottom: '20%'}}>
+      <Grid
+      container
+      spacing={{ xs: 2, md: 2 }}
+      columns={{ xs: 1, sm: 3, md: 3 }}
+      sx={{ flexGrow: 1 }}
+    >
+      {Array.from(Array(9)).map((_, index) => (
+        <Grid xs={1} sm={1} md={1} key={index}>
+          <Container 
+              sx={{width:'90%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', paddingBottom: '20%'}}>
+            <Image src={'/grey.svg'} alt='' width={200} height={200} layout="responsive"
+                style={{borderRadius: '50%', border: '1px, solid, black'}}/>
+            <Typography level='subtitle' className='graphite' textAlign='center' pt={3}>
+              {teamRoles[index]}
+            </Typography>
+            <Typography level='subtitle-light' className='graphite' textAlign='center'>
+              {memberNames[index]}
+            </Typography>
+          </Container>
+        </Grid>
+      ))}
+    </Grid>
+    </Container>
+  );
 }
 
 export default function AboutUs() {
@@ -96,6 +129,17 @@ export default function AboutUs() {
             </Grid>
           </Grid>
         </Stack>
+      </Sheet>
+      <Sheet>
+        <Typography level='h1' className='graphite' textAlign='center' py={2} sx={{marginBottom: 0}}>
+          Our Team
+        </Typography>
+        <Typography level='body' className='graphite' textAlign='center' pb={7}>
+          Meet the team behind the magic!
+        </Typography>
+        <OurTeamProfiles>
+
+        </OurTeamProfiles>
       </Sheet>
     </Sheet>
 
