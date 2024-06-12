@@ -8,13 +8,11 @@ import LabelledIcon from './LabelledIcon';
 interface ProgramsComponentProps {
   frontTitle: string;
   frontImageSrc: string;
-  backContent: {
-    icon: string;
-    iconText: string;
-  }[];
+  backContent: React.ReactElement[];
   link: string;
   description: string;
 }
+
 
 export default function ProgramsComponent({ frontTitle, frontImageSrc, backContent, link, description }: ProgramsComponentProps) {
 	const [isFlipped, setIsFlipped] = useState(false);
@@ -62,7 +60,7 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
           >
             {backContent.map((item, index) => (
               <Box key={index} style={{ maxWidth: '50%', padding: '15px', }}>
-                <LabelledIcon icon={item.icon} text={item.iconText} />
+                {item}
               </Box>
             ))}
           </Box>        

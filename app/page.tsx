@@ -70,6 +70,20 @@ function AboutUsOverview() {
 }
 
 function ProgramsOverview() {
+
+  const backContent_1 = [
+    <LabelledIcon icon="/programs/Graduate.svg" text="Student Mentors" />,
+    <LabelledIcon icon="/programs/Friendship.svg" text="Foster Friendships" />,
+    <LabelledIcon icon="/programs/Location.svg" text="Checkpoint Events" />,
+    <LabelledIcon icon="/programs/BookStack.svg" text="Settle into University" />,
+  ];
+  
+  const backContent_2 = [
+    <LabelledIcon icon="/programs/Graduate.svg" text="not sure" />,
+    <LabelledIcon icon="/programs/Friendship.svg" text="which icons" />,
+    <LabelledIcon icon="/programs/Location.svg" text="go here" />,
+  ];
+
   return (
     <Box
       style={{ 
@@ -97,24 +111,7 @@ function ProgramsOverview() {
         <ProgramsComponent 
           frontTitle="Industry Mentoring Program" 
           frontImageSrc="/landing-page/Industry_Mentoring_Program.svg" 
-          backContent={[
-            {
-              icon: "/programs/Graduate.svg",
-              iconText: "Student Mentors",
-            },
-            {
-              icon: "/programs/Friendship.svg",
-              iconText: "Foster Friendships",
-            },
-            {
-              icon: "/programs/Location.svg",
-              iconText: "Checkpoint Events",
-            },
-            {
-              icon: "/programs/BookStack.svg",
-              iconText: "Settle into University",
-            },
-          ]}
+          backContent={backContent_1}
           link=''
           description='This program helps new students adapt to engineering by pairing them with older student mentors.'
         />
@@ -122,26 +119,12 @@ function ProgramsOverview() {
         <ProgramsComponent 
           frontTitle="WIE Connect" 
           frontImageSrc="/landing-page/WIE_Connect.svg" 
-          backContent={[
-            {
-              icon: "/programs/Graduate.svg",
-              iconText: "not sure",
-            },
-            {
-              icon: "/programs/Friendship.svg",
-              iconText: "which icons",
-            },
-            {
-              icon: "/programs/Location.svg",
-              iconText: "go here",
-            },
-          ]}
+          backContent={backContent_2}
           link=''
           description='hello world'
         />
       </Stack>
     </Box>
-    
   );
 }
 
