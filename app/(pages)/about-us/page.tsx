@@ -47,19 +47,22 @@ function AboutUsCard({image, cardName, cardText, link}: cardProps) {
 
 function OurTeamProfiles() {
   return(
-    <Container sx={{width: '75%', paddingBottom: '20%'}}>
+    <Container sx={{width: '80%', paddingBottom: '20%'}}>
       <Grid
       container
       spacing={{ xs: 2, md: 2 }}
-      columns={{ xs: 1, sm: 3, md: 3 }}
+      columns={{ xs: 1, sm: 2, md: 3 }}
       sx={{ flexGrow: 1 }}
     >
       {Array.from(Array(9)).map((_, index) => (
         <Grid xs={1} sm={1} md={1} key={index}>
+          <Container sx={{width: '90%'}}>
+            <AspectRatio variant='outlined' ratio='1' objectFit='cover' sx={{borderRadius: '50%'}}>
+              <Image src={'/about-us/Tara-HR.svg'} alt='member-profile-picture' layout='fill'/>
+            </AspectRatio>
+          </Container>  
           <Container 
-              sx={{width:'90%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', paddingBottom: '20%'}}>
-            <Image src={'/grey.svg'} alt='' width={200} height={200} layout="responsive"
-                style={{borderRadius: '50%', border: '1px, solid, black'}}/>
+              sx={{width:'100%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', paddingBottom: '20%'}}>
             <Typography level='subtitle' className='graphite' textAlign='center' pt={3}>
               {teamRoles[index]}
             </Typography>
