@@ -12,6 +12,7 @@ declare module '@mui/joy/styles' {
     body: true;
     subtitle: true;
     'subtitle-light': true;
+    'h2-blue': true;
   }
 }
 
@@ -80,7 +81,8 @@ export default function ThemeRegistry({
         fontWeight: '400',
         color: '#33373D',
         letterSpacing: '0.4px',
-        lineHeight: '1.7'
+        lineHeight: '1.7',
+        whiteSpace: 'pre-line'
       },
       'subtitle-lg': {
         fontSize: '1.2rem',
@@ -94,7 +96,8 @@ export default function ThemeRegistry({
         fontWeight: '400',
         color: '#33373D',
         letterSpacing: '0.4px',
-        lineHeight: '1.7'
+        lineHeight: '1.7',
+        whiteSpace: 'pre-line'
       },
       subtitle: {
         fontSize: '1rem',
@@ -109,7 +112,14 @@ export default function ThemeRegistry({
         color: '#33373D',
         textAlign: 'center',
         letterSpacing: '0.4px'
-      }
+      },
+      'h2-blue': {
+        fontSize: '45px',
+        fontWeight: '550',
+        color: '#3C639A',
+        textAlign: 'center',
+        letterSpacing: '0.43px'
+      },
     },
   });
   
