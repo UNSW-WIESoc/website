@@ -3,7 +3,6 @@ import Image from 'next/image';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import OutlineButton from '@/components/OutlineButton';
-import { BorderRight } from '@mui/icons-material';
 
 interface cardProps {
   image: string;
@@ -58,11 +57,22 @@ function OurTeamProfiles() {
         <Grid xs={1} sm={1} md={1} key={index}>
           <Container sx={{width: '90%'}}>
             <AspectRatio variant='outlined' ratio='1' objectFit='cover' sx={{borderRadius: '50%'}}>
-              <Image src={`/about-us/${memberNames[index]}.png`} alt='member-profile-picture' layout='fill' />
+              <Image
+                src={`/about-us/${memberNames[index]}.png`}
+                alt='member-profile-picture'
+                layout='fill'
+              />
             </AspectRatio>
           </Container> 
           <Container 
-              sx={{width:'100%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', paddingBottom: '20%'}}>
+            sx={{
+              width:'100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              paddingTop: '5%',
+              paddingBottom: '20%'
+            }}>
             <Typography level='subtitle' className='graphite' textAlign='center' pt={3}>
               {teamRoles[index]}
             </Typography>
