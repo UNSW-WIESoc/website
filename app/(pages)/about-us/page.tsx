@@ -13,7 +13,7 @@ interface cardProps {
 }
 
 const teamRoles = ['President', 'Secretary', 'Treasurer', 'EDI Officer', 'Arc Delegate', 'VP of Events', 'VP of Public Relations', 'VP of IT', 'VP of HR'];
-const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashishtha', 'Nityaa Jaidka', 'Kieren Nguyen', 'Sophia De Bellis', 'Rebecca Hsu', 'Tara Hercz'];
+const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashishtha', 'Melissa Thein', 'Kieren Nguyen', 'Sofia De Bellis', 'Rebecca Hsu', 'Tara Hercz'];
 
 function AboutUsCard({image, cardName, cardText, link}: cardProps) {
   return (<Card className='shadow-hover' variant='plain'
@@ -58,9 +58,9 @@ function OurTeamProfiles() {
         <Grid xs={1} sm={1} md={1} key={index}>
           <Container sx={{width: '90%'}}>
             <AspectRatio variant='outlined' ratio='1' objectFit='cover' sx={{borderRadius: '50%'}}>
-              <Image src={'/about-us/Tara-HR.svg'} alt='member-profile-picture' layout='fill'/>
+              <Image src={`/about-us/${memberNames[index]}.png`} alt='member-profile-picture' layout='fill' />
             </AspectRatio>
-          </Container>  
+          </Container> 
           <Container 
               sx={{width:'100%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', paddingBottom: '20%'}}>
             <Typography level='subtitle' className='graphite' textAlign='center' pt={3}>
