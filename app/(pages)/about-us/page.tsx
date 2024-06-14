@@ -60,7 +60,7 @@ function OurTeamProfiles() {
               <Image
                 src={`/about-us/${memberNames[index]}.png`}
                 alt='member-profile-picture'
-                layout='fill'
+                fill
               />
             </AspectRatio>
           </Container> 
