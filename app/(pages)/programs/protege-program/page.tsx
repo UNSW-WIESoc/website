@@ -15,23 +15,7 @@ export default function ProtegeProgram() {
       <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
 
       <Box sx={{ px: 10, mt: 5, mb: 20 }}>
-        <Stack direction='row' spacing={3} sx={{ margin: '0 auto' }}>
-          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
-            <Box>
-              <Image src={'/programs/protege-program/MeetOthers.svg'} alt='icon' height={422} width={567}/>
-            </Box>
-            <Box width='570px'>
-              <Typography level='h4' sx={{ mb: 1, mt: 5 }}>
-                Ease the transition
-              </Typography>
-              <Typography level='body' sx={{ mb: 12 }}>
-                The Protege Program helps ease the transition between high school and engineering at UNSW by providing an older student mentor who can help to navigate this new enviornment and overcome its challenges.
-              </Typography>
-            </Box>
-            <Box>
-              <Image src={'/programs/protege-program/FosterFriendships.svg'} alt='icon' height={381} width={570}/>
-            </Box>
-          </Stack>
+        <Stack direction={{ lg: 'column', xl: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
             <Box width='583px'>
               <Typography level='h4' sx={{ mb: 1 }}>
@@ -48,9 +32,26 @@ export default function ProtegeProgram() {
               <Typography level='h4' sx={{ mb: 1, mt: 14 }}>
                 Foster friendships
               </Typography>
-              <Typography level='body'>
+              <Typography level='body' sx={{ mb: 12 }}>
                 The Protege Program offers the chance for new female engineering students to meet and build a network with other female engineering students in first year and beyond through the course of a structured program.
               </Typography>
+            </Box>
+          </Stack>
+
+          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
+            <Box>
+              <Image src={'/programs/protege-program/MeetOthers.svg'} alt='icon' height={422} width={567}/>
+            </Box>
+            <Box width='570px'>
+              <Typography level='h4' sx={{ mb: 1, mt: 5 }}>
+                Ease the transition
+              </Typography>
+              <Typography level='body' sx={{ mb: 12 }}>
+                The Protege Program helps ease the transition between high school and engineering at UNSW by providing an older student mentor who can help to navigate this new enviornment and overcome its challenges.
+              </Typography>
+            </Box>
+            <Box>
+              <Image src={'/programs/protege-program/FosterFriendships.svg'} alt='icon' height={381} width={570}/>
             </Box>
           </Stack>
         </Stack>
