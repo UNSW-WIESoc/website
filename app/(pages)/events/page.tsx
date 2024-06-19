@@ -1,8 +1,9 @@
 import EventsCard from '@/components/EventsCard';
 
-import {Grid, Stack, Typography} from '@mui/joy';
+import {Grid, Stack, Box} from '@mui/joy';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import HeadingBodyText from '@/components/HeadingBodyText';
+import EventsCarousel from '@/components/Carousel/EventsCarousel';
 
 export default function Events() {
   return (
@@ -25,10 +26,15 @@ export default function Events() {
             justifyContent='center'
             alignItems='center'
           >
-            <EventsCard />
+            <Box flexGrow={1} justifyContent='center'>
+              <EventsCard />
+            </Box>
           </Grid>
         ))}
       </Grid>
+      
+      <EventsCarousel heading='Past Events' body='WIESoc hold many events throughout the semester, with a great mix of industry and social events.
+Browse our previous events over the past year!' slides={Array.from(Array(24)).fill(0)} size='small'/>
     </Stack>
   );
 }
