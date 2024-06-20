@@ -1,9 +1,9 @@
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
-import PersonIcon from '@mui/icons-material/Groups';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
 import OutlineButton from '@/components/OutlineButton';
 import HorizontalLine from "@/components/HorizontalLine";
+import EventsCarousel from '@/components/Carousel/EventsCarousel';
 
 function CoverImage() {
   return (
@@ -45,8 +45,6 @@ function AboutUsOverview() {
   const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n \
   We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n'
 
-  const stat1 = '2000+\nmembers'
-
   return (
     <Box mx='auto' my={15} width='1000px' height='100%'>
       <Typography level='h1' textAlign={'left'}>About Us</Typography>
@@ -80,16 +78,16 @@ function SponsorsPreview() {
         <Typography level='subtitle-lg'>MEET OUR SPONSORS</Typography>
       </Box>
       <Stack direction='row' spacing={10} justifyContent='center' alignItems='center' my={5}>
-        <Box className='relative' sx={{width: '150', height: 'auto'}}>
+        <Box className='relative' sx={{ width: '150', height: 'auto' }}>
           <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
         </Box>
-        <Box className='relative' sx={{width: '150', height: 'auto'}}>
+        <Box className='relative' sx={{ width: '150', height: 'auto' }}>
           <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
         </Box>
-        <Box className='relative' sx={{width: '100', height: 'auto'}}>
+        <Box className='relative' sx={{ width: '100', height: 'auto' }}>
           <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={150} height={100} />
         </Box>
-        <Box className='relative' sx={{width: '150', height: 'auto'}}>
+        <Box className='relative' sx={{ width: '150', height: 'auto' }}>
           <Image src={'/sponsors/sydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={100} height={75} />
         </Box>
       </Stack>
@@ -111,11 +109,13 @@ function SponsorsPreview() {
 }
 
 export default function Home() {
-    return (
-        <Box justifyContent='center'>
-            <CoverImage/>
-            <AboutUsOverview/>
-            <SponsorsPreview/>
-        </Box>
-    );
+  const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
+  return (
+    <Box justifyContent='center'>
+      <CoverImage/>
+      <AboutUsOverview />
+      <SponsorsPreview />
+      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={Array(6).fill(0)} size='large'/>
+    </Box>
+  )
 }
