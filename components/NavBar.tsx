@@ -1,9 +1,11 @@
+'use client'
 import {Sheet, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Url} from 'next/dist/shared/lib/router/router';
 import {navData, socialsData} from '@/app/data';
 import React from 'react';
+import {usePathname} from "next/navigation";
 
 interface NavProps {
   title: string;
@@ -11,13 +13,15 @@ interface NavProps {
 }
 
 function NavItem({title, navigateTo}: NavProps) {
+  const activePage = usePathname();
   return (<Stack component={Link} href={navigateTo}
                  sx={{
                    alignContent: 'center',
                    width: '100%',
                    height: '100%',
                    textDecoration: 'none',
-                   '&:hover': {bgcolor: '#D1E2F8', opacity: '40%'}
+                   borderBottom: activePage === navigateTo ? '4px solid #33373D' : 'none',
+                   '&:hover': {bgcolor: '#D1E2F8', opacity: '40%', textDecoration: "none"}
                  }}>
       <Typography
         level='subtitle-light'
