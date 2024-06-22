@@ -1,6 +1,17 @@
 'use client';
 
-import {AspectRatio, Divider, Drawer, IconButton, Link, List, ListItemButton, Sheet, Stack,} from '@mui/joy';
+import {
+  AspectRatio,
+  Divider,
+  Drawer,
+  IconButton,
+  Link,
+  List,
+  ListItemButton,
+  Sheet,
+  Stack,
+  Typography,
+} from '@mui/joy';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import React from 'react';
@@ -36,7 +47,7 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({open, setOpen}) => {
   return (<Drawer anchor='right' open={open} onClose={() => setOpen(false)}>
     <Link component={NextLink} href='/' mx='auto' my={2}>
       <AspectRatio variant='plain' ratio='15/6' objectFit='contain' sx={{width: 200}}>
-        <Image fill src='/wiesoc_logo_long.svg'  alt='logo'/>
+        <Image fill src='/wiesoc_logo_long.svg' alt='logo'/>
       </AspectRatio>
     </Link>
     <Divider/>
@@ -47,21 +58,21 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({open, setOpen}) => {
         flex: 'none', fontSize: 'xl', '& > div': {justifyContent: 'center'},
       }}
     >
-      {navData.map(({ text, href }, idx) => (
-        <ListItemButton key={idx} onClick={() => setOpen(false)} >
-          <Link component={NextLink} href={href} key={idx} underline='none' sx={{ color: 'inherit', fontSize: 'inherit' }}>
-            {text}
+      {navData.map(({text, href}, idx) => (
+        <ListItemButton className='navbar-hover' key={idx} onClick={() => setOpen(false)}>
+          <Link component={NextLink} href={href} key={idx} underline='none'
+                sx={{color: 'inherit', fontSize: 'inherit'}}>
+            <Typography level='subtitle-lg' fontWeight={400}>
+              {text}
+            </Typography>
           </Link>
-        </ListItemButton>
-      ))}
+        </ListItemButton>))}
     </List>
     <Divider/>
     <Stack direction='row' mr={2} spacing={2} justifyContent='center' py={4}>
-      {socialsData.map(({ Icon, href }, idx) => (
-        <Link key={idx} href={href} target='_blank'>
+      {socialsData.map(({Icon, href}, idx) => (<Link key={idx} href={href} target='_blank'>
           <Icon color='#33373D' width={25} height={25}/>
-        </Link>
-      ))}
+        </Link>))}
     </Stack>
   </Drawer>)
 }

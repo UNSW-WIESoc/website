@@ -14,14 +14,13 @@ interface NavProps {
 
 function NavItem({title, navigateTo}: NavProps) {
   const activePage = usePathname();
-  return (<Stack component={Link} href={navigateTo}
+  return (<Stack component={Link} href={navigateTo} className='navbar-hover'
                  sx={{
                    alignContent: 'center',
                    width: '100%',
                    height: '100%',
                    textDecoration: 'none',
                    borderBottom: activePage === navigateTo ? '4px solid #33373D' : 'none',
-                   '&:hover': {bgcolor: '#D1E2F8', opacity: '40%', textDecoration: "none"}
                  }}>
       <Typography
         level='subtitle-light'
