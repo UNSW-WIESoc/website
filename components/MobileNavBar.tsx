@@ -69,7 +69,7 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({open, setOpen}) => {
         </ListItemButton>))}
     </List>
     <Divider/>
-    <Stack direction='row' mr={2} spacing={2} justifyContent='center' py={4}>
+    <Stack direction='row' spacing={4} justifyContent='center' py={4}>
       {socialsData.map(({Icon, href}, idx) => (<Link key={idx} href={href} target='_blank'>
           <Icon color='#33373D' width={25} height={25}/>
         </Link>))}
