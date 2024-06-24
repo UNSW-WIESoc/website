@@ -1,8 +1,11 @@
+'use client'
 import {Sheet, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import Link from 'next/link';
-import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
 import {Url} from 'next/dist/shared/lib/router/router';
+import {navData, socialsData} from '@/app/data';
+import React from 'react';
+import {usePathname} from "next/navigation";
 
 interface NavProps {
   title: string;
@@ -10,13 +13,14 @@ interface NavProps {
 }
 
 function NavItem({title, navigateTo}: NavProps) {
-  return (<Stack component={Link} href={navigateTo}
+  const activePage = usePathname();
+  return (<Stack component={Link} href={navigateTo} className='navbar-hover'
                  sx={{
                    alignContent: 'center',
                    width: '100%',
                    height: '100%',
                    textDecoration: 'none',
-                   '&:hover': {bgcolor: '#D1E2F8', opacity: '40%'}
+                   borderBottom: activePage === navigateTo ? '4px solid #33373D' : 'none',
                  }}>
       <Typography
         level='subtitle-light'
@@ -28,29 +32,23 @@ function NavItem({title, navigateTo}: NavProps) {
 }
 
 export default function NavBar() {
-  return (<Sheet sx={{height: 85}}>
+  return (
+    <Sheet sx={{height: 80, 'display': {xs: 'none', lg: 'flex'}}}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2}>
         <Link href='/'>
           <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={250}/>
         </Link>
         <Stack direction='row' width='100%' height='100%' px={10}>
-          <NavItem title='About Us' navigateTo='/about-us'/>
-          <NavItem title='Events' navigateTo='/events'/>
-          <NavItem title='Programs' navigateTo='/programs'/>
-          <NavItem title='Sponsors' navigateTo='/sponsors'/>
-          <NavItem title='Careers' navigateTo='/careers'/>
-          <NavItem title='Contact Us' navigateTo='/contact-us'/>
+          {navData.map(({ text, href }, idx) => (
+            <NavItem title={text} navigateTo={href} key={idx}/>
+          ))}
         </Stack>
         <Stack direction='row' spacing={3} mx={3}>
-          <Link href='https://www.facebook.com/wieunsw/' target='_blank'>
-            <FacebookIcon color='#33373D' width={25} height={25}/>
-          </Link>
-          <Link href='https://www.instagram.com/wieunsw/?hl=en' target='_blank'>
-            <InstagramIcon color='#33373D' width={25} height={25}/>
-          </Link>
-          <Link href='https://au.linkedin.com/company/unsw-wiesoc' target='_blank'>
-            <LinkedInIcon color='#33373D' width={25} height={25}/>
-          </Link>
+          {socialsData.map(({ Icon, href }, idx) => (
+            <Link key={idx} href={href} target='_blank'>
+              <Icon color='#33373D' width={25} height={25}/>
+            </Link>
+          ))}
         </Stack>
       </Stack>
     </Sheet>)
