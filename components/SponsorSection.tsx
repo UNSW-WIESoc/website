@@ -11,12 +11,12 @@ export default function SponsorSection({ title }: SectionTitle) {
         {title}
       </Typography>
       <Box
+        mt= {2}
+        mb= {5}
         component="hr"
         sx={{
           border: 0,
           borderTop: '2px solid #93AED3',
-          mt: 2,
-          mb: 5,
           width: '100%'
         }}
       />
