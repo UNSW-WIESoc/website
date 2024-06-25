@@ -70,15 +70,17 @@ function AboutUsOverview() {
 
 function SponsorsPreview() {
   return (
-    <Box mx='auto' textAlign='center' width='100%' mb={10} justifyContent='center'>
+    <Box mx='auto' textAlign='center' width='100%' mb={10}>
       <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
         <HorizontalLine color='#93AED3' height={1} width={1000} />
       </Box>
-      <Box m={2}>
-        <Typography level='subtitle-lg'>MEET OUR SPONSORS</Typography>
-      </Box>
-      <Stack direction='row' spacing={10} justifyContent='center' alignItems='center' my={5}>
-        <Stack direction={{ sm: 'column', md: 'row' }} spacing={10}>
+      <Typography m={2} level='subtitle-lg'>MEET OUR SPONSORS</Typography>
+      
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 5, sm: 10 }} justifyContent='center' alignItems='center' my={5}>
+        <Stack
+          direction={{ sm: 'column', md: 'row' }}
+          spacing={{ xs: 5, sm: 10 }}
+        >
           <Box className='relative' sx={{ width: '150', height: 'auto' }}>
             <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
           </Box>
@@ -86,7 +88,10 @@ function SponsorsPreview() {
             <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
           </Box>
         </Stack>
-        <Stack direction={{ sm: 'column', md: 'row' }} spacing={10}>
+        <Stack
+          direction={{ sm: 'column', md: 'row' }}
+          spacing={{ xs: 5, sm: 10 }}
+        >
           <Box className='relative' sx={{ width: '100', height: 'auto' }}>
             <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={150} height={100} />
           </Box>
@@ -95,14 +100,8 @@ function SponsorsPreview() {
           </Box>
         </Stack>
       </Stack>
-      <Box mt={3}
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          position: 'relative',
-          width: '100%'
-        }}>
+
+      <Box mt={3} display='flex' justifyContent='center' alignItems='center' position='relative' width='100%'>
         <Box sx={{ position: 'absolute' }}>
           <OutlineButton text='View All' link='/sponsors' />
         </Box>
