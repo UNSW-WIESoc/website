@@ -1,8 +1,29 @@
-import {Box, Stack} from '@mui/joy';
+import {Box, Stack, Typography} from '@mui/joy';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import ProgramsCard from '@/components/ProgramsCard';
 import {IconTextProps} from '@/components/LabelledIcon';
 import HeadingBodyText from '@/components/HeadingBodyText';
+
+function Testimonials() {
+  const test1 = '"The Protégé Program was easily one of the most enjoyable and rewarding experiences at UNSW. Not only was it great to help my mentees with any queries they have, but seeing them come out of their shells and make new friends was what made this program so memorable."'
+  const test2 = '"As a WIESOC peer mentor, you forge new friendships and gain invaluable leadership skills. It meant I was able to give the first years the same support I received when I first started. It was the highlight of my week with a program full of fun challenges and competitions and a great group of people."'
+  const test3 = '"The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!"'
+  
+  return (
+    <Box textAlign='center'>
+      <Typography level='subtitle-lg'>Hear from our previous mentors and mentees</Typography>
+      {/* line */}
+      <Typography className='dark-blue' level='body'>{test1}</Typography>
+      <Typography className='dark-blue' level='subtitle'>Olivia Widjaja (Former Protege Program Mentor)</Typography>
+      {/* line */}
+      <Typography className='dark-blue' level='body'>{test2}</Typography>
+      <Typography className='dark-blue' level='subtitle'>Nicole Sroba (Former Protege Program Mentor)</Typography>
+      {/* line */}
+      <Typography className='dark-blue' level='body'>{test3}</Typography>
+      <Typography className='dark-blue' level='subtitle'>Eeman Chaudhary (Former Protege Program Mentee)</Typography>
+    </Box>
+  )
+}
 
 export default function Program() {
   const bodyText =
@@ -58,6 +79,7 @@ export default function Program() {
                       description={impDescription} icon1={impIcon1} icon2={impIcon2} icon3={impIcon3}
                       icon4={impIcon4} link='/industry-mentoring-program'/>
       </Stack>
+      <Testimonials />
     </Box>
   );
 }
