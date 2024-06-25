@@ -25,7 +25,7 @@ const premiumSponsors2 = [
 const advancedSponsors1 = [
   { src: '/sponsors/cochlear.jpg', alt: 'Cochlear' },
   { src: '/sponsors/aecom.jpg', alt: 'Aecom' },
-  { src: '/sponsors/dolby.jpg', alt: 'Dolby' },
+  { src: '/sponsors/dolby.jpg', alt: 'Dolby' }
 ];
 
 const advancedSponsors2 = [
@@ -50,7 +50,7 @@ const foundationSponsors2 = [
 
 function SponsorRows ({ images }: sponsorRows) {
   return(
-    <Grid container spacing={10} justifyContent='center'>
+    <Grid container spacing={10} justifyContent='center' mx='auto'>
       {images.map((image, index) => (
         <Grid xs={6} sm={5} md={4} lg={3} key={index}>
           <AspectRatio variant='plain' objectFit='contain'>
