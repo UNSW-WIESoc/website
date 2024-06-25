@@ -42,29 +42,37 @@ function CoverImage() {
 }
 
 function AboutUsOverview() {
-  const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n \
+  const aboutUsText = 'We are a UNSW student-run society that facilitates members from all disciplines of engineering. \n\n \
   We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n'
 
   return (
-    <Box mx='auto' my={15} width='1000px' height='100%'>
-      <Typography level='h1' textAlign={'left'}>About Us</Typography>
-      <Stack direction='row' spacing={15}>
-        <Box width='500px'>
-          <Typography level='body' pb={3}>{aboutUsText}</Typography>
-          <Stack direction='row' width='100%' height='100%' justifyContent='center' spacing={6}>
-            <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-            <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-            <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-          </Stack>
-        </Box>
-        <Box width='500px'>
-          <iframe width='100%' height='100%' src='https://www.youtube.com/embed/Tyyl9Kp-yiE?si=kk2dfErd_cJNYBbh'
-                  title='Welcome To WIESoc'
-                  allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                  referrerPolicy='strict-origin-when-cross-origin' allowFullScreen style={{border: 'none'}}></iframe>
-        </Box>
+    <Stack
+      width={{md: '90%', lg: '70%', xl: '50%'}}
+      direction={{md: 'column', lg: 'row'}} 
+      mx='auto'
+      my={15}
+      spacing={6}
+      alignItems='center'
+    >
+      <Stack width={{xs: '90%', sm: '70%', md: '60%', lg: '50%'}} spacing={3} pb={3}>
+        <Typography level='h1' textAlign={'left'}>About Us</Typography>
+        <Typography level='body'>{aboutUsText}</Typography>
+        <Stack direction='row' justifyContent='center'>
+          <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
+          <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
+          <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
+        </Stack>
       </Stack>
-    </Box>
+      <AspectRatio sx={{width: {xs: '90%', sm: '70%', md: '60%', lg: '50%'}, alignContent: 'center'}}>
+        <iframe
+          src='https://www.youtube.com/embed/Tyyl9Kp-yiE?si=kk2dfErd_cJNYBbh'
+          title='Welcome To WIESoc'
+          allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          referrerPolicy='strict-origin-when-cross-origin' allowFullScreen style={{border: 'none'}}
+        >
+        </iframe>
+      </AspectRatio>
+    </Stack>
   );
 }
 
