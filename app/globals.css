@@ -90,3 +90,8 @@ body {
 .button-border-round {
   border-radius: 20px;
 }
+
+.navbar-hover:hover {
+  background-color: #D1E2F8;
+  opacity: 40%;
+}
