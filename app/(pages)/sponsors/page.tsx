@@ -50,7 +50,7 @@ const foundationSponsors2 = [
 
 function SponsorRows ({ images }: sponsorRows) {
   return(
-    <Grid container spacing={10} justifyContent='center' mx='auto'>
+    <Grid container spacing={8} justifyContent='center' mx='auto'>
       {images.map((image, index) => (
         <Grid xs={6} sm={5} md={4} lg={3} key={index}>
           <AspectRatio variant='plain' objectFit='contain'>
@@ -68,7 +68,7 @@ export default function Sponsors() {
       <PageHeaderCard imagePath={'/sponsors/header.jpg'} pageTitle={'Sponsors'}/>
       <HeadingBodyText heading='Our Sponsors' body='WIESoc is proudly supported by the UNSW Faculty of Engineering and our industry partners.' color='graphite'/>
       <Grid container justifyContent='center'>
-        <Grid xs={6} sm={5} md={4} lg={4}>  
+        <Grid xs={7} sm={5} md={4} lg={4}>  
           <AspectRatio variant='plain' objectFit='contain'>
             <Image src="/sponsors/unsw_logo.jpg" alt="UNSW Engineering" fill/>
           </AspectRatio>
