@@ -27,7 +27,7 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
       className={'shadow border-round'}
       style={{ 
         width: '375px',
-        height: '450px',
+        height: '425px',
         overflow: 'hidden',
       }}
     >
@@ -53,7 +53,6 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
               display: 'flex', 
               flexWrap: 'wrap', 
               justifyContent: 'center', 
-              //paddingBottom: '20px',
               transform: 'scale(0.9)',
               marginTop: 'auto',
             }}
@@ -77,22 +76,25 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
         </Box>
       ) : (
         <Box>
-          <img
-            style={{
-              paddingBottom: '30px',
-            }}
-            src={frontImageSrc}
-					/>
-          <Typography
-            className={'graphite'}
-            level='body-lg' //is this the right typography? looks different to figma
-            style={{
-              textAlign: 'center',
-            }}
-          >
-            {frontTitle}
-          </Typography>
-        </Box>
+      <img
+        style={{
+          width: '100%',
+          height: '350px',
+          objectFit: 'cover',
+          paddingBottom: '30px',
+        }}
+        src={frontImageSrc}
+      />
+      <Typography
+        className={'graphite'}
+        level='body-lg'
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        {frontTitle}
+      </Typography>
+    </Box>
       )}
     </Box>
   );

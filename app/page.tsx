@@ -77,51 +77,47 @@ function ProgramsOverview() {
     <LabelledIcon icon="/programs/Location.svg" text="Checkpoint Events" />,
     <LabelledIcon icon="/programs/BookStack.svg" text="Settle into University" />,
   ];
-  
+
   const backContent_2 = [
-    <LabelledIcon icon="/programs/Graduate.svg" text="not sure" />,
-    <LabelledIcon icon="/programs/Friendship.svg" text="which icons" />,
-    <LabelledIcon icon="/programs/Location.svg" text="go here" />,
+    <LabelledIcon icon="/programs/WomanProfile.svg" text="Industry Mentors" />,
+    <LabelledIcon icon="/programs/Learning.svg" text="Develop Professionally" />,
+    <LabelledIcon icon="/programs/Location.svg" text="Checkpoint Events" />,
+    <LabelledIcon icon="/programs/ConnectedPeople.svg" text="Make Connections" />,
   ];
 
   return (
-    <Box
-      style={{ 
-        justifyContent: 'center',
-        flexDirection: 'column',
-      }}
-    >
+    <Box sx={{ 
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: { xs: 2, md: 4 },
+    }}>
       <Typography className={'graphite'} level='h1'>
         Programs
       </Typography>
-      <Typography className={'graphite'} level='body'
-        style={{ textAlign: 'center',
-          paddingBottom: '40px' //double check later - randomly guessed it 
-        }}
-      >
+      <Typography className={'graphite'} level='body' sx={{ textAlign: 'center', paddingBottom: 4 }}>
         Our Industry Mentoring Program and Protege Program can cater to your personal and professional development.
       </Typography>
       <Stack
-        direction="row"
+        direction={{ xs: 'column', md: 'row' }}
         justifyContent="center"
         alignItems="center"
-        spacing={4} //double check later - randomly guessed it 
-        paddingBottom='120px' //double check later - randomly guessed it 
+        spacing={10}
+        paddingBottom={15}
       >
         <ProgramsComponent 
-          frontTitle="Industry Mentoring Program" 
-          frontImageSrc="/landing-page/Industry_Mentoring_Program.svg" 
+          frontTitle="Protege Program" 
+          frontImageSrc="/programs/protege_card.jpg" 
           backContent={backContent_1}
           link=''
-          description='This program helps new students adapt to engineering by pairing them with older student mentors.'
+          description='This program allows international women in engineering to connect, engage and support one another.'
         />
-
         <ProgramsComponent 
-          frontTitle="WIE Connect" 
-          frontImageSrc="/landing-page/WIE_Connect.svg" 
+          frontTitle="Industry Mentoring Program" 
+          frontImageSrc="/programs/Industry_Mentoring.svg" 
           backContent={backContent_2}
           link=''
-          description='hello world'
+          description='This program helps new students adapt to engineering by pairing them with industry mentors.'
         />
       </Stack>
     </Box>
