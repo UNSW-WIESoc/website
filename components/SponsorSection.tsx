@@ -7,7 +7,7 @@ interface SectionTitle {
 export default function SponsorSection({ title }: SectionTitle) {
   return (
     <Box mt={7}>
-      <Typography level='h2-blue' >
+      <Typography level='h2-blue'>
         {title}
       </Typography>
       <Box
