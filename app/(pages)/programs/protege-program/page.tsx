@@ -15,9 +15,9 @@ export default function ProtegeProgram() {
       <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
 
       <Box sx={{ px: 10, mt: 5, mb: 20 }}>
-        <Stack direction={{ lg: 'column', xl: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
+        <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
-            <Box width='583px'>
+            <Box width={{ xl: '583px', lg: '466.4px', md: '800px', sm: '500px', xs: '300px' }}>
               <Typography level='h4' sx={{ mb: 1 }}>
                 Meet other female engineers in your field
               </Typography>
@@ -28,7 +28,7 @@ export default function ProtegeProgram() {
             <Box>
               <Image src={'/programs/protege-program/EaseTheTransition.svg'} alt='icon' height={408} width={583}/>
             </Box>
-            <Box width='583px'>
+            <Box width={{ xl: '583px', lg: '466.4px', md: '800px', sm: '500px', xs: '300px' }}>
               <Typography level='h4' sx={{ mb: 1, mt: 14 }}>
                 Foster friendships
               </Typography>
@@ -42,12 +42,12 @@ export default function ProtegeProgram() {
             <Box>
               <Image src={'/programs/protege-program/MeetOthers.svg'} alt='icon' height={422} width={567}/>
             </Box>
-            <Box width='570px'>
+            <Box width={{ xl: '570px', lg: '456px', md: '800px', sm: '500px', xs: '300px' }}>
               <Typography level='h4' sx={{ mb: 1, mt: 5 }}>
                 Ease the transition
               </Typography>
               <Typography level='body' sx={{ mb: 12 }}>
-                The Protege Program helps ease the transition between high school and engineering at UNSW by providing an older student mentor who can help to navigate this new enviornment and overcome its challenges.
+                The Protege Program helps ease the transition between high school and engineering at UNSW by providing an older student mentor who can help to navigate this new environment and overcome its challenges.
               </Typography>
             </Box>
             <Box>
