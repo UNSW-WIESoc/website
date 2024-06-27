@@ -143,15 +143,9 @@ export default function AboutUs() {
         </Stack>
       </Sheet>
       <Sheet>
-        <Typography level='h1' textAlign='center' py={2} sx={{marginBottom: 0}}>
-          Our Team
-        </Typography>
-        <Typography level='body' textAlign='center' pb={7}>
-          Meet the team behind the magic!
-        </Typography>
+        <HeadingBodyText heading='Our Team' body='Meet the team behind the magic!' color='graphite'/>
         <OurTeamProfiles/>
       </Sheet>
     </Sheet>
-
   );
 }
