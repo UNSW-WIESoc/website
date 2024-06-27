@@ -10,17 +10,23 @@ function Testimonials() {
   const test3 = '"The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!"'
   
   return (
-    <Box textAlign='center'>
-      <Typography level='subtitle-lg'>Hear from our previous mentors and mentees</Typography>
+    <Box py={10} px={5} maxWidth={1250} mx='auto' textAlign='center' alignItems='center'>
+      <Typography level='subtitle-lg' mb={5} >Hear from our previous mentors and mentees</Typography>
       {/* line */}
-      <Typography className='dark-blue' level='body'>{test1}</Typography>
-      <Typography className='dark-blue' level='subtitle'>Olivia Widjaja (Former Protege Program Mentor)</Typography>
+      <Box my={10} py={2}>
+        <Typography className='dark-blue' level='body' mb={2}>{test1}</Typography>
+        <Typography className='dark-blue' level='subtitle'>Olivia Widjaja (Former Protege Program Mentor)</Typography>
+      </Box>
       {/* line */}
-      <Typography className='dark-blue' level='body'>{test2}</Typography>
-      <Typography className='dark-blue' level='subtitle'>Nicole Sroba (Former Protege Program Mentor)</Typography>
+      <Box my={10} py={2}>
+        <Typography className='dark-blue' level='body' mb={2}>{test2}</Typography>
+        <Typography className='dark-blue' level='subtitle'>Nicole Sroba (Former Protege Program Mentor)</Typography>
+      </Box>
       {/* line */}
-      <Typography className='dark-blue' level='body'>{test3}</Typography>
-      <Typography className='dark-blue' level='subtitle'>Eeman Chaudhary (Former Protege Program Mentee)</Typography>
+      <Box my={10} py={2}>
+        <Typography className='dark-blue' level='body' mb={2}>{test3}</Typography>
+        <Typography className='dark-blue' level='subtitle'>Eeman Chaudhary (Former Protege Program Mentee)</Typography>
+      </Box>
     </Box>
   )
 }
