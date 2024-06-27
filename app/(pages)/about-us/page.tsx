@@ -11,8 +11,8 @@ interface cardProps {
   link: string;
 }
 
-const teamRoles = ['President', 'Secretary', 'Treasurer', 'EDI Officer', 'Arc Delegate', 'VP of Events', 'VP of Public Relations', 'VP of IT', 'VP of HR'];
-const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashishtha', 'Melissa Thein', 'Kieren Nguyen', 'Sofia De Bellis', 'Rebecca Hsu', 'Tara Hercz'];
+const teamRoles = ['President', 'Secretary', 'Treasurer', 'EDI Officer', 'Arc Delegate', 'VP of Events', 'VP of Public Relations', 'VP of IT', 'VP of HR', 'VP of Programs'];
+const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashishtha', 'Melissa Thein', 'Kieren Nguyen', 'Sofia De Bellis', 'Rebecca Hsu', 'Tara Hercz', 'Amar Kl'];
 
 function AboutUsCard({image, cardName, cardText, link}: cardProps) {
   return (<Card className='shadow-hover' variant='plain'
@@ -41,7 +41,6 @@ function AboutUsCard({image, cardName, cardText, link}: cardProps) {
         </Stack>
       </CardContent>
     </Card>);
-
 }
 
 function OurTeamProfiles() {
@@ -49,11 +48,11 @@ function OurTeamProfiles() {
     <Container sx={{width: '80%', paddingBottom: '20%'}}>
       <Grid
       container
-      spacing={{ xs: 2, md: 2 }}
+      spacing={{ xs: 2, md: 2 }}  
       columns={{ xs: 1, sm: 2, md: 3 }}
       sx={{ flexGrow: 1 }}
     >
-      {Array.from(Array(9)).map((_, index) => (
+      {Array.from(Array(10)).map((_, index) => (
         <Grid xs={1} sm={1} md={1} key={index}>
           <Container sx={{width: '90%'}}>
             <AspectRatio variant='outlined' ratio='1' objectFit='cover' sx={{borderRadius: '50%'}}>
@@ -64,19 +63,19 @@ function OurTeamProfiles() {
               />
             </AspectRatio>
           </Container> 
-          <Container 
+          <Container
             sx={{
+              pt: '5%',
+              pb: '20%',
               width:'100%',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              paddingTop: '5%',
-              paddingBottom: '20%'
+              alignItems: 'center'
             }}>
-            <Typography level='subtitle' className='graphite' textAlign='center' pt={3}>
+            <Typography level='subtitle' textAlign='center' pt={3}>
               {teamRoles[index]}
             </Typography>
-            <Typography level='subtitle-light' className='graphite' textAlign='center'>
+            <Typography level='subtitle-light' textAlign='center'>
               {memberNames[index]}
             </Typography>
           </Container>
@@ -144,15 +143,13 @@ export default function AboutUs() {
         </Stack>
       </Sheet>
       <Sheet>
-        <Typography level='h1' className='graphite' textAlign='center' py={2} sx={{marginBottom: 0}}>
+        <Typography level='h1' textAlign='center' py={2} sx={{marginBottom: 0}}>
           Our Team
         </Typography>
-        <Typography level='body' className='graphite' textAlign='center' pb={7}>
+        <Typography level='body' textAlign='center' pb={7}>
           Meet the team behind the magic!
         </Typography>
-        <OurTeamProfiles>
-
-        </OurTeamProfiles>
+        <OurTeamProfiles/>
       </Sheet>
     </Sheet>
 
