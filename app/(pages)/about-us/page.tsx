@@ -50,7 +50,7 @@ function OurTeamProfiles() {
       container
       spacing={{ xs: 2, md: 2 }}  
       columns={{ xs: 1, sm: 2, md: 3 }}
-      sx={{ flexGrow: 1 }}
+      sx={{ flexGrow: 1, dipslay: 'flex', alignItems:'center', justifyContent:'center'}}
     >
       {Array.from(Array(10)).map((_, index) => (
         <Grid xs={1} sm={1} md={1} key={index}>
