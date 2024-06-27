@@ -78,18 +78,12 @@ function AboutUsOverview() {
 
 function SponsorsPreview() {
   return (
-    <Box mx='auto' textAlign='center' width='100%' mb={10}>
+    <Box mx='auto' textAlign='center' width='100%' mb={10} px={5}>
       <Box display='flex'>
         <HorizontalLine color='#93AED3' height={1} width={1000} />
       </Box>
       <Typography m={2} level='subtitle-lg'>MEET OUR SPONSORS</Typography>
-      <Stack
-        direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 5, sm: 10 }}
-        justifyContent='center'
-        alignItems='center'
-        my={5}
-      >
+      <Stack direction='row' spacing={{ xs: 5, sm: 10 }} justifyContent='center' alignItems='center' my={5} >
         <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 5, sm: 10 }}>
           <Box className='relative' sx={{ width: '150', height: 'auto' }}>
             <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
