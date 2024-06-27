@@ -58,6 +58,7 @@ export default function Program() {
                       description={impDescription} icon1={impIcon1} icon2={impIcon2} icon3={impIcon3}
                       icon4={impIcon4} link='/industry-mentoring-program'/>
       </Stack>
+      
     </Box>
   );
 }
