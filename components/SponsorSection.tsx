@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/joy';
+import HorizontalLine from './HorizontalLine';
 
 interface SectionTitle {
   title: string;
@@ -10,16 +11,9 @@ export default function SponsorSection({ title }: SectionTitle) {
       <Typography level='h2-blue'>
         {title}
       </Typography>
-      <Box
-        mt= {2}
-        mb= {5}
-        component="hr"
-        sx={{
-          border: 0,
-          borderTop: '2px solid #93AED3',
-          width: '100%'
-        }}
-      />
+      <Box display='flex'>
+        <HorizontalLine color='#93AED3' height={1} width={4000}/>
+      </Box>
     </Box>
   )
 }
