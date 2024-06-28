@@ -68,8 +68,8 @@ export default function Sponsors() {
       <PageHeaderCard imagePath={'/sponsors/header.jpg'} pageTitle={'Sponsors'}/>
       <HeadingBodyText heading='Our Sponsors' body='WIESoc is proudly supported by the UNSW Faculty of Engineering and our industry partners.' color='graphite'/>
       <Grid container justifyContent='center'>
-        <Grid xs={7} sm={5} md={4} lg={4}>  
-          <AspectRatio variant='plain' objectFit='contain'>
+        <Grid xs={7} sm={6} md={4} lg={3} pb={10}>  
+          <AspectRatio variant='plain' objectFit='contain' ratio={26/6}>
             <Image src="/sponsors/unsw_logo.jpg" alt="UNSW Engineering" fill/>
           </AspectRatio>
         </Grid>
