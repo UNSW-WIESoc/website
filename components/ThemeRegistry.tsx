@@ -114,7 +114,7 @@ export default function ThemeRegistry({
         letterSpacing: '0.4px'
       },
       'h2-blue': {
-        fontSize: '45px',
+        fontSize: '2rem',
         fontWeight: '550',
         color: '#3C639A',
         textAlign: 'center',
