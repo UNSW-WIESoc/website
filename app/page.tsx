@@ -1,6 +1,8 @@
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
+import OutlineButton from '@/components/OutlineButton';
+import HorizontalLine from "@/components/HorizontalLine";
 import EventsCarousel from '@/components/Carousel/EventsCarousel';
 
 function CoverImage() {
@@ -74,13 +76,49 @@ function AboutUsOverview() {
   );
 }
 
+function SponsorsPreview() {
+  return (
+    <Box mx='auto' textAlign='center' width='100%' mb={10} px={5}>
+      <Box display='flex'>
+        <HorizontalLine color='#93AED3' height={1} width={1000} />
+      </Box>
+      <Typography m={2} level='subtitle-lg'>MEET OUR SPONSORS</Typography>
+      <Stack direction='row' spacing={{ xs: 5, sm: 10 }} justifyContent='center' alignItems='center' my={5} >
+        <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 5, sm: 10 }}>
+          <Box className='relative' sx={{ width: '150', height: 'auto' }}>
+            <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
+          </Box>
+          <Box className='relative' sx={{ width: '150', height: 'auto' }} pt={1}>
+            <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
+          </Box>
+        </Stack>
+        <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 5, sm: 10 }}>
+          <Box className='relative' sx={{ width: '100', height: 'auto' }}>
+            <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={150} height={100} />
+          </Box>
+          <Box className='relative' sx={{ width: '150', height: 'auto' }}>
+            <Image src={'/sponsors/sydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={100} height={75} />
+          </Box>
+        </Stack>
+      </Stack>
+      <Box mt={3} display='flex' justifyContent='center' alignItems='center' position='relative' width='100%'>
+        <Box sx={{ position: 'absolute' }}>
+          <OutlineButton text='View All' link='/sponsors' />
+        </Box>
+        <HorizontalLine color='#93AED3' height={1} width={1000} />
+      </Box>
+    </Box>
+  )
+}
+
 export default function Home() {
   const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
   return (
     <Box justifyContent='center'>
       <CoverImage/>
-      <AboutUsOverview/>
+      <AboutUsOverview />
+      <SponsorsPreview />
       <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={Array(6).fill(0)} size='large'/>
     </Box>
-  );
+  )
 }
