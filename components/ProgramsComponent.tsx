@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from 'react';
 import { Box, Typography } from '@mui/joy';
@@ -120,7 +120,7 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
                 justifyContent: 'center',
               }}
             >
-              <OutlineButton text="Learn More" link={link} />
+              <OutlineButton text='Learn More' link={link} />
             </Box>
           </Box>
         </Box>

@@ -72,17 +72,17 @@ function AboutUsOverview() {
 function ProgramsOverview() {
 
   const backContent_1 = [
-    <LabelledIcon icon="/programs/Graduate.svg" text="Student Mentors" />,
-    <LabelledIcon icon="/programs/Friendship.svg" text="Foster Friendships" />,
-    <LabelledIcon icon="/programs/Location.svg" text="Checkpoint Events" />,
-    <LabelledIcon icon="/programs/BookStack.svg" text="Settle into University" />,
+    <LabelledIcon icon='/programs/Graduate.svg' text='Student Mentors' />,
+    <LabelledIcon icon='/programs/Friendship.svg'text='Foster Friendships' />,
+    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon icon='/programs/BookStack.svg' text='Settle into University' />,
   ];
 
   const backContent_2 = [
-    <LabelledIcon icon="/programs/WomanProfile.svg" text="Industry Mentors" />,
-    <LabelledIcon icon="/programs/Learning.svg" text="Develop Professionally" />,
-    <LabelledIcon icon="/programs/Location.svg" text="Checkpoint Events" />,
-    <LabelledIcon icon="/programs/ConnectedPeople.svg" text="Make Connections" />,
+    <LabelledIcon icon='/programs/WomanProfile.svg' text='Industry Mentors' />,
+    <LabelledIcon icon='/programs/Learning.svg' text='Develop Professionally' />,
+    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon icon='/programs/ConnectedPeople.svg' text='Make Connections' />,
   ];
 
   return (
@@ -100,21 +100,21 @@ function ProgramsOverview() {
       </Typography>
       <Stack
         direction={{ xs: 'column', md: 'row' }}
-        justifyContent="center"
-        alignItems="center"
+        justifyContent='center'
+        alignItems='center'
         spacing={10}
         paddingBottom={15}
       >
         <ProgramsComponent 
-          frontTitle="Protege Program" 
-          frontImageSrc="/programs/protege_card.jpg" 
+          frontTitle='Protege Program'
+          frontImageSrc='/programs/protege_card.jpg' 
           backContent={backContent_1}
           link='/programs/protege-program'
           description='This program allows international women in engineering to connect, engage and support one another.'
         />
         <ProgramsComponent 
-          frontTitle="Industry Mentoring Program" 
-          frontImageSrc="/programs/Industry_Mentoring.svg" 
+          frontTitle='Industry Mentoring Program'
+          frontImageSrc='/programs/Industry_Mentoring.svg' 
           backContent={backContent_2}
           link='/programs/imp-program'
           description='This program helps new students adapt to engineering by pairing them with industry mentors.'
