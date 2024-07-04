@@ -4,15 +4,14 @@ const Arrow = () => (
   <Box sx={{
     display: 'flex',
     alignItems: 'center',
-    top: '-20px',
     '&:before': {
       content: '""',
       display: 'block',
-      width: '100px',
+      width: '120px',
       borderBottom: '2px dashed white',
-      marginRight: '4px',
+      marginRight: '5px',
       position: 'relative',
-      top: '-1px'
+      top: '-30px'
     },
     '&:after': {
       content: '""',
@@ -21,8 +20,8 @@ const Arrow = () => (
       height: '0',
       borderTop: '6px solid transparent',
       borderBottom: '6px solid transparent',
-      borderLeft: '10px solid white',
-      left: '-1px',
+      borderLeft: '8px solid white',
+      transform: 'translateY(-30px)' 
     }
   }} />
 );
