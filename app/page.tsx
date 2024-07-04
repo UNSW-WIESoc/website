@@ -109,14 +109,14 @@ function ProgramsOverview() {
           frontTitle="Protege Program" 
           frontImageSrc="/programs/protege_card.jpg" 
           backContent={backContent_1}
-          link=''
+          link='/programs/protege-program'
           description='This program allows international women in engineering to connect, engage and support one another.'
         />
         <ProgramsComponent 
           frontTitle="Industry Mentoring Program" 
           frontImageSrc="/programs/Industry_Mentoring.svg" 
           backContent={backContent_2}
-          link=''
+          link='/programs/imp-program'
           description='This program helps new students adapt to engineering by pairing them with industry mentors.'
         />
       </Stack>
