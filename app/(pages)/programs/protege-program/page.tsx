@@ -22,15 +22,17 @@ export default function ProtegeProgram() {
 
     <Box>
       <PageHeaderCard imagePath={'/programs/header.jpg'} pageTitle={'Programs'}/>
-      <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
+      <Box sx={{ px: '30px' }}>
+        <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
+      </Box>
 
       <Box sx={{ px: 10, mt: 5, mb: 20 }}>
         <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
 
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
-            <Box width={{ xl: '583px', lg: '466.4px', md: '800px', sm: '500px', xs: '300px'}}>
+            <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}}>
               <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
-              <AspectRatio variant='plain' objectFit='fill'>
+              <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                   <Image src={'/programs/protege-program/EaseTheTransition.svg'} alt={'icon'} fill/>
               </AspectRatio>
               <ProgramsTitleDescription title={title2} description={description2} marginTop={14} marginBottom={12} color='graphite'/>
@@ -38,13 +40,13 @@ export default function ProtegeProgram() {
           </Stack>
 
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
-            <Box width={{ xl: '570px', lg: '456px', md: '800px', sm: '500px', xs: '300px' }}>
-              <AspectRatio variant='plain' objectFit='fill'>
+            <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px' }}>
+              <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                 <Image src={'/programs/protege-program/MeetOthers.svg'} alt={'icon'} fill/>
               </AspectRatio>              
               <ProgramsTitleDescription title={title3} description={description3} marginTop={5} marginBottom={12} color='graphite'/>
               <Box>
-                <AspectRatio variant='plain' objectFit='fill'>
+                <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                   <Image src={'/programs/protege-program/FosterFriendships.svg'} alt={'icon'} fill/>
                 </AspectRatio>              
               </Box>
