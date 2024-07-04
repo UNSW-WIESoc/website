@@ -4,8 +4,8 @@ import Image from 'next/image';
 const TimelineCard = ({ icon, text, date }) => (
   <Box textAlign="center">
     <Box sx={{
-      width: '110px',
-      height: '110px',
+      width: '148px',
+      height: '148px',
       borderRadius: '50%',
       border: '2px solid white',
       display: 'flex',
@@ -13,10 +13,10 @@ const TimelineCard = ({ icon, text, date }) => (
       justifyContent: 'center',
       margin: '0 auto',
     }}>
-      <Image src={icon} alt={text} width={60} height={60} />
+      <Image src={icon} alt={text} width={100} height={100} />
     </Box>
-    <Typography level='body' className='light-white' sx={{ marginTop: '12px' }}>{text}</Typography>
-    <Typography level='subtitle' className='white' sx={{ marginTop: '6px' }}>{date}</Typography>
+    <Typography level='body' className='light-white' sx={{marginTop: '18px'}}>{text}</Typography>
+    <Typography level='subtitle' className='white' sx={{marginTop: '16px',fontWeight: 'bold'}}>{date}</Typography>
   </Box>
 );
 
