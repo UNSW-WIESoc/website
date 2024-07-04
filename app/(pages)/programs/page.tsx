@@ -1,8 +1,10 @@
-import {Box, Stack} from '@mui/joy';
+import {Box, Stack, Typography} from '@mui/joy';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import ProgramsCard from '@/components/ProgramsCard';
 import {IconTextProps} from '@/components/LabelledIcon';
 import HeadingBodyText from '@/components/HeadingBodyText';
+import Arrow from '@/components/ProgramsArrow';
+import TimelineCard from '@/components/ProgramsTimeline';
 
 export default function Program() {
   const bodyText =
@@ -59,6 +61,19 @@ export default function Program() {
                       icon4={impIcon4} link='/industry-mentoring-program'/>
       </Stack>
       
+      <Box className='bg-medium-blue' sx={{justifyContent: 'center'}} pb={3} width='100%'>
+      <HeadingBodyText heading='Checkpoint Events' color='light-white'/>
+        <Stack direction='row' justifyContent="center" alignItems='center' spacing={5} pb={10}>
+          <TimelineCard icon='/programs/Stage.svg' text='Opening Ceremony' date='7th March 2024' />
+          <Arrow />
+          <TimelineCard icon='/programs/Level1.svg' text='Mid-term Checkpoint 1' date='14th March 2024' />
+          <Arrow />
+          <TimelineCard icon='/programs/Level2.svg' text='Mid-term Checkpoint 2' date='23rd March 2024' />
+          <Arrow />
+          <TimelineCard icon='/programs/Trophy.svg' text='Closing Ceremony' date='11th April 2024' />
+        </Stack>
+      </Box>
     </Box>
   );
 }
+
