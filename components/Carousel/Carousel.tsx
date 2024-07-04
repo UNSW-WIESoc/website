@@ -45,6 +45,7 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
             }}>
             {slides.map((_, index) => (
               <Box
+              key={index}
                 mr={2}
                 sx={{flex: size == 'large'
                     ? {xs: '0 0 300px', sm: '0 0 400px', md: '0 0 500px', lg: '0 0 600px'}
