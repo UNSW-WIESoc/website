@@ -33,7 +33,7 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi, onNavButtonClick)
   
   return (
-    <Box mx={5} mt={2} mb={6} justifyContent='center'>
+    <Box mx={5} mb={6} justifyContent='center'>
       <Stack direction='row' sx={{justifyContent: 'center', alignItems: 'center'}}>
         <CarouselArrowButton type='prev' onButtonClick={onPrevButtonClick}/>
         <Box ref={emblaRef} sx={{overflow: 'hidden'}} width={{xs: '100%', sm: '90%', md: '80%', lg: '70%', xl: '60%'}}>
@@ -48,7 +48,7 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
               key={index}
                 mr={2}
                 sx={{flex: size == 'large'
-                    ? {xs: '0 0 300px', sm: '0 0 400px', md: '0 0 500px', lg: '0 0 600px'}
+                    ? {xs: '0 0 300px', sm: '0 0 400px'}
                     : '0 0 300px'
                 }}>
                 <EventsCard key={index}/>
