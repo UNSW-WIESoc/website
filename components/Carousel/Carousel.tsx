@@ -9,7 +9,7 @@ import EventsCard from '../EventsCard';
 import { Box, Stack } from '@mui/joy';
 
 interface CarouselProps {
-  slides: Array<number>; // TODO:  Will need to be changed to suit slides data when connected to contentful
+  slides: Array<any>;
   options: any;
   size: 'large' | 'small';
 }
@@ -43,15 +43,16 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
               'backface-visibility': 'hidden',
               'touch-action': 'pan-y pinch-zoom'
             }}>
-            {slides.map((_, index) => (
+            {slides?.map((event, index) => (
               <Box
-              key={index}
+                key={index}
                 mr={2}
                 sx={{flex: size == 'large'
                     ? {xs: '0 0 300px', sm: '0 0 400px'}
                     : '0 0 300px'
-                }}>
-                <EventsCard key={index}/>
+                }}
+              >
+                <EventsCard key={index} event={event}/>
               </Box>
             ))}
           </Stack>
