@@ -9,7 +9,7 @@ import EventsCard from '../EventsCard';
 import { Box, Stack } from '@mui/joy';
 
 interface CarouselProps {
-  slides: Array<number>; // TODO:  Will need to be changed to suit slides data when connected to contentful
+  slides: Array<any>;
   options: any;
   size: 'large' | 'small';
 }
