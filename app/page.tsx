@@ -1,9 +1,13 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
 import OutlineButton from '@/components/OutlineButton';
 import HorizontalLine from "@/components/HorizontalLine";
 import EventsCarousel from '@/components/Carousel/EventsCarousel';
+import { getEvents } from "@/lib/api";
 
 function CoverImage() {
   return (
@@ -112,13 +116,27 @@ function SponsorsPreview() {
 }
 
 export default function Home() {
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const events = await getEvents();
+      const now = new Date();
+      const upcoming = events.filter((event: any) => new Date(event.fields.dateTimeEnd) > now);
+
+      setUpcomingEvents(upcoming);
+    }
+
+    fetchData();
+  }, []);
+  
   const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview />
       <SponsorsPreview />
-      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={Array(6).fill(0)} size='large'/>
+      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={upcomingEvents} size='large'/>
     </Box>
   )
 }
