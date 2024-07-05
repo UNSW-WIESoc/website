@@ -43,14 +43,15 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
               'backface-visibility': 'hidden',
               'touch-action': 'pan-y pinch-zoom'
             }}>
-            {slides.map((_, index) => (
+            {slides?.map((event, index) => (
               <Box
                 mr={2}
                 sx={{flex: size == 'large'
                     ? {xs: '0 0 300px', sm: '0 0 400px', md: '0 0 500px', lg: '0 0 600px'}
                     : '0 0 300px'
-                }}>
-                <EventsCard key={index}/>
+                }}
+                key={index}>
+                <EventsCard key={index} event={event}/>
               </Box>
             ))}
           </Stack>
