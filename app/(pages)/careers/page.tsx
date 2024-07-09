@@ -7,7 +7,7 @@ export default function Careers() {
     <Stack alignItems='center'>
     <PageHeaderCard imagePath={'/careers/header.jpg'} pageTitle={'Careers'}/>
     <HeadingBodyText heading='Jobs and Opportunities' body='Discover corporate 
-      sponsored events and activities to expand your professional networks and skills.'/>
+      sponsored events and activities to expand your professional networks and skills.' color='graphite'/>
     </Stack>
   );
 }
