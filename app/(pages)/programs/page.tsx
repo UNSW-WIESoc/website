@@ -3,31 +3,27 @@ import PageHeaderCard from '@/components/PageHeaderCard';
 import ProgramsCard from '@/components/ProgramsCard';
 import {IconTextProps} from '@/components/LabelledIcon';
 import HeadingBodyText from '@/components/HeadingBodyText';
+import HorizontalLine from '@/components/HorizontalLine';
+import Quote from '@/components/Quote';
 
 function Testimonials() {
-  const test1 = '"The Protégé Program was easily one of the most enjoyable and rewarding experiences at UNSW. Not only was it great to help my mentees with any queries they have, but seeing them come out of their shells and make new friends was what made this program so memorable."'
-  const test2 = '"As a WIESOC peer mentor, you forge new friendships and gain invaluable leadership skills. It meant I was able to give the first years the same support I received when I first started. It was the highlight of my week with a program full of fun challenges and competitions and a great group of people."'
-  const test3 = '"The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!"'
+  const test1 = 'The Protégé Program was easily one of the most enjoyable and rewarding experiences at UNSW. Not only was it great to help my mentees with any queries they have, but seeing them come out of their shells and make new friends was what made this program so memorable.'
+  const test2 = 'As a WIESOC peer mentor, you forge new friendships and gain invaluable leadership skills. It meant I was able to give the first years the same support I received when I first started. It was the highlight of my week with a program full of fun challenges and competitions and a great group of people.'
+  const test3 = 'The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!'
   
   return (
-    <Box py={10} px={5} maxWidth={1250} mx='auto' textAlign='center' alignItems='center'>
+    <Stack py={5} px={5} mx='auto' textAlign='center' justifyContent='center' maxWidth={1250} alignItems='center'>
       <Typography level='subtitle-lg' mb={5} >Hear from our previous mentors and mentees</Typography>
-      {/* line */}
-      <Box my={10} py={2}>
-        <Typography className='dark-blue' level='body' mb={2}>{test1}</Typography>
-        <Typography className='dark-blue' level='subtitle'>Olivia Widjaja (Former Protege Program Mentor)</Typography>
-      </Box>
-      {/* line */}
-      <Box my={10} py={2}>
-        <Typography className='dark-blue' level='body' mb={2}>{test2}</Typography>
-        <Typography className='dark-blue' level='subtitle'>Nicole Sroba (Former Protege Program Mentor)</Typography>
-      </Box>
-      {/* line */}
-      <Box my={10} py={2}>
-        <Typography className='dark-blue' level='body' mb={2}>{test3}</Typography>
-        <Typography className='dark-blue' level='subtitle'>Eeman Chaudhary (Former Protege Program Mentee)</Typography>
-      </Box>
-    </Box>
+      <Stack spacing={10} width='100%' alignItems='center'>
+        <HorizontalLine color='#93AED3' width={1250} height={2} />
+        <Quote quote={test1} color='dark-blue' author='Olivia Widjaja (Former Protégé Program Mentor)' />
+        <HorizontalLine color='#93AED3' width={1250} height={2} />
+        <Quote quote={test2} color='dark-blue' author='Nicole Sroba (Former Protégé Program Mentor)' />
+        <HorizontalLine color='#93AED3' width={1250} height={2} />
+        <Quote quote={test3} color='dark-blue' author='Eeman Chaudhary (Former Protégé Program Mentee)' />
+        <HorizontalLine color='#93AED3' width={1250} height={2} />
+      </Stack>
+    </Stack>
   )
 }
 
