@@ -1,7 +1,8 @@
 import { Box, Typography, Stack, Sheet } from '@mui/joy';
 import Link from 'next/link';
 import Image from 'next/image';
-import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
+import {socialsData} from '@/app/data';
+import React from 'react';
 
 export default function Footer() {
   const darkBlue = '#063776';
@@ -12,19 +13,12 @@ export default function Footer() {
       <Box className='bg-light-blue' py={4}>
         <center>
           <Typography level='h2'>Join Us Here</Typography>
-          <Stack direction='row' justifyContent='center' spacing={10}>
-            <Box component={Link} href={'https://www.facebook.com/wieunsw/'} target='_blank' style={{textDecoration: 'none'}}>
-              <FacebookIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography className='dark-blue' level='body'>Facebook</Typography>
-            </Box>
-            <Box component={Link} href={'https://www.instagram.com/wieunsw/'} target='_blank' style={{textDecoration: 'none'}}>
-              <InstagramIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography className='dark-blue' level='body'>Instagram</Typography>
-            </Box>
-            <Box component={Link} href={'https://au.linkedin.com/company/unsw-wiesoc'} target='_blank' style={{textDecoration: 'none'}}>
-              <LinkedInIcon color={darkBlue} height={iconSize} width={iconSize}/>
-              <Typography className='dark-blue' level='body'>LinkedIn</Typography>
-            </Box>
+          <Stack direction='row' justifyContent='center' spacing={{xs: 8, md: 10}}>
+            {socialsData.map(({ Icon, href }, idx) => (
+              <Link key={idx} href={href} target='_blank'>
+                <Icon color={darkBlue} width={iconSize} height={iconSize}/>
+              </Link>
+            ))}
           </Stack>
           <Stack direction='column' spacing={2} py={7}>
             <Typography level='body'>Have more questions? Contact us here:</Typography>
