@@ -49,7 +49,8 @@ const SubMenu: React.FC<{ subData: { text: string, href: string }[] }> = ({ subD
         <ListItemButton
         key={idx}
         className='navbar-hover'
-        sx={{ marginLeft: '37%', '&:hover': { borderLeft: '4px solid #33373D' }}}
+        sx = {{justifyContent: 'center'}}
+        
         >
             <Link component={NextLink} href={href} underline='none' sx={{ color: 'inherit', fontSize: '20px'}}>
             <Typography level='subtitle-light' fontWeight={400} sx={{ paddingLeft: '0.5rem', textAlign:'left' }}>
@@ -95,9 +96,6 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ open, setOpen }) => {
           <ListItemButton
             className='navbar-hover'
             key={idx}
-            sx={{'&:hover': {
-              borderLeft: '4px solid #33373D',
-            }}}
             onClick={() => {
               if (Array.isArray(subData) && subData.length > 0) {
                 setOpenSubMenuIndex(openSubMenuIndex === idx ? null : idx);
