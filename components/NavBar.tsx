@@ -34,12 +34,14 @@ function SubMenu({ subData }: { subData: { text: string, href: string }[] }) {
           href={href}
           className='navbar-hover'
           sx={{
+            borderLeft: '3px solid transparent',
             '&:hover': {
-              borderLeft: '3px solid #33373D',
+              borderLeftColor: '#33373D',
             },
             '&:focus': {
               outline: 'none',
             },
+            paddingLeft: '3px',
             zIndex: 1,
           }}
         >
@@ -115,7 +117,7 @@ function NavItem({ title, navigateTo, subData }: NavProps) {
         >
           {title}
         </Typography>
-        {hasSubMenu && <ExpandMoreIcon sx={{ pt: 0.5, fontSize: '1.7rem', position: 'relative', zIndex: 2}} />}
+        {hasSubMenu && <ExpandMoreIcon sx={{ pt: 0.5, pl:0.8, fontSize: '1.7rem', position: 'center', zIndex: 2}} />}
       </MenuButton>
       {hasSubMenu && (
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
