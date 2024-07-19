@@ -12,7 +12,7 @@ import { getEvents } from "@/lib/api";
 
 function CoverImage() {
   return (
-    <AspectRatio sx={{width: '100%', overflow: 'hidden'}} objectFit='cover'>
+    <AspectRatio sx={{width: '100%', height: 'auto', overflow: 'hidden'}} objectFit='cover'>
       <Image src={'/landing-page/2024_group_photo.JPG'} alt={'group of people'} fill/>
       <Box
         className='bg-dark-blue'
@@ -23,6 +23,7 @@ function CoverImage() {
           width: '100%',
           height: '100%',
           opacity: '0.6',
+          justifyContent: 'center'
         }}
       />
       <Stack
@@ -32,13 +33,14 @@ function CoverImage() {
           left: 0,
           width: '100%',
           height: '100%',
+          px: '5%',
+          justifyContent: 'center'
         }}
-        justifyContent='center'
       >
-        <Typography className='light-white' level='title-lg'>
+        <Typography className='light-white' level='title-lg' mb={0} fontSize={{xs: '2rem', sm: '3rem', md: '4.5rem'}}>
           UNSW Women In Engineering
         </Typography>
-        <Typography className='light-white' level='h2'>
+        <Typography className='light-white' level='h2' fontSize={{xs: '1rem', sm: '1.5rem', md: '2rem'}}>
           Connect • Engage • Inspire
         </Typography>
       </Stack>
@@ -55,7 +57,7 @@ function AboutUsOverview() {
       width={{md: '90%', lg: '70%', xl: '50%'}}
       direction={{md: 'column', lg: 'row'}} 
       mx='auto'
-      my={15}
+      my={10}
       spacing={6}
       alignItems='center'
     >
