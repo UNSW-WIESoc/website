@@ -91,7 +91,7 @@ body {
   border-radius: 20px;
 }
 
-.navbar-hover:hover {
+.navbar-hover:hover::before {
   background-color: #D1E2F8;
-  opacity: 40%;
+  opacity: 0.4;
 }
