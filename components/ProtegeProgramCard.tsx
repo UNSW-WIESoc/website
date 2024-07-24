@@ -1,13 +1,44 @@
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
-import LabelledIcon from '@/components/LabelledIcon';
+import Card from '@mui/joy/Card';
 import OutlineButton from '@/components/OutlineButton';
+import Image from 'next/image';
 
-export default function ProtegeProgramCard({}) {
+export default function ProtegeProgramCard({ icon, text, type, description }: any) {
   return (
-    <Box>
-      <Typography level='subtitle-lg'>
-        Want to get invovled in the Protege program?
-      </Typography>
-    </Box>
-  )
+    <Card
+      variant='outlined'
+      className='border-round'
+      sx={{
+        width: '350px',
+        height: '400px',
+        border: '2px solid #93AED3'
+      }}
+    >
+      <Box sx={{
+          position: 'absolute',
+          top: '-50px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100px',
+          height: '100px',
+          borderRadius: '50%',
+          border: '2px solid #93AED3',
+          backgroundColor: 'white',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+      }}>
+        <Image src={icon} alt={text} width={70} height={70} />
+      </Box>
+      <Stack direction="column" spacing={5} alignItems='center' pt={9}>
+        <Typography level='subtitle-lg'>
+          {type}
+        </Typography>
+        <Typography level='body' textAlign='center' px={5}>
+          {description}
+        </Typography>
+        <OutlineButton text='Apply now' link='sth'/>
+      </Stack>
+    </Card>
+  );
 }

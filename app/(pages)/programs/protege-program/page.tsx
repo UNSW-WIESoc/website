@@ -1,8 +1,9 @@
-import {Box, Stack, AspectRatio} from '@mui/joy';
+import {Box, Stack, AspectRatio, Typography, Grid} from '@mui/joy';
 import PageHeaderCard from "@/components/PageHeaderCard";
 import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
+import ProtegeProgramCard from '@/components/ProtegeProgramCard';
 
 export default function ProtegeProgram() {
 
@@ -55,6 +56,26 @@ export default function ProtegeProgram() {
 
         </Stack>
       </Box>
-    </Box>
+
+      <Box pb={15}>
+        <Typography level='subtitle-lg'>
+          Want to get invovled in the Protege program?
+        </Typography>
+      </Box>
+      <Stack direction='row' spacing={12} mx='auto' justifyContent='center' pb={35}>
+        <ProtegeProgramCard 
+          icon='/programs/protege-program/BolivianGirl.svg'
+          text='Bolivian Girl'
+          type='Mentee'
+          description='Are you a new engineering student and want a little help settling into UNSW? This is the program for you!'
+        />
+        <ProtegeProgramCard 
+          icon='/programs/protege-program/AmeliePoulain.svg'
+          text='Amelia Poulain'
+          type='Mentor'
+          description='Are you a 2nd year+ female engineering student looking to develop your skills? This is perfect for you!'
+        />
+      </Stack>
+    </Box> 
   );
 }
