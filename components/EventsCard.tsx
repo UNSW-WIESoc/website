@@ -9,35 +9,57 @@ import Image from 'next/image';
 import Button from '@mui/joy/Button';
 import Stack from '@mui/material/Stack';
 import { FacebookIcon } from '@/components/SocialMediaIcons';
+import { formatEventDates } from '../lib/helpers/event';
 
+export default function EventsCard({ event }: any) {
+  if (!event || !event.fields) {
+    return null;
+  }
 
-// Hardedcoded for now
-// TODO (rbeccahsu): Work on integrating website with Contentful
+  const {
+    img,
+    title,
+    dateTimeStart,
+    dateTimeEnd,
+    description,
+    registerLink,
+    facebookLink,
+    location, 
+    slug
+  } = event.fields;
+  const imgUrl = 'https:' + img.fields.file.url;
+  const eventDateTimeStr = formatEventDates(dateTimeStart, dateTimeEnd);
+  console.log(img.fields)
 
-export default function EventsCard() {
   return (
     <Card
       variant='outlined'
       className='shadow-hover border-round'
-      sx={{minWidth: '300px', maxWidth: '600px'}}
+      sx={{
+        minWidth: '300px',
+        maxWidth: '600px',
+        height: '100%'
+      }}
     >
       <CardOverflow>
         <AspectRatio objectFit='contain'>
-          <Image src={'/event_banner.JPG'} alt={'group of people'} fill/>
+          <Image src={imgUrl} alt={title} objectFit='cover' fill/>
         </AspectRatio>
       </CardOverflow>
-      <CardContent>
-        <Stack alignItems='center' py={1} spacing={1}>
-          <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>WIESoc Study Lounge</Typography>
-          <Typography level='body' textAlign='center'>Wednesday 17 April 12pm - 2pm</Typography>
+      <CardContent sx={{ height: '100%' }}>
+        <Stack alignItems='center' py={1} spacing={1} sx={{ height: '100%' }}>
+          <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{title}</Typography>
+          <Typography level='title-sm' textAlign='center'>{eventDateTimeStr}</Typography>
+          <Typography level='title-sm' textAlign='center' sx={{ pt: 0 }}>{location}</Typography>
           <Button 
             component='a' 
-            href='https://fb.me/e/6IzxSbHFH'
+            href={facebookLink}
             target='_blank'
             startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
             className='bg-purple button-border-round'
+            sx={{ mb: 'auto' }}
             >
-            <Typography level='subtitle' className='white' p={0.5}>
+            <Typography level='subtitle' className='white' p={0.5} sx={{ mt: 'auto' }}>
               View Event
             </Typography>
           </Button>
