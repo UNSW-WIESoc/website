@@ -62,7 +62,13 @@ export default function ProtegeProgram() {
           Want to get invovled in the Protege program?
         </Typography>
       </Box>
-      <Stack direction='row' spacing={12} mx='auto' justifyContent='center' pb={35}>
+      <Stack 
+        direction={{ xs: 'column', md: 'row'}}
+        spacing={12}
+        justifyContent='center'
+        alignItems='center'
+        pb={35}
+      >
         <ProtegeProgramCard 
           icon='/programs/protege-program/BolivianGirl.svg'
           text='Bolivian Girl'

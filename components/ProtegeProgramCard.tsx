@@ -1,4 +1,4 @@
-import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
+import {Box, Stack, Typography} from '@mui/joy';
 import Card from '@mui/joy/Card';
 import OutlineButton from '@/components/OutlineButton';
 import Image from 'next/image';
@@ -9,8 +9,8 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
       variant='outlined'
       className='border-round'
       sx={{
-        width: '350px',
-        height: '400px',
+        width: {xs: '300px', lg: '350px'},
+        height: 'auto',
         border: '2px solid #93AED3'
       }}
     >
@@ -19,8 +19,8 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
           top: '-50px',
           left: '50%',
           transform: 'translateX(-50%)',
-          width: '100px',
-          height: '100px',
+          width: {xs: '90px', sm: '100px'},
+          height: {xs: '90px', sm: '100px'},
           borderRadius: '50%',
           border: '2px solid #93AED3',
           backgroundColor: 'white',
@@ -28,13 +28,13 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
           alignItems: 'center',
           justifyContent: 'center',
       }}>
-        <Image src={icon} alt={text} width={70} height={70} />
+        <Image src={icon} alt={text} width={70} height={70}/>
       </Box>
-      <Stack direction="column" spacing={5} alignItems='center' pt={9}>
+      <Stack direction="column" spacing={5} alignItems='center' pt={8} pb={4}>
         <Typography level='subtitle-lg'>
           {type}
         </Typography>
-        <Typography level='body' textAlign='center' px={5}>
+        <Typography level='body' textAlign='center' px={{xs: 2, sm: 3, md: 4, lg: 5}}>
           {description}
         </Typography>
         <OutlineButton text='Apply now' link='sth'/>
