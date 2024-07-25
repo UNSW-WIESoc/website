@@ -9,17 +9,11 @@ interface PageHeaderCardProps {
 export default function PageHeaderCard({ imagePath, pageTitle }: PageHeaderCardProps) {
   return (
     <AspectRatio
-      ratio="700/150"
+      ratio="650/150"
       objectFit="cover"
       sx={{
         width: '100%',
-        height: {
-          xs: '200px',
-          sm: '250px',
-          md: '300px',
-          lg: '350px',
-          xl: '400px',
-        },
+        height: 'auto',
         position: 'relative',
         overflow: 'hidden',
       }}
