@@ -5,26 +5,38 @@ import {IconTextProps} from '@/components/LabelledIcon';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import HorizontalLine from '@/components/HorizontalLine';
 import Quote from '@/components/Quote';
+import { protegeData } from '@/app/data';
 
 function Testimonials() {
-  const test1 = 'The Protégé Program was easily one of the most enjoyable and rewarding experiences at UNSW. Not only was it great to help my mentees with any queries they have, but seeing them come out of their shells and make new friends was what made this program so memorable.'
-  const test2 = 'As a WIESOC peer mentor, you forge new friendships and gain invaluable leadership skills. It meant I was able to give the first years the same support I received when I first started. It was the highlight of my week with a program full of fun challenges and competitions and a great group of people.'
-  const test3 = 'The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!'
-  
   return (
-    <Stack py={5} px={5} mx='auto' textAlign='center' justifyContent='center' maxWidth={1250} alignItems='center'>
-      <Typography level='subtitle-lg' mb={5} >Hear from our previous mentors and mentees</Typography>
-      <Stack spacing={10} width='100%' alignItems='center'>
-        <HorizontalLine color='#93AED3' width={1250} height={2} />
-        <Quote quote={test1} color='dark-blue' author='Olivia Widjaja (Former Protégé Program Mentor)' />
-        <HorizontalLine color='#93AED3' width={1250} height={2} />
-        <Quote quote={test2} color='dark-blue' author='Nicole Sroba (Former Protégé Program Mentor)' />
-        <HorizontalLine color='#93AED3' width={1250} height={2} />
-        <Quote quote={test3} color='dark-blue' author='Eeman Chaudhary (Former Protégé Program Mentee)' />
-        <HorizontalLine color='#93AED3' width={1250} height={2} />
+    <Stack
+      py={5}
+      px={5}
+      mx='auto'
+      textAlign='center'
+      justifyContent='center'
+      maxWidth={1250}
+      width='100%'
+      alignItems='center'
+    >
+      <Typography level='subtitle-lg' mb={5}>
+        Hear from our previous mentors and mentees
+      </Typography>
+      <Stack spacing={5} direction='column' width='100%'>
+        <Box display='flex' justifyContent='center' width='100%'>
+          <HorizontalLine color='#93AED3' height={2} width={1200} />
+        </Box>
+        {protegeData.map(({ quote, by }, idx) => (
+          <Stack key={idx} spacing={5} maxWidth={1250} width='100%' alignItems='center'>
+            <Quote quote={quote} color='dark-blue' author={by} />
+            <Box display='flex' justifyContent='center' width='100%'>
+              <HorizontalLine color='#93AED3' height={2} width={1200} />
+            </Box>
+          </Stack>
+        ))}
       </Stack>
     </Stack>
-  )
+  );
 }
 
 export default function Program() {
