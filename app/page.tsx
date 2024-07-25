@@ -1,9 +1,14 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+
 import {AspectRatio, Box, Stack, Typography} from '@mui/joy';
 import Image from 'next/image';
 import LabelledIcon from '@/components/LabelledIcon';
+import ProgramsComponent from '@/components/ProgramsComponent';
 import OutlineButton from '@/components/OutlineButton';
 import HorizontalLine from "@/components/HorizontalLine";
 import EventsCarousel from '@/components/Carousel/EventsCarousel';
+import { getEvents } from "@/lib/api";
 
 function CoverImage() {
   return (
@@ -111,14 +116,85 @@ function SponsorsPreview() {
   )
 }
 
+function ProgramsOverview() {
+
+  const backContent_1 = [
+    <LabelledIcon icon='/programs/Graduate.svg' text='Student Mentors' />,
+    <LabelledIcon icon='/programs/Friendship.svg'text='Foster Friendships' />,
+    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon icon='/programs/BookStack.svg' text='Settle into University' />,
+  ];
+
+  const backContent_2 = [
+    <LabelledIcon icon='/programs/WomanProfile.svg' text='Industry Mentors' />,
+    <LabelledIcon icon='/programs/Learning.svg' text='Develop Professionally' />,
+    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon icon='/programs/ConnectedPeople.svg' text='Make Connections' />,
+  ];
+
+  return (
+    <Box sx={{ 
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: { xs: 2, md: 4 },
+    }}>
+      <Typography className={'graphite'} level='h1'>
+        Programs
+      </Typography>
+      <Typography className={'graphite'} level='body' sx={{ textAlign: 'center', paddingBottom: 4 }}>
+        Our Industry Mentoring Program and Protege Program can cater to your personal and professional development.
+      </Typography>
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        justifyContent='center'
+        alignItems='center'
+        spacing={10}
+        paddingBottom={15}
+      >
+        <ProgramsComponent 
+          frontTitle='Protege Program'
+          frontImageSrc='/programs/protege_card.jpg' 
+          backContent={backContent_1}
+          link='/programs/protege-program'
+          description='This program allows international women in engineering to connect, engage and support one another.'
+        />
+        <ProgramsComponent 
+          frontTitle='Industry Mentoring Program'
+          frontImageSrc='/programs/Industry_Mentoring.svg' 
+          backContent={backContent_2}
+          link='/programs/imp-program'
+          description='This program helps new students adapt to engineering by pairing them with industry mentors.'
+        />
+      </Stack>
+    </Box>
+  );
+}
+
+
 export default function Home() {
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const events = await getEvents();
+      const now = new Date();
+      const upcoming = events.filter((event: any) => new Date(event.fields.dateTimeEnd) > now);
+
+      setUpcomingEvents(upcoming);
+    }
+
+    fetchData();
+  }, []);
+  
   const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview />
       <SponsorsPreview />
-      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={Array(6).fill(0)} size='large'/>
+      <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={upcomingEvents} size='large'/>
+      <ProgramsOverview/>
     </Box>
   )
 }
