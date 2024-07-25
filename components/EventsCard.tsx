@@ -42,7 +42,7 @@ export default function EventsCard({ event }: any) {
       }}
     >
       <CardOverflow>
-        <AspectRatio objectFit='cover'>
+        <AspectRatio className='border-round-top' objectFit='cover'>
           <Image src={imgUrl} alt={title} objectFit='cover' fill/>
         </AspectRatio>
       </CardOverflow>
