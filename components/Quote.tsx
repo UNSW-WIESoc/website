@@ -13,7 +13,7 @@ export default function Quote({quote, author, color}: QuoteProps) {
         "{quote}"
       </Typography>
       <Typography className={color} level='subtitle' textAlign='center'>
-        "{author}"
+        {author}
       </Typography>
     </Stack>
   )
