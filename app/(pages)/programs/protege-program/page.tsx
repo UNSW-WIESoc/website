@@ -1,5 +1,5 @@
 import {Box, Stack, AspectRatio, Typography, Grid} from '@mui/joy';
-import PageHeaderCard from "@/components/PageHeaderCard";
+import PageHeaderCard from '@/components/PageHeaderCard';
 import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
@@ -23,9 +23,7 @@ export default function ProtegeProgram() {
 
     <Box>
       <PageHeaderCard imagePath={'/programs/header.jpg'} pageTitle={'Programs'}/>
-      <Box sx={{ px: '30px' }}>
-        <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
-      </Box>
+      <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
 
       <Box sx={{ px: 10, mt: 5, mb: 20 }}>
         <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
@@ -46,11 +44,9 @@ export default function ProtegeProgram() {
                 <Image src={'/programs/protege-program/MeetOthers.svg'} alt={'icon'} fill/>
               </AspectRatio>              
               <ProgramsTitleDescription title={title3} description={description3} marginTop={5} marginBottom={12} color='graphite'/>
-              <Box>
-                <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
-                  <Image src={'/programs/protege-program/FosterFriendships.svg'} alt={'icon'} fill/>
-                </AspectRatio>              
-              </Box>
+              <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
+                <Image src={'/programs/protege-program/FosterFriendships.svg'} alt={'icon'} fill/>
+              </AspectRatio>              
             </Box>
           </Stack>
 

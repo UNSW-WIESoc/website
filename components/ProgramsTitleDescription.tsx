@@ -1,21 +1,21 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/joy';
 
 interface ProgramsTitleDescriptionProps {
     title: string;
     description: string;
     marginTop: number;
     marginBottom: number;
-    color: string // uses colours from globals.css
+    color: string
   }
 
 export default function ProgramsTitleDescription({title, description, marginTop, marginBottom, color}: ProgramsTitleDescriptionProps) {
   return (
     <Box sx={{ mt: marginTop, mb: marginBottom }}>
-      <Typography className={color} variant='h4' sx={{ mb: 1 }}>
+      <Typography textAlign='left' className={color} level='subtitle-lg' sx={{ mb: 1 }}>
         {title}
       </Typography>
-      <Typography className={color} variant='body1'>
+      <Typography className={color} level='body'>
         {description}
       </Typography>
     </Box>
