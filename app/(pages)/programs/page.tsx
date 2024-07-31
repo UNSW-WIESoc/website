@@ -88,7 +88,7 @@ export default function Program() {
       <Stack direction='column' alignItems='center' spacing={10} pb={10}>
         <ProgramsCard imagePath='/programs/protege_card.jpg' cardTitle='Protege Program'
                       description={protegeDescription} icon1={protegeIcon1} icon2={protegeIcon2} icon3={protegeIcon3}
-                      icon4={protegeIcon4} link='/protege-program'/>
+                      icon4={protegeIcon4} link='/programs/protege-program'/>
         <ProgramsCard imagePath='/programs/imp_card.jpg' cardTitle='Industry Mentoring Program'
                       description={impDescription} icon1={impIcon1} icon2={impIcon2} icon3={impIcon3}
                       icon4={impIcon4} link='/industry-mentoring-program'/>
