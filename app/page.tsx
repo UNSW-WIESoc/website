@@ -9,6 +9,7 @@ import OutlineButton from '@/components/OutlineButton';
 import HorizontalLine from "@/components/HorizontalLine";
 import EventsCarousel from '@/components/Carousel/EventsCarousel';
 import { getEvents } from "@/lib/api";
+import TypingAnimation from '@/components/TypingAnimation';
 
 function CoverImage() {
   return (
@@ -39,7 +40,8 @@ function CoverImage() {
           UNSW Women In Engineering
         </Typography>
         <Typography className='light-white' level='h2'>
-          Connect • Engage • Inspire
+           
+          <TypingAnimation text='Connect • Engage • Inspire' delay={100} infinite={true} />
         </Typography>
       </Stack>
     </AspectRatio>
