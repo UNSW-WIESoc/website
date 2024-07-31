@@ -5,7 +5,7 @@ export const navData = [
   { text: 'Events', href: '/events' },
   { text: 'Programs', href: '/programs',
     subData: [
-      { text: 'Protege Program', href: '/protege-program' },
+      { text: 'Protege Program', href: '/programs/protege-program' },
       { text: 'Industry Mentoring Program', href: '/industry-mentoring-program' },
     ]
   },
