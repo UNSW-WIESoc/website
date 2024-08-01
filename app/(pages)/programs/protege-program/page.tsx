@@ -3,6 +3,7 @@ import PageHeaderCard from '@/components/PageHeaderCard';
 import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
+import Timeline from '@/components/ProgramsTimeline';
 
 export default function ProtegeProgram() {
 
@@ -48,9 +49,9 @@ export default function ProtegeProgram() {
               </AspectRatio>              
             </Box>
           </Stack>
-
         </Stack>
       </Box>
+      <Timeline /> 
     </Box>
   );
 }
