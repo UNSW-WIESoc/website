@@ -1,6 +1,6 @@
 import {Box, Stack, Typography} from '@mui/joy';
 import Card from '@mui/joy/Card';
-import OutlineButton from '@/components/OutlineButton';
+import DarkOutlineButton from './DarkOutlineButton';
 import Image from 'next/image';
 
 export default function ProtegeProgramCard({ icon, text, type, description }: any) {
@@ -11,7 +11,8 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
       sx={{
         width: {xs: '300px', lg: '350px'},
         height: 'auto',
-        border: '2px solid #93AED3'
+        border: '2px solid #93AED3',
+        backgroundColor: 'white'
       }}
     >
       <Box sx={{
@@ -37,7 +38,7 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
         <Typography level='body' textAlign='center' px={{xs: 2, sm: 3, md: 4, lg: 5}}>
           {description}
         </Typography>
-        <OutlineButton text='Apply now' link='sth'/>
+        <DarkOutlineButton text='Apply Now' link='sth'/>
       </Stack>
     </Card>
   );
