@@ -5,9 +5,9 @@ import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
 import HorizontalLine from '@/components/HorizontalLine';
 import Quote from '@/components/Quote';
-import { protegeData } from '@/app/data';
+import { impData } from '@/app/data';
 
-/*
+
 function Testimonials() {
   return (
     <Stack py={5} px={5} mx='auto' textAlign='center' justifyContent='center' maxWidth={1250} width='100%' alignItems='center'>
@@ -18,7 +18,7 @@ function Testimonials() {
         <Box display='flex' justifyContent='center' width='100%'>
           <HorizontalLine color='#93AED3' height={2} width={1200} />
         </Box>
-        {protegeData.map(({ quote, by }, idx) => (
+        {impData.map(({ quote, by }, idx) => (
           <Stack key={idx} spacing={5} maxWidth={1250} width='100%' alignItems='center'>
             <Quote quote={quote} color='dark-blue' author={by} />
             <Box display='flex' justifyContent='center' width='100%'>
@@ -30,7 +30,6 @@ function Testimonials() {
     </Stack>
   );
 }
-*/
 
 
 export default function IndustryMentoringProgram() {
@@ -53,15 +52,6 @@ export default function IndustryMentoringProgram() {
         <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
 
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
-            <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}}>
-              <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
-              <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
-                  <Image src={'/programs/industry-mentoring-program/BuildFoundation.jpg'} alt={'icon'} fill/>
-              </AspectRatio>
-            </Box>
-          </Stack>
-
-          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
             <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px' }}>
               <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                 <Image src={'/programs/industry-mentoring-program/DeeperUnderstanding.jpg'} alt={'icon'} fill/>
@@ -70,8 +60,18 @@ export default function IndustryMentoringProgram() {
             </Box>
           </Stack>
 
+          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
+            <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}}>
+              <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
+              <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
+                  <Image src={'/programs/industry-mentoring-program/BuildFoundation.jpg'} alt={'icon'} fill/>
+              </AspectRatio>
+            </Box>
+          </Stack>
+
         </Stack>
       </Box>
+      <Testimonials />
     </Box>
   );
 }

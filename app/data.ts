@@ -6,7 +6,7 @@ export const navData = [
   { text: 'Programs', href: '/programs',
     subData: [
       { text: 'Protege Program', href: '/programs/protege-program' },
-      { text: 'Industry Mentoring Program', href: '/industry-mentoring-program' },
+      { text: 'Industry Mentoring Program', href: '/programs/industry-mentoring-program' },
     ]
   },
   { text: 'Sponsors', href: '/sponsors' },
@@ -32,5 +32,20 @@ export const protegeData = [
   {
     quote: 'The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!',
     by: 'Eeman Chaudhary (Former Protégé Program Mentee)'
+  }
+];
+
+export const impData = [
+  {
+    quote: 'This program has taught me so much more about the value of professional conduct, networking and personal development than anything else throughout my degree. More importantly, it provided me with a mentor who I could go to for any professional advice - something I have never had before. A well-structured program with a wealth of opportunities for personal growth - highly recommend it!',
+    by: 'Suvekchhya (Former IMP Mentee)'
+  },
+  {
+    quote: 'WIESOC\'s IMP was a really great program - I got to understand more about which skills I should develop for the industry that I\'m interested in, and my mentor answered all my questions about gaining experience and progressing my career.',
+    by: 'Olivia (Former IMP Mentee)'
+  },
+  {
+    quote: 'Being part of WIESoc’s Industry Mentoring Program was a valuable experience that gave me an insight into what a career in engineering could look like. I was given the opportunity to work with an industry mentor who gave me the support and guidance I needed to expand my understanding of the industry. I would highly recommend the program!',
+    by: 'Nityaa (Former IMP Mentee)'
   }
 ];
