@@ -61,11 +61,15 @@ export default function IndustryMentoringProgram() {
           </Stack>
 
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
-            <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}}>
-              <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
-              <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
-                  <Image src={'/programs/industry-mentoring-program/BuildFoundation.jpg'} alt={'icon'} fill/>
-              </AspectRatio>
+            <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}} sx={{ display: 'flex', flexDirection: 'column'}}>
+              <Box sx={{ order: { md: 2, lg: 1 } }}>
+                <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
+              </Box>
+              <Box sx={{ order: { md: 1, lg: 2 }, mb: { md: 15, lg: 0} }}>
+                <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
+                    <Image src={'/programs/industry-mentoring-program/BuildFoundation.jpg'} alt={'icon'} fill/>
+                </AspectRatio>
+              </Box>
             </Box>
           </Stack>
 
