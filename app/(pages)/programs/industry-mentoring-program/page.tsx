@@ -62,10 +62,10 @@ export default function IndustryMentoringProgram() {
 
           <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
             <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}} sx={{ display: 'flex', flexDirection: 'column'}}>
-              <Box sx={{ order: { md: 2, lg: 1 } }}>
+              <Box sx={{ order: { xs: 2, sm: 2, md: 2, lg: 1, xl: 1 } }}>
                 <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
               </Box>
-              <Box sx={{ order: { md: 1, lg: 2 }, mb: { md: 15, lg: 0} }}>
+              <Box sx={{ order: { xs: 1, sm: 1, md: 1, lg: 2, xl: 2 }, mb: { xs: 15, sm: 15, md: 15, lg: 0, xl: 0} }}>
                 <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                     <Image src={'/programs/industry-mentoring-program/BuildFoundation.jpg'} alt={'icon'} fill/>
                 </AspectRatio>
@@ -78,7 +78,7 @@ export default function IndustryMentoringProgram() {
 
       <Testimonials />
       <Box
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingY: 2, mb: 5 }}>
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingY: 2, paddingX: 2, mb: 5 }}>
         <Typography level='h1' sx={{ fontWeight: '700', fontStyle: 'italic' }}>
           Are you interested? Keep a lookout for applications!
         </Typography>
