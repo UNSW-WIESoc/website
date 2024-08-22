@@ -1,8 +1,8 @@
-import { Box, Typography, Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import { FC } from 'react';
-
+import Typography from '@mui/joy/Typography';
 interface TimelineCardProps {
   icon: string;
   text: string;
@@ -27,7 +27,7 @@ const Arrow = () => {
         marginRight: { xs: '0px', sm: '5px' },
         marginBottom: { xs: '5px', sm: '0px' },
         position: 'relative',
-        top: { xs: '0px', sm: '-30px' }
+        top: { xs: '0px', sm: '-60px' }
       },
       '&:after': {
         content: '""',
@@ -38,7 +38,7 @@ const Arrow = () => {
         borderBottom: { xs: 'none', sm: '6px solid transparent' },
         borderLeft: { xs: '8px solid transparent', sm: '8px solid white' },
         borderRight: { xs: '8px solid transparent', sm: 'none' },
-        transform: { xs: 'translateY(0)', sm: 'translateY(-30px)' },
+        transform: { xs: 'translateY(0)', sm: 'translateY(-60px)' },
         marginTop: { xs: '0px', sm: '0px' },
         marginLeft: { xs: '0px', sm: '0px' }
       }
@@ -80,14 +80,15 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, text, date }) => (
       }}
     >
       <Typography 
-        variant="body1"
+        level="body-lg"
         className="light-white"
         sx={{ marginTop: { xs: '0', sm: '18px' } }}
       >
         {text}
       </Typography>
+      
       <Typography
-        variant="subtitle1"
+        level="body"
         className="white"
         sx={{ marginTop: { xs: '12px', sm: '16px' }, fontWeight: 'bold' }}
       >
