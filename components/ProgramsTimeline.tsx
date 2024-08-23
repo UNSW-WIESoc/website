@@ -8,6 +8,7 @@ interface TimelineCardProps {
   text: string;
   date: string;
 }
+
 const Arrow = () => {
   return (
  <Box sx={{
@@ -20,26 +21,25 @@ const Arrow = () => {
       '&:before': {
         content: '""',
         display: 'block',
-        width: { xs: '2px', sm: '120px' },
-        height: { xs: '40px', sm: '0px' },
+        width: { xs: '2px', sm: '90px' },
+        height: { xs: '20px', sm: '0px' },
         borderBottom: { xs: 'none', sm: '2px dashed white' },
         borderLeft: { xs: '2px dashed white', sm: 'none' },
-        marginRight: { xs: '0px', sm: '5px' },
-        marginBottom: { xs: '5px', sm: '0px' },
+        marginRight: { xs: '0px', sm: '0px' },
+        marginBottom: { xs: '3px', sm: '0px' },
         position: 'relative',
-        top: { xs: '0px', sm: '-60px' }
+        top: { xs: '0px', sm: '-35px' }
       },
       '&:after': {
         content: '""',
         display: 'block',
         width: '0',
         height: '0',
-        borderTop: { xs: '8px solid white', sm: '6px solid transparent' },
-        borderBottom: { xs: 'none', sm: '6px solid transparent' },
-        borderLeft: { xs: '8px solid transparent', sm: '8px solid white' },
-        borderRight: { xs: '8px solid transparent', sm: 'none' },
-        transform: { xs: 'translateY(0)', sm: 'translateY(-60px)' },
-        marginTop: { xs: '0px', sm: '0px' },
+        borderTop: { xs: '6px solid white', sm: '4px solid transparent' },
+        borderBottom: { xs: 'none', sm: '4px solid transparent' },
+        borderLeft: { xs: '6px solid transparent', sm: '4px solid white' },
+        borderRight: { xs: '6px solid transparent', sm: 'none' },
+        transform: { xs: 'translateY(0)', sm: 'translateY(-35px)' },
         marginLeft: { xs: '0px', sm: '0px' }
       }
     }} />
@@ -55,42 +55,41 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, text, date }) => (
       alignItems: 'center', 
       justifyContent: 'center' ,
       width: '100%', 
-
     }}
   >
     <Box
       sx={{
-        width: { xs: '125px', sm: '148px' }, 
-        height: { xs: '125px', sm: '148px' },
+        width: { xs: '90px', sm: '110px' }, 
+        height: { xs: '90px', sm: '110px' },
         borderRadius: '50%',
-        border: '2px solid white',
+        border: '1px solid white',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         margin: { xs: '0', sm: '0' },
       }}
     >
-      <Image src={icon} alt={text} width={90} height={90} />
+      <Image src={icon} alt={text} width={60} height={60} />
     </Box>
     <Box
       sx={{
         textAlign: { xs: 'center', sm: 'center' },
-        ml: { xs: 7, sm: 0 }, 
-        mt: { xs: 0, sm: 2 }, 
+        ml: { xs: 5, sm: 0 }, 
+        mt: { xs: 0, sm: 1 }, 
       }}
     >
       <Typography 
-        level="body-lg"
+        level="body-sm"
         className="light-white"
-        sx={{ marginTop: { xs: '0', sm: '18px' } }}
+        sx={{ marginTop: { xs: '0', sm: '18px' }, fontSize: '0.875rem', whiteSpace: 'nowrap'}}
       >
         {text}
       </Typography>
       
       <Typography
-        level="body"
+        level="body-xs"
         className="white"
-        sx={{ marginTop: { xs: '12px', sm: '16px' }, fontWeight: 'bold' }}
+        sx={{ marginTop: { xs: '12px', sm: '16px' }, fontWeight: 'bold', fontSize: '0.875rem', whiteSpace: 'nowrap'}}
       >
         {date}
       </Typography>
@@ -100,13 +99,15 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, text, date }) => (
 
 const Timeline = () => {
   return (
-      <Box className='bg-medium-blue' sx={{ justifyContent: 'center' }} pb={3} width='100%'>
-      <HeadingBodyText heading='Checkpoint Events' body={''} color='light-white' />
+      <Box className='bg-medium-blue' sx={{ justifyContent: 'center', pt: 8, pb: 2 }} pb={3} mb={10} width='100%'>
+      <Typography level='subtitle-lg' className='light-white' sx={{ mb: 4, textAlign: 'center'}}>
+      Checkpoint Events
+      </Typography>
       <Stack
         direction={{ xs: 'column', sm: 'row' }} 
         justifyContent="center"
         alignItems='center'
-        spacing={5}
+        spacing={3}
         pb={10}
         sx={{ width: { xs: '90%', md: '65%' }, mx: 'auto' }} 
       >
