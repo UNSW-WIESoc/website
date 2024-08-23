@@ -35,6 +35,7 @@ function CoverImage() {
           height: '100%',
         }}
         justifyContent='center'
+        spacing={{xs: 2, sm: 5}}
       >
         <Typography className='light-white' level='title-lg'>
           UNSW Women In Engineering

@@ -34,5 +34,5 @@ export default function TypingAnimation({ text, delay, infinite, pause }: Typing
     return () => clearTimeout(timeout);
   }, [currentIndex, delay, infinite, text, isPaused, pause]);
 
-  return <Box minHeight={100}>{currentText}</Box>;
+  return <Box height={100}>{currentText}</Box>;
 };
