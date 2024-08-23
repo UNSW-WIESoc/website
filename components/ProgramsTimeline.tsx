@@ -17,7 +17,7 @@ const Arrow = () => {
         alignItems: 'center',
        justifyContent: 'center',
         position: 'relative',
-        left: { xs: '-26%', sm: '0' }, 
+        left: { xs: '-20%', sm: '0' }, 
       '&:before': {
         content: '""',
         display: 'block',
@@ -99,17 +99,22 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, text, date }) => (
 
 const Timeline = () => {
   return (
-      <Box className='bg-medium-blue' sx={{ justifyContent: 'center', pt: 8, pb: 2 }} pb={3} mb={10} width='100%'>
+      <Box className='bg-medium-blue' sx={{ justifyContent: 'center', pt: 8, pb: 8 }} pb={3} mb={10} width='100%'>
       <Typography level='subtitle-lg' className='light-white' sx={{ mb: 4, textAlign: 'center'}}>
       Checkpoint Events
       </Typography>
-      <Stack
-        direction={{ xs: 'column', sm: 'row' }} 
-        justifyContent="center"
-        alignItems='center'
-        spacing={3}
-        pb={10}
-        sx={{ width: { xs: '90%', md: '65%' }, mx: 'auto' }} 
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' }, 
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'nowrap', 
+          gap: 3, 
+          width: '100%',
+          maxWidth: { xs: '100%', sm: '90%', md: '80%' }, 
+          mx: 'auto',
+        }} 
       >
         <TimelineCard icon='/programs/Stage.svg' text='Introductory Ceremony' date='7th March 2024' />
         <Arrow />
@@ -117,8 +122,8 @@ const Timeline = () => {
         <Arrow />
         <TimelineCard icon='/programs/Level2.svg' text='Mid-term Checkpoint 2' date='23rd March 2024' />
         <Arrow />
-        <TimelineCard icon='/programs/Trophy.svg' text='Concluding Ceremony' date='11th April 2024' />
-      </Stack>
+        <TimelineCard icon='/programs/Trophy.svg' text='Concluding Ceremony ' date='11th April 2024' />
+        </Box>
     </Box>
   )
 }
