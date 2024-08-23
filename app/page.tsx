@@ -40,8 +40,7 @@ function CoverImage() {
           UNSW Women In Engineering
         </Typography>
         <Typography className='light-white' level='h2'>
-           
-          <TypingAnimation text='Connect • Engage • Inspire' delay={100} infinite={true} />
+          <TypingAnimation text='Connect • Engage • Inspire' delay={100} infinite={true} pause={1000} />
         </Typography>
       </Stack>
     </AspectRatio>
