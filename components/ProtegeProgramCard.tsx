@@ -3,7 +3,7 @@ import Card from '@mui/joy/Card';
 import DarkOutlineButton from './DarkOutlineButton';
 import Image from 'next/image';
 
-export default function ProtegeProgramCard({ icon, text, type, description }: any) {
+export default function ProtegeProgramCard({ icon, type, description }: any) {
   return (
     <Card
       variant='outlined'
@@ -12,7 +12,13 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
         width: {xs: '300px', lg: '350px'},
         height: 'auto',
         border: '2px solid #93AED3',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        transition: 'all 0.2s ease',
+        '&:hover': {
+          boxShadow: '0px 4px 8px rgba(38, 38, 38, 0.2)',
+          top: '-4px',
+          border: '2px solid #93AED3',
+        }
       }}
     >
       <Box sx={{
@@ -29,7 +35,7 @@ export default function ProtegeProgramCard({ icon, text, type, description }: an
           alignItems: 'center',
           justifyContent: 'center',
       }}>
-        <Image src={icon} alt={text} width={70} height={70}/>
+        <Image src={icon} alt="" width={70} height={70}/>
       </Box>
       <Stack direction="column" spacing={5} alignItems='center' pt={8} pb={4}>
         <Typography level='subtitle-lg'>
