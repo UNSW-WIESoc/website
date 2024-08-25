@@ -83,7 +83,7 @@ export default function ProtegeProgram() {
 
       <Box pt={20} pb={35}>
         <Typography level='subtitle-lg' pb={15}>
-          Want to get invovled in the Protege program?
+          Want to get involved in the Protege program?
         </Typography>
         <Stack 
           direction={{ xs: 'column', md: 'row'}}
@@ -93,13 +93,11 @@ export default function ProtegeProgram() {
         >
           <ProtegeProgramCard 
             icon='/programs/protege-program/BolivianGirl.svg'
-            text='Bolivian Girl'
             type='Mentee'
             description='Are you a new engineering student and want a little help settling into UNSW? This is the program for you!'
           />
           <ProtegeProgramCard 
             icon='/programs/protege-program/AmeliePoulain.svg'
-            text='Amelia Poulain'
             type='Mentor'
             description='Are you a 2nd year+ female engineering student looking to develop your skills? This is perfect for you!'
           />
