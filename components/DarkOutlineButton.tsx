@@ -10,9 +10,10 @@ export default function DarkOutlineButton({text, link}: DarkOutlineButtonProps) 
   return (<Link href={link} passHref>
     <Button variant='outlined' className='medium-blue button-border-round'
       sx={{
-        'borderColor': '#93AED3',
-        'borderWidth': '2px',
-        'backgroundColor': 'white',
+        borderColor: '#93AED3',
+        borderWidth: '2px',
+        backgroundColor: 'white',
+        transition: 'all ease-in-out .2s',
         '&:hover': {
           backgroundColor: '#93AED3',
           borderColor: '#6182B0',
