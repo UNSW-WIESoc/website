@@ -83,7 +83,7 @@ export default function ProtegeProgram() {
 
       <Box pt={20} pb={35}>
         <Typography level='subtitle-lg' pb={15}>
-          Want to get involved in the Protege program?
+          Want to get involved in the Protege Program?
         </Typography>
         <Stack 
           direction={{ xs: 'column', md: 'row'}}

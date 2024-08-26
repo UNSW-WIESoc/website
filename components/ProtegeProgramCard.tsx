@@ -7,18 +7,12 @@ export default function ProtegeProgramCard({ icon, type, description }: any) {
   return (
     <Card
       variant='outlined'
-      className='border-round'
+      className='border-round shadow-hover'
       sx={{
         width: {xs: '300px', lg: '350px'},
         height: 'auto',
         border: '2px solid #93AED3',
         backgroundColor: 'white',
-        transition: 'all 0.2s ease',
-        '&:hover': {
-          boxShadow: '0px 4px 8px rgba(38, 38, 38, 0.2)',
-          top: '-4px',
-          border: '2px solid #93AED3',
-        }
       }}
     >
       <Box sx={{
