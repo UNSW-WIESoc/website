@@ -11,18 +11,18 @@ export default function ContactUs() {
       <HeadingBodyText heading='Contact Us' body={bodyText} color='graphite'/>
       <Stack spacing={5} pb={4} alignItems='center'>
         <Box display='flex' justifyContent='center' sx={{width:'70%', height:'4em', gap:2, flexDirection: { xs: 'column', sm: 'row' }}}>
-            <Input className='medium-blue' placeholder='First Name' variant='outlined' sx={{color:'blue', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
-            <Input className='medium-blue' placeholder='Last Name' variant='outlined' sx={{color:'blue', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
+            <Input placeholder='First Name' variant='outlined' sx={{color:'black', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
+            <Input placeholder='Last Name' variant='outlined' sx={{color:'black', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
         </Box>
         <Box display='flex' justifyContent='center' sx={{width:'70%', height:'4em', gap:2, flexDirection: { xs: 'column', sm: 'row' }}}>
-            <Input className='medium-blue' placeholder='Email Address' variant='outlined' sx={{color:'medium-blue', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
-            <Input className='medium-blue' placeholder='Contact Number' variant='outlined' sx={{width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
+            <Input placeholder='Email Address' variant='outlined' sx={{color:'black', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
+            <Input placeholder='Contact Number' variant='outlined' sx={{color:'black', width:'100%', paddingLeft: '4%', fontSize:'0.9em'}}/>
         </Box>
         <Textarea
-          className='medium-blue'
           placeholder="Message"
           minRows={15}
           style={{
+            color: 'black',
             width: '70%',
             resize: 'vertical',
             paddingTop: '2.5%', 
