@@ -11,56 +11,58 @@ interface TimelineCardProps {
 
 const Arrow = () => {
   return (
- <Box sx={{
+    <Box
+      sx={{
         display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row' },
+        flexDirection: { xs: 'column', sm: 'column', md: 'row' }, 
         alignItems: 'center',
-       justifyContent: 'center',
+        justifyContent: 'center',
         position: 'relative',
-        left: { xs: '-20%', sm: '0' }, 
-      '&:before': {
-        content: '""',
-        display: 'block',
-        width: { xs: '2px', sm: '90px' },
-        height: { xs: '20px', sm: '0px' },
-        borderBottom: { xs: 'none', sm: '2px dashed white' },
-        borderLeft: { xs: '2px dashed white', sm: 'none' },
-        marginRight: { xs: '0px', sm: '0px' },
-        marginBottom: { xs: '3px', sm: '0px' },
-        position: 'relative',
-        top: { xs: '0px', sm: '-35px' }
-      },
-      '&:after': {
-        content: '""',
-        display: 'block',
-        width: '0',
-        height: '0',
-        borderTop: { xs: '6px solid white', sm: '4px solid transparent' },
-        borderBottom: { xs: 'none', sm: '4px solid transparent' },
-        borderLeft: { xs: '6px solid transparent', sm: '4px solid white' },
-        borderRight: { xs: '6px solid transparent', sm: 'none' },
-        transform: { xs: 'translateY(0)', sm: 'translateY(-35px)' },
-        marginLeft: { xs: '0px', sm: '0px' }
-      }
-    }} />
+        left: { xs: '-20%', sm: '-12.5%', md: '0' },
+        '&:before': {
+          content: '""',
+          display: 'block',
+          width: { xs: '2px', sm: '2px', md: '90px' }, 
+          height: { xs: '20px', sm: '20px', md: '0px' }, 
+          borderBottom: { xs: 'none', sm: 'none', md: '2px dashed white' },
+          borderLeft: { xs: '2px dashed white', sm: '2px dashed white', md: 'none' },
+          marginRight: { xs: '0px', sm: '0px', md: '0px' },
+          marginBottom: { xs: '0px', sm: '0px', md: '0px' },
+          position: 'relative',
+          top: { xs: '0px', sm: '0px', md: '-35px' },
+        },
+        '&:after': {
+          content: '""',
+          display: 'block',
+          width: '0',
+          height: '0',
+          borderTop: { xs: '4px solid white', sm: '4px solid white', md: '4px solid transparent' },
+          borderBottom: { xs: 'none', sm: 'none', md: '4px solid transparent' },
+          borderLeft: { xs: '4px solid transparent', sm: '4px solid transparent', md: '4px solid white' },
+          borderRight: { xs: '4px solid transparent', sm: '4px solid transparent', md: 'none' },
+          transform: { xs: 'translateY(0)', sm: 'translateY(0)', md: 'translateY(-35px)' },
+          marginLeft: { xs: '0px', sm: '0px', md: '0px' },
+        },
+      }}
+    />
   );
 };
 
 const TimelineCard: FC<TimelineCardProps> = ({ icon, text, date }) => (
-<Box
+  <Box
     textAlign="center"
     sx={{
       display: 'flex',
-      flexDirection: { xs: 'row', sm: 'column' },
-      alignItems: 'center', 
-      justifyContent: 'center' ,
-      width: '100%', 
+      flexDirection: { xs: 'row', sm: 'row', md: 'column' }, 
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
     }}
   >
     <Box
       sx={{
-        width: { xs: '90px', sm: '110px' }, 
-        height: { xs: '90px', sm: '110px' },
+        width: { xs: '90px', sm: '90px', md: '110px' }, 
+        height: { xs: '90px', sm: '90px', md: '110px' },
         borderRadius: '50%',
         border: '1px solid white',
         display: 'flex',
@@ -73,29 +75,30 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, text, date }) => (
     </Box>
     <Box
       sx={{
-        textAlign: { xs: 'center', sm: 'center' },
-        ml: { xs: 5, sm: 0 }, 
-        mt: { xs: 0, sm: 1 }, 
+        textAlign: 'center',
+        ml: { xs: 5, sm: 5, md: 0 }, 
+        mt: { xs: 0, sm: 0, md: 1 }, 
       }}
     >
-      <Typography 
+      <Typography
         level="body-sm"
         className="light-white"
-        sx={{ marginTop: { xs: '0', sm: '18px' }, fontSize: '0.875rem', whiteSpace: 'nowrap'}}
+        sx={{ marginTop: { xs: '0', sm: '0', md: '18px' }, fontSize: '0.875rem', whiteSpace: 'nowrap' }}
       >
         {text}
       </Typography>
-      
+
       <Typography
         level="body-xs"
         className="white"
-        sx={{ marginTop: { xs: '12px', sm: '16px' }, fontWeight: 'bold', fontSize: '0.875rem', whiteSpace: 'nowrap'}}
+        sx={{ marginTop: { xs: '12px', sm: '12px', md: '16px' }, fontWeight: 'bold', fontSize: '0.875rem', whiteSpace: 'nowrap' }}
       >
         {date}
       </Typography>
     </Box>
   </Box>
 );
+
 
 const Timeline = () => {
   return (
@@ -106,7 +109,7 @@ const Timeline = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' }, 
+          flexDirection: { xs: 'column', sm: 'column', md: 'row' },
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'nowrap', 
