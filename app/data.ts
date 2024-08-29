@@ -31,6 +31,6 @@ export const protegeData = [
   },
   {
     quote: 'The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!',
-    by: 'Eeman Chaudhary (Former Protégé Program Mentee)'
+    by: 'Eeman Chaudhry (Former Protégé Program Mentee)'
   }
 ];
