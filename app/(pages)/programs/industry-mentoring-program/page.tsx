@@ -3,34 +3,9 @@ import PageHeaderCard from '@/components/PageHeaderCard';
 import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
-import HorizontalLine from '@/components/HorizontalLine';
-import Quote from '@/components/Quote';
 import { impData } from '@/app/data';
-
-
-function Testimonials() {
-  return (
-    <Stack py={5} px={5} mx='auto' textAlign='center' justifyContent='center' maxWidth={1250} width='100%' alignItems='center'>
-      <Typography level='subtitle-lg' mb={5}>
-        Hear from our previous mentors and mentees
-      </Typography>
-      <Stack spacing={5} direction='column' width='100%'>
-        <Box display='flex' justifyContent='center' width='100%'>
-          <HorizontalLine color='#93AED3' height={2} width={1200} />
-        </Box>
-        {impData.map(({ quote, by }, idx) => (
-          <Stack key={idx} spacing={5} maxWidth={1250} width='100%' alignItems='center'>
-            <Quote quote={quote} color='dark-blue' author={by} />
-            <Box display='flex' justifyContent='center' width='100%'>
-              <HorizontalLine color='#93AED3' height={2} width={1200} />
-            </Box>
-          </Stack>
-        ))}
-      </Stack>
-    </Stack>
-  );
-}
-
+import Testimonials from '@/components/Testimonials';
+import Interested from '@/components/Interested';
 
 export default function IndustryMentoringProgram() {
 
@@ -76,14 +51,8 @@ export default function IndustryMentoringProgram() {
         </Stack>
       </Box>
 
-      <Testimonials />
-      <Box
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingY: 2, paddingX: 2, mb: 5 }}>
-        <Typography level='h1' sx={{ fontWeight: '700', fontStyle: 'italic' }}>
-          Are you interested? Keep a lookout for applications!
-        </Typography>
-      </Box>
-
+      <Testimonials data={impData} />
+      <Interested />
     </Box>
   );
 }
