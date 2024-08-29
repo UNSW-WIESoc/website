@@ -4,6 +4,7 @@ import { Box, Stack, Input, Button, Textarea } from '@mui/joy';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import React from 'react';
+import OutlineButtonLinkless from '@/components/OutlineButtonLinkless';
 
 export default function ContactUs() {
   const [firstName, setFirstName] = React.useState('');
@@ -71,17 +72,7 @@ export default function ContactUs() {
             fontSize:'0.9em'
           }}
         />
-        <Button className='medium-blue' variant="outlined" onClick={handleSubmitClick}
-        sx={{
-          width:'19%',
-          fontSize: '1em',
-          fontWeight:'bold',
-          padding:'1% 0',
-          borderRadius:'20px',
-          borderWidth:'2px'
-        }}>
-          Send Message
-        </Button>        
+        <OutlineButtonLinkless text={'Send Message'}/>    
       </Stack>
     </Stack>
   );
