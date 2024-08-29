@@ -49,7 +49,7 @@ export default function EventsCard({ event }: any) {
       </CardOverflow>
       <CardContent sx={{ height: '100%' }}>
         <Stack alignItems='center' py={1} spacing={1} sx={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
-          <Box sx={{ flex:'0 0 28%', alignItems:'center', height: '30%', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 2, textOverflow: 'ellipsis' }}>
+          <Box sx={{ flex:'0 0 39%', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
             <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{title}</Typography>
           </Box>
           <Box sx={{ flex:'0 0 23%', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 2, textOverflow: 'ellipsis' }}>
