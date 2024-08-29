@@ -31,43 +31,39 @@ export default function ContactUs() {
       <HeadingBodyText heading='Contact Us' body={bodyText} color='graphite'/>
       <Stack spacing={5} pb={4} alignItems='center'>
         <Box display='flex' justifyContent='center' sx={{width:'70%', height:'4em', gap:2, flexDirection: { xs: 'column', sm: 'row' }}}>
-            <Input placeholder='First Name' variant='outlined' onChange={e => setFirstName(e.target.value)}
+            <Input className='dark-blue' placeholder='First Name' variant='outlined' onChange={e => setFirstName(e.target.value)}
             sx={{
-              color:'black',
               width:'100%',
               paddingLeft: '4%',
               fontSize:'0.9em'
             }}/>
-            <Input placeholder='Last Name' variant='outlined' onChange={e => setLastName(e.target.value)}
+            <Input className='dark-blue' placeholder='Last Name' variant='outlined' onChange={e => setLastName(e.target.value)}
             sx={{
-              color:'black',
               width:'100%',
               paddingLeft: '4%',
               fontSize:'0.9em'
             }}/>
         </Box>
         <Box display='flex' justifyContent='center' sx={{width:'70%', height:'4em', gap:2, flexDirection: { xs: 'column', sm: 'row' }}}>
-            <Input placeholder='Email Address' variant='outlined' onChange={e => setEmail(e.target.value)}
+            <Input className='dark-blue' placeholder='Email Address' variant='outlined' onChange={e => setEmail(e.target.value)}
             sx={{
-              color:'black',
               width:'100%',
               paddingLeft: '4%',
               fontSize:'0.9em'
             }}/>
-            <Input placeholder='Contact Number' variant='outlined' onChange={e => setPhone(e.target.value)}
+            <Input className='dark-blue' placeholder='Contact Number' variant='outlined' onChange={e => setPhone(e.target.value)}
             sx={{
-              color:'black',
               width:'100%',
               paddingLeft: '4%',
               fontSize:'0.9em'
             }}/>
         </Box>
         <Textarea
+          className='dark-blue'
           placeholder="Message"
           minRows={15}
           onChange={e => setMessage(e.target.value)}
           style={{
-            color: 'black',
             width: '70%',
             resize: 'vertical',
             paddingTop: '2.5%', 
