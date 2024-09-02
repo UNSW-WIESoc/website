@@ -37,7 +37,6 @@ function CoverImage() {
           px: '5%',
           justifyContent: 'center'
         }}
-        spacing={{xs: 2, sm: 5}}
       >
         <Typography className='light-white' level='title-lg' mb={0} fontSize={{xs: '2rem', sm: '3rem', md: '4.5rem'}}>
           UNSW Women In Engineering
