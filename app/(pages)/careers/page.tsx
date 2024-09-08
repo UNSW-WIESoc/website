@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import CareersCard from '@/components/CareersCard';
 
 export default function Careers() {
-  const [upcomingCareers, setUpcomingCareers] = useState([]);
+  const [careerEvents, setCareers] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -15,9 +15,9 @@ export default function Careers() {
 
       const now = new Date();
 
-      const upcoming = events.filter((event: any) => new Date(event.fields.dateTimeEnd) > now);
+      const careerEvents = events.filter((event: any) => new Date(event.fields.dateTimeEnd) <= now || new Date(event.fields.dateTimeEnd) > now);
 
-      setUpcomingCareers(upcoming);
+      setCareers(careerEvents);
     }
 
     fetchData();
@@ -35,7 +35,7 @@ export default function Careers() {
         spacing={10}
         mb={10}
       >
-        {upcomingCareers && upcomingCareers?.map((event: any, index: number) => (
+        {careerEvents && careerEvents?.map((event: any, index: number) => (
           <Grid
             xs={12} sm={12} md={6}
             key={index}

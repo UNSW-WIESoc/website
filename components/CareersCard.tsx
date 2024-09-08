@@ -9,6 +9,7 @@ import Image from 'next/image';
 import Button from '@mui/joy/Button';
 import Stack from '@mui/material/Stack';
 import { formatEventDates } from '../lib/helpers/event';
+import Box from '@mui/joy/Box';
 
 export default function CareersCard({ event }: any) {
   if (!event || !event.fields) {
@@ -46,18 +47,18 @@ export default function CareersCard({ event }: any) {
         </AspectRatio>
       </CardOverflow>
       <CardContent sx={{ height: '100%' }}>
-        <Stack alignItems='center' py={1} spacing={1} sx={{ height: '100%' }}>
-          <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{title}</Typography>
-          <Typography level='title-sm' textAlign='center'>{eventDateTimeStr}</Typography>
-          <Typography level='title-sm' textAlign='center' sx={{ pt: 0 }}>{location}</Typography>
+        <Stack alignItems='center' py={1} spacing={1} sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{title}</Typography>
+            <Typography level='title-sm' textAlign='center'>{eventDateTimeStr}</Typography>
+            <Typography level='title-sm' textAlign='center'>{location}</Typography>
           <Button 
             component='a' 
             href={facebookLink}
             target='_blank'
             className='bg-purple button-border-round'
-            sx={{ mb: 'auto' }}
+            sx={{ mb: 'auto'}}
             >
-            <Typography level='subtitle' className='white' p={0.5} sx={{ mt: 'auto' }}>
+            <Typography level='subtitle' pb={0.3} className='white'  sx={{ mt: 'auto' }}>
               View Event
             </Typography>
           </Button>
