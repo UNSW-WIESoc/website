@@ -53,24 +53,24 @@ function AboutUsOverview() {
   We run many social and industry events throughout the year as well as two Programs dedicated to mentoring and interpersonal development.\n'
 
   return (
+    <Stack>
+          <Typography level='h1' textAlign={'center'}> About Us</Typography>
     <Stack
       width={{md: '90%', lg: '70%', xl: '50%'}}
-      direction={{md: 'column', lg: 'row'}} 
+      direction={{xs: 'column', lg: 'row'}} 
       mx='auto'
-      my={10}
+      my={3}
       spacing={6}
       alignItems='center'
-    >
-      <Stack width={{xs: '90%', sm: '70%', md: '60%', lg: '50%'}} spacing={3} pb={3}>
-        <Typography level='h1' textAlign={'left'}>About Us</Typography>
-        <Typography level='body'>{aboutUsText}</Typography>
+    >      <Stack width={{xs: '90%', sm: '70%', md: '60%', lg: '50%'}} spacing={3} pb={3}>
+        <Typography level='body' textAlign={'center'} >{aboutUsText}</Typography>
         <Stack direction='row' justifyContent='center'>
           <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
           <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
           <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
         </Stack>
       </Stack>
-      <AspectRatio sx={{width: {xs: '90%', sm: '70%', md: '60%', lg: '50%'}, alignContent: 'center'}}>
+      <AspectRatio sx={{width: {xs: '90%', sm: '70%', md: '60%', lg: '60%'}, alignContent: 'center'}}>
         <iframe
           src='https://www.youtube.com/embed/Tyyl9Kp-yiE?si=kk2dfErd_cJNYBbh'
           title='Welcome To WIESoc'
@@ -80,6 +80,8 @@ function AboutUsOverview() {
         </iframe>
       </AspectRatio>
     </Stack>
+    </Stack>
+
   );
 }
 
