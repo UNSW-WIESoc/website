@@ -8,6 +8,7 @@ import React, { useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Dropdown from '@mui/joy/Dropdown';
 import Menu from '@mui/joy/Menu';
+import Box from '@mui/joy/Box';
 import MenuButton from '@mui/joy/MenuButton';
 import MenuItem from '@mui/joy/MenuItem';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -25,6 +26,7 @@ function SubMenu({ subData }: { subData: { text: string, href: string }[] }) {
       placement='bottom-start'
       sx={{
         borderRadius: '0px 10px 10px 10px', 
+        border: '0px'
       }}
     >
       {subData.map(({text,href}, idx) => (
@@ -41,8 +43,8 @@ function SubMenu({ subData }: { subData: { text: string, href: string }[] }) {
             '&:focus': {
               outline: 'none',
             },
-            paddingLeft: '3px',
             zIndex: 1,
+            padding: '13px 13px'
           }}
         >
           <Typography           
@@ -131,16 +133,18 @@ function NavItem({ title, navigateTo, subData }: NavProps) {
 export default function NavBar() {
   return (
     <Sheet sx={{ height: 80, display: { xs: 'none', lg: 'flex' } }}>
-      <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2}>
-        <Link href='/'>
-          <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={250} />
-        </Link>
-        <Stack direction='row' width='100%' height='100%' px={10}>
+      <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2} sx={{display: 'flex'}}>
+        <Box sx={{flex: '0.5'}}>
+          <Link href='/'>
+            <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={250} />
+          </Link>
+        </Box>
+        <Stack direction='row' width='100%' height='100%' px={5} sx={{flexGrow:'1'}}>
           {navData.map(({ text, href, subData }, idx) => (
-            <NavItem title={text} navigateTo={href} subData={subData} key={idx} />
+            <NavItem title={text} navigateTo={href} subData={subData} key={idx}/>
           ))}
         </Stack>
-        <Stack direction='row' spacing={3} mx={3}>
+        <Stack direction='row' spacing={3} mx={3} sx={{flex:'0 0 auto'}}>
           {socialsData.map(({ Icon, href }, idx) => (
             <Link key={idx} href={href} target='_blank'>
               <Icon color='#33373D' width={25} height={25} />
