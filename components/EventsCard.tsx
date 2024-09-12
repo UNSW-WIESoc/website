@@ -39,8 +39,7 @@ export default function EventsCard({ event }: any) {
       sx={{
         minWidth: '300px',
         maxWidth: '600px',
-        height: '100%',
-        border: '0px'
+        height: '100%'
       }}
     >
       <CardOverflow>
