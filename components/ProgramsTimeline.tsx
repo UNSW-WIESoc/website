@@ -80,7 +80,7 @@ const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
     sx={{
       textAlign: 'center',
       ml: { xs: -22, sm: -22, md: 0},
-      mt: { xs: 3, sm: 3, md: 0}
+      mt: { xs: 3, sm: 3, md: 0},
     }}
   >
     <Typography
@@ -102,14 +102,10 @@ const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
 );
 
 const items = [
-  <TimelineCard icon='/programs/Stage.svg' isLast={false} key="1" />,
-  <TimelineCard icon='/programs/Level1.svg' isLast={false} key="2" />,
-  <TimelineCard icon='/programs/Level2.svg'isLast={false} key="3" />,
-  <TimelineCard icon='/programs/Trophy.svg' isLast={true} key="4" />,
-  <TextComponent text='Introductory Ceremony' date='7th March 2024' key="5" />,
-  <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' key="6" />,
-  <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' key="7" />,
-  <TextComponent text='Concluding Ceremony ' date='11th April 2024' key="8" />
+  <TextComponent text='Introductory Ceremony' date='7th March 2024' key="1" />,
+  <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' key="2" />,
+  <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' key="3" />,
+  <TextComponent text='Concluding Ceremony ' date='11th April 2024' key="4" />
 ];
 
 const Mobileitems = [
@@ -133,14 +129,21 @@ const Timeline = () => {
 
   <Box sx={{ maxWidth: { xs: '100%', sm: '90%', md: '80%' }, mx: 'auto',}}>
   <Box sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
-        <Grid container spacing={0}>
-          {items.map((item, index) => (
-            <Grid item md={3} key={index}>
-              {item}
-            </Grid>
-          ))}
-        </Grid>
+
+  <Box 
+        sx={{ display: 'flex', justifyContent: 'center', mb: -52, mt: -50, mr: -1.5 }}>
+        <Image src='/programs/Timeline.svg' alt='Timeline' width={950} height={950} style={{ display: 'block' }} />
       </Box>
+
+    <Box
+    sx={{display: 'flex', flexDirection: { md: 'row' },  justifyContent: 'center', gap: '130px',}}>
+    <TextComponent text='Introductory Ceremony' date='7th March 2024' />
+    <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
+    <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
+    <TextComponent text='Concluding Ceremony ' date='11th April 2024' />
+    </Box>
+
+  </Box>
 
   <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, flexGrow: 1 }}>
     <Grid container spacing={2}>
