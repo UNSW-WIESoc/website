@@ -101,13 +101,6 @@ const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
   </Box>
 );
 
-const items = [
-  <TextComponent text='Introductory Ceremony' date='7th March 2024' key="1" />,
-  <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' key="2" />,
-  <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' key="3" />,
-  <TextComponent text='Concluding Ceremony ' date='11th April 2024' key="4" />
-];
-
 const Mobileitems = [
   { component: <TimelineCard icon='/programs/Stage.svg' isLast={false} key="1" />, xs: 8, sm: 8 },
   { component: <TextComponent text='Introductory Ceremony' date='7th March 2024' key="2" />, xs: 4, sm: 4 },
@@ -121,43 +114,38 @@ const Mobileitems = [
 
 const Timeline = () => {
   return (
+    <Box className='bg-medium-blue' sx={{ justifyContent: 'center', pt: 8, pb: 8 }} mb={10} width='100%'>
+      <Typography level='subtitle-lg' className='light-white' sx={{ mb: 4, textAlign: 'center'}}>
+      Checkpoint Events
+      </Typography>
 
-  <Box className='bg-medium-blue' sx={{ justifyContent: 'center', pt: 8, pb: 8 }} pb={3} mb={10} width='100%'>
-  <Typography level='subtitle-lg' className='light-white' sx={{ mb: 4, textAlign: 'center'}}>
-  Checkpoint Events
-  </Typography>
+      <Box sx={{ maxWidth: { xs: '100%', sm: '90%', md: '80%' }, mx: 'auto',}}>
+        <Box sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
+          <Box 
+            sx={{ display: 'flex', justifyContent: 'center', mb: -52, mt: -50, mr: -1.5 }}>
+            <Image src='/programs/Timeline.svg' alt='Timeline' width={961} height={961} style={{ display: 'block' }} />
+          </Box>
+          <Box
+            sx={{display: 'flex', flexDirection: { md: 'row' },  justifyContent: 'center', gap: '130px',}}>
+            <TextComponent text='Introductory Ceremony' date='7th March 2024' />
+            <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
+            <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
+            <TextComponent text='Concluding Ceremony ' date='11th April 2024' />
+          </Box>
+        </Box>
 
-  <Box sx={{ maxWidth: { xs: '100%', sm: '90%', md: '80%' }, mx: 'auto',}}>
-  <Box sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
-
-  <Box 
-        sx={{ display: 'flex', justifyContent: 'center', mb: -52, mt: -50, mr: -1.5 }}>
-        <Image src='/programs/Timeline.svg' alt='Timeline' width={950} height={950} style={{ display: 'block' }} />
+        <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            {Mobileitems.map((item, index) => (
+              <Grid item xs={item.xs} sm={item.sm} key={index}>
+                {item.component}
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Box>
-
-    <Box
-    sx={{display: 'flex', flexDirection: { md: 'row' },  justifyContent: 'center', gap: '130px',}}>
-    <TextComponent text='Introductory Ceremony' date='7th March 2024' />
-    <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
-    <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
-    <TextComponent text='Concluding Ceremony ' date='11th April 2024' />
     </Box>
-
-  </Box>
-
-  <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, flexGrow: 1 }}>
-    <Grid container spacing={2}>
-      {Mobileitems.map((item, index) => (
-        <Grid item xs={item.xs} sm={item.sm} key={index}>
-          {item.component}
-        </Grid>
-      ))}
-    </Grid>
-  </Box>
-  </Box>
-  </Box>
   )
 }
-
 
 export default Timeline;
