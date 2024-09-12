@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { Box, Typography } from '@mui/joy';
 import OutlineButton from './OutlineButton';
+import Image from "next/image";
+import AspectRatio from "@mui/joy/AspectRatio";
 
 
 interface ProgramsComponentProps {
@@ -60,30 +62,23 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
-      <Box style={flipperStyle}>
-        <Box style={frontBackStyle}>
-          <img
-            style={{
-              width: '100%',
-              height: '350px',
-              objectFit: 'cover',
-              paddingBottom: '30px',
-            }}
-            src={frontImageSrc}
-          />
+      <Box sx={flipperStyle}>
+        <Box sx={frontBackStyle}>
+          <AspectRatio ratio='8/7'>
+            <Image fill src={frontImageSrc} alt="programs-card-image"/>
+          </AspectRatio>
           <Typography
-            className={'graphite'}
+            mt={3}
+            className='graphite'
             level='body-lg'
-            style={{
-              textAlign: 'center',
-            }}
+            textAlign='center'
           >
             {frontTitle}
           </Typography>
         </Box>
-        <Box style={backStyle}>
+        <Box sx={backStyle}>
           <Box
-            style={{ 
+            sx={{
               padding: '40px',
               display: 'flex',
               flexDirection: 'column',
@@ -91,15 +86,15 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
             }}
           >
             <Box
-              style={{ 
+              sx={{
                 display: 'flex', 
                 justifyContent: 'center',
               }}
             >
-              <Typography className={'graphite'} level='body' style={{ textAlign: 'center', lineHeight: '1.2', }}>{description}</Typography>
+              <Typography className='graphite' level='body' textAlign='center' lineHeight='1.2'>{description}</Typography>
             </Box>
             <Box 
-              style={{ 
+              sx={{
                 display: 'flex', 
                 flexWrap: 'wrap', 
                 justifyContent: 'center', 
@@ -108,13 +103,13 @@ export default function ProgramsComponent({ frontTitle, frontImageSrc, backConte
               }}
             >
               {backContent.map((item, index) => (
-                <Box key={index} style={{ maxWidth: '50%', padding: '15px', }}>
+                <Box key={index} sx={{ maxWidth: '50%', padding: '15px', }}>
                   {item}
                 </Box>
               ))}
             </Box>        
             <Box
-              style={{ 
+              sx={{
                 marginTop: 'auto',
                 display: 'flex', 
                 justifyContent: 'center',

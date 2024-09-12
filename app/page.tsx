@@ -121,17 +121,17 @@ function SponsorsPreview() {
 function ProgramsOverview() {
 
   const backContent_1 = [
-    <LabelledIcon icon='/programs/Graduate.svg' text='Student Mentors' />,
-    <LabelledIcon icon='/programs/Friendship.svg'text='Foster Friendships' />,
-    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
-    <LabelledIcon icon='/programs/BookStack.svg' text='Settle into University' />,
+    <LabelledIcon key='/programs/Graduate.svg' icon='/programs/Graduate.svg' text='Student Mentors' />,
+    <LabelledIcon key='/programs/Friendship.svg' icon='/programs/Friendship.svg'text='Foster Friendships' />,
+    <LabelledIcon key='/programs/Location.svg' icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon key='/programs/BookStack.svg' icon='/programs/BookStack.svg' text='Settle into University' />,
   ];
 
   const backContent_2 = [
-    <LabelledIcon icon='/programs/WomanProfile.svg' text='Industry Mentors' />,
-    <LabelledIcon icon='/programs/Learning.svg' text='Develop Professionally' />,
-    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
-    <LabelledIcon icon='/programs/ConnectedPeople.svg' text='Make Connections' />,
+    <LabelledIcon key='/programs/WomanProfile.svg' icon='/programs/WomanProfile.svg' text='Industry Mentors' />,
+    <LabelledIcon key='/programs/Learning.svg' icon='/programs/Learning.svg' text='Develop Professionally' />,
+    <LabelledIcon key='/programs/Location.svg' icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon key='/programs/ConnectedPeople.svg' icon='/programs/ConnectedPeople.svg' text='Make Connections' />,
   ];
 
   return (
