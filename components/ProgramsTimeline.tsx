@@ -24,12 +24,12 @@ const Arrow = () => {
       '&:before': {
         content: '""',
         display: 'block',
-        width: { xs: '2px', sm: '2px', md: '120px' }, 
+        width: { xs: '2px', sm: '2px', md: '80px' }, 
         height: { xs: '25px', sm: '25px', md: '0px' }, 
         borderBottom: { xs: 'none', sm: 'none', md: '2px dashed white'},
         borderLeft: { xs: '2px dashed white', sm: '2px dashed white', md: '0px' },
         position: 'relative',
-        marginLeft: { xs: '0px', sm: '0px', md: '325px' },
+        marginLeft: { xs: '0px', sm: '0px', md: '275px' },
         top: { xs: '0px', sm: '0px', md: '-65px' },
       },
       '&:after': {
@@ -55,7 +55,6 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, isLast }) => (
       alignItems: { xs:'center', sm: 'center', md: 'center' },
       justifyContent: 'center',
       width: '100%',
-      ml: isLast ? { xs: 0, sm: 0, md: 0 } : { xs: 0, sm: 0, md: 0 },
     }}
   >
     <Box
@@ -132,8 +131,9 @@ const Timeline = () => {
   Checkpoint Events
   </Typography>
 
+  <Box sx={{ maxWidth: { xs: '100%', sm: '90%', md: '80%' }, mx: 'auto',}}>
   <Box sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
-        <Grid container spacing={1}>
+        <Grid container spacing={0}>
           {items.map((item, index) => (
             <Grid item md={3} key={index}>
               {item}
@@ -150,6 +150,7 @@ const Timeline = () => {
         </Grid>
       ))}
     </Grid>
+  </Box>
   </Box>
   </Box>
   )
