@@ -29,7 +29,8 @@ const Arrow = () => {
         borderBottom: { xs: 'none', sm: 'none', md: '2px dashed white'},
         borderLeft: { xs: '2px dashed white', sm: '2px dashed white', md: '0px' },
         position: 'relative',
-        marginLeft: {xs: '0px', sm: '0px', md: '50px'}
+        marginLeft: { xs: '0px', sm: '0px', md: '325px' },
+        top: { xs: '0px', sm: '0px', md: '-65px' },
       },
       '&:after': {
         content: '""',
@@ -38,6 +39,7 @@ const Arrow = () => {
         borderBottom: { xs: 'none', sm: 'none', md: '4px solid transparent' },
         borderLeft: { xs: '4px solid transparent', sm: '4px solid transparent', md: '4px solid white' },
         borderRight: { xs: '4px solid transparent', sm: '4px solid transparent', md: 'none' },
+        transform: { xs: 'translateY(0)', sm: 'translateY(0)', md: 'translateY(-65px)' },
       },
     }}
   />
@@ -49,11 +51,11 @@ const TimelineCard: FC<TimelineCardProps> = ({ icon, isLast }) => (
     textAlign="center"
     sx={{
       display: 'flex',
-      flexDirection: { xs: 'column', sm: 'column', md: 'row' }, 
+      flexDirection: { xs: 'column', sm: 'column', md: 'column' }, 
       alignItems: { xs:'center', sm: 'center', md: 'center' },
       justifyContent: 'center',
       width: '100%',
-      ml: isLast ? { xs: 0, sm: 0, md: 0 } : { xs: 0, sm: 0, md: 11 },
+      ml: isLast ? { xs: 0, sm: 0, md: 0 } : { xs: 0, sm: 0, md: 0 },
     }}
   >
     <Box
