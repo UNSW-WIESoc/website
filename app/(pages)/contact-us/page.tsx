@@ -72,7 +72,9 @@ export default function ContactUs() {
             fontSize:'0.9em'
           }}
         />
-        <OutlineButtonLinkless text={'Send Message'}/>    
+        <Box pb='15px'>
+          <OutlineButtonLinkless text={'Send Message'}/>  
+        </Box>  
       </Stack>
     </Stack>
   );
