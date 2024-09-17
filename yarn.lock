@@ -123,7 +123,15 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@contentful/content-source-maps@^0.6.0", "@contentful/content-source-maps@^0.6.1":
+"@contentful/content-source-maps@^0.11.0":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.3.tgz#0e9ea325c36e352b00b7fca1c1a0834018d4ad77"
+  integrity sha512-RFF9reUVU6o6A/Rm1662Ez+BhyVgcATs8yvNKIVJWvXQkwsgevLLZduAn2jU7Dl/q1EgJLeJFeuOREtk8LY3zQ==
+  dependencies:
+    "@vercel/stega" "^0.1.2"
+    json-pointer "^0.6.2"
+
+"@contentful/content-source-maps@^0.6.1":
   version "0.6.1"
   resolved "https://registry.npmjs.org/@contentful/content-source-maps/-/content-source-maps-0.6.1.tgz"
   integrity sha512-IjsyhakG17OC5xtIa5agVRsnjjxiJf9HZjpDIV6Ix036Pd5YHJrbyyiF4KNEmLlIqe3hQ0kHGWEs9S/HfECmRQ==
@@ -936,10 +944,10 @@ axe-core@^4.9.1:
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.9.1.tgz"
   integrity sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==
 
-axios@~1.6.8:
-  version "1.6.8"
-  resolved "https://registry.npmjs.org/axios/-/axios-1.6.8.tgz"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+axios@^1.7.4:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -1079,17 +1087,17 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-contentful-resolve-response@^1.8.1:
-  version "1.8.2"
-  resolved "https://registry.npmjs.org/contentful-resolve-response/-/contentful-resolve-response-1.8.2.tgz"
-  integrity sha512-F9oLqSkprxcvUVkzp8ZfVy98nfKv8cmdBIZ0RB1HFGU5xbPDyWYNb7D0CzhSeDVcMmwmsfBbM6DuR//Dq6Bmng==
+contentful-resolve-response@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/contentful-resolve-response/-/contentful-resolve-response-1.9.0.tgz#7a89e6f332d32b98c6e98af9406ce7aa64707711"
+  integrity sha512-LtgPx/eREpHXOX82od48zFZbFhXzYw/NfUoYK4Qf1OaKpLzmYPE4cAY4aD+rxVgnMM5JN/mQaPCsofUlJRYEUA==
   dependencies:
     fast-copy "^2.1.7"
 
-contentful-sdk-core@^8.1.0:
-  version "8.3.1"
-  resolved "https://registry.npmjs.org/contentful-sdk-core/-/contentful-sdk-core-8.3.1.tgz"
-  integrity sha512-HYy4ecFA76ERxz7P0jW7hgDcL8jH+bRckv2QfAwQ4k1yPP9TvxpZwrKnlLM69JOStxVkCXP37HvbjbFnjcoWdg==
+contentful-sdk-core@^8.3.1:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-8.3.2.tgz#04807041633cc99b11065494389882185182afc5"
+  integrity sha512-L2LNWRXb1/5RLpLemCoP2Lzz6211xyE63GXh2nVXekvM4Dnswo+9N2D6JmWTne9zq89Izo88vOGAzzIAxb4Ukw==
   dependencies:
     fast-copy "^2.1.7"
     lodash.isplainobject "^4.0.6"
@@ -1097,16 +1105,16 @@ contentful-sdk-core@^8.1.0:
     p-throttle "^4.1.1"
     qs "^6.11.2"
 
-contentful@^10.12.7:
-  version "10.12.7"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-10.12.7.tgz#0b7ac48e393d76054328a4f0cfc1354f70d46cc2"
-  integrity sha512-qY2GyiwXK3Hb+QuyCSbNgvnF+Si7qlX0dG9KoqmJ3uiT8ga5jUikYw/BXjbZiqhsV5KI4IyXp2rhBcBKfj1YIQ==
+contentful@^10.12.8:
+  version "10.15.1"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-10.15.1.tgz#1ab92a41b15ff692e0bbc0ecffac9eb018f0ab21"
+  integrity sha512-vPgQvpzqWHauroXrhPOW03iz/ZVqZrv6BX2Fk/vMOlMMB7a+zrhUWAuUjY9WFDVMRcAwPhZF2Lvey6Nvyyd6sQ==
   dependencies:
-    "@contentful/content-source-maps" "^0.6.0"
+    "@contentful/content-source-maps" "^0.11.0"
     "@contentful/rich-text-types" "^16.0.2"
-    axios "~1.6.8"
-    contentful-resolve-response "^1.8.1"
-    contentful-sdk-core "^8.1.0"
+    axios "^1.7.4"
+    contentful-resolve-response "^1.9.0"
+    contentful-sdk-core "^8.3.1"
     json-stringify-safe "^5.0.1"
     type-fest "^4.0.0"
 
