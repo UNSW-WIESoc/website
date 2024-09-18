@@ -87,6 +87,10 @@ body {
   border-radius: 10px;
 }
 
+.border-round-top {
+  border-radius: 10px 10px 0px 0px;
+}
+
 .button-border-round {
   border-radius: 20px;
 }
