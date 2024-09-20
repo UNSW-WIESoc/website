@@ -45,7 +45,7 @@ const Timeline = () => {
         <Box sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
           <Box 
             sx={{ display: 'flex', justifyContent: 'center', mb: -52, mt: -50, mr: -1.5 }}>
-            <Image src='/programs/Timeline.svg' alt='Timeline' width={950} height={950} style={{ display: 'block' }} />
+            <Image src='/programs/protege-program/Timeline.svg' alt='Timeline' width={950} height={950} style={{ display: 'block' }} />
           </Box>
           <Box
             sx={{display: 'flex', flexDirection: { md: 'row' },  justifyContent: 'center', mr: -2, gap: '132px',}}>
@@ -59,7 +59,7 @@ const Timeline = () => {
         <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' },  flexDirection: { xs: 'column', sm: 'column'}, alignItems: 'center', flexGrow: 1 }}>
           <Box 
             sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' }, mb: 0, mt: 0, mr: 30}}>
-            <Image src='/programs/Verticaltimeline.svg' alt='Timeline' width={510} height={510} style={{ display: 'block' }} />
+            <Image src='/programs/protege-program/Verticaltimeline.svg' alt='Timeline' width={510} height={510} style={{ display: 'block' }} />
           </Box>
           <Box
             sx={{ display: 'flex', flexDirection: {xs: 'column',  sm: 'column'}, mt: -65.5, mr: -30, justifyContent: 'center', gap: '63px'}}>
