@@ -9,10 +9,11 @@ import OutlineButton from '@/components/OutlineButton';
 import HorizontalLine from "@/components/HorizontalLine";
 import EventsCarousel from '@/components/Carousel/EventsCarousel';
 import { getEvents } from "@/lib/api";
+import TypingAnimation from '@/components/TypingAnimation';
 
 function CoverImage() {
   return (
-    <AspectRatio sx={{width: '100%', overflow: 'hidden'}} objectFit='cover'>
+    <AspectRatio sx={{width: '100%', height: 'auto', overflow: 'hidden'}} objectFit='cover'>
       <Image src={'/landing-page/2024_group_photo.JPG'} alt={'group of people'} fill/>
       <Box
         className='bg-dark-blue'
@@ -23,6 +24,7 @@ function CoverImage() {
           width: '100%',
           height: '100%',
           opacity: '0.6',
+          justifyContent: 'center'
         }}
       />
       <Stack
@@ -32,14 +34,15 @@ function CoverImage() {
           left: 0,
           width: '100%',
           height: '100%',
+          px: '5%',
+          justifyContent: 'center'
         }}
-        justifyContent='center'
       >
-        <Typography className='light-white' level='title-lg'>
+        <Typography className='light-white' level='title-lg' mb={0} fontSize={{xs: '2rem', sm: '3rem', md: '4.5rem'}}>
           UNSW Women In Engineering
         </Typography>
-        <Typography className='light-white' level='h2'>
-          Connect • Engage • Inspire
+        <Typography className='light-white' level='h2' fontSize={{xs: '1rem', sm: '1.5rem', md: '2rem'}}>
+          <TypingAnimation text='Connect • Engage • Inspire' delay={100} infinite={true} pause={1000} />
         </Typography>
       </Stack>
     </AspectRatio>
@@ -55,7 +58,7 @@ function AboutUsOverview() {
       width={{md: '90%', lg: '70%', xl: '50%'}}
       direction={{md: 'column', lg: 'row'}} 
       mx='auto'
-      my={15}
+      my={10}
       spacing={6}
       alignItems='center'
     >
@@ -119,17 +122,17 @@ function SponsorsPreview() {
 function ProgramsOverview() {
 
   const backContent_1 = [
-    <LabelledIcon icon='/programs/Graduate.svg' text='Student Mentors' />,
-    <LabelledIcon icon='/programs/Friendship.svg'text='Foster Friendships' />,
-    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
-    <LabelledIcon icon='/programs/BookStack.svg' text='Settle into University' />,
+    <LabelledIcon key='/programs/Graduate.svg' icon='/programs/Graduate.svg' text='Student Mentors' />,
+    <LabelledIcon key='/programs/Friendship.svg' icon='/programs/Friendship.svg'text='Foster Friendships' />,
+    <LabelledIcon key='/programs/Location.svg' icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon key='/programs/BookStack.svg' icon='/programs/BookStack.svg' text='Settle into University' />,
   ];
 
   const backContent_2 = [
-    <LabelledIcon icon='/programs/WomanProfile.svg' text='Industry Mentors' />,
-    <LabelledIcon icon='/programs/Learning.svg' text='Develop Professionally' />,
-    <LabelledIcon icon='/programs/Location.svg' text='Checkpoint Events' />,
-    <LabelledIcon icon='/programs/ConnectedPeople.svg' text='Make Connections' />,
+    <LabelledIcon key='/programs/WomanProfile.svg' icon='/programs/WomanProfile.svg' text='Industry Mentors' />,
+    <LabelledIcon key='/programs/Learning.svg' icon='/programs/Learning.svg' text='Develop Professionally' />,
+    <LabelledIcon key='/programs/Location.svg' icon='/programs/Location.svg' text='Checkpoint Events' />,
+    <LabelledIcon key='/programs/ConnectedPeople.svg' icon='/programs/ConnectedPeople.svg' text='Make Connections' />,
   ];
 
   return (

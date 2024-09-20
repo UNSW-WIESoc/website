@@ -56,7 +56,7 @@ export default function Program() {
                       icon4={protegeIcon4} link='/programs/protege-program'/>
         <ProgramsCard imagePath='/programs/imp_card.jpg' cardTitle='Industry Mentoring Program'
                       description={impDescription} icon1={impIcon1} icon2={impIcon2} icon3={impIcon3}
-                      icon4={impIcon4} link='/industry-mentoring-program'/>
+                      icon4={impIcon4} link='/programs/industry-mentoring-program'/>
       </Stack>
     </Box>
   );
