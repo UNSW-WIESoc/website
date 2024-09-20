@@ -59,7 +59,6 @@ export default function ProtegeProgram() {
       </Box>
 
       <Testimonials data={protegeData} />
-      <Interested />
 
       <Box pt={10} pb={35}>
         <Typography level='subtitle-lg' pb={15}>
