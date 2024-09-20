@@ -11,27 +11,26 @@ export default function ProtegeProgramCard({ icon, type, description }: any) {
       sx={{
         width: {xs: '300px', lg: '350px'},
         height: 'auto',
-        border: '2px solid #93AED3',
+        border: '3px solid #93AED3',
         backgroundColor: 'white',
       }}
     >
       <Box sx={{
           position: 'absolute',
-          top: '-50px',
+          top: '-55px',
           left: '50%',
           transform: 'translateX(-50%)',
           width: {xs: '90px', sm: '100px'},
           height: {xs: '90px', sm: '100px'},
           borderRadius: '50%',
-          border: '2px solid #93AED3',
           backgroundColor: 'white',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
       }}>
-        <Image src={icon} alt="" width={70} height={70}/>
+        <Image src={icon} alt="" width={90} height={90}/>
       </Box>
-      <Stack direction="column" spacing={5} alignItems='center' pt={8} pb={4}>
+      <Stack direction="column" spacing={5} alignItems='center' pt={7} pb={4}>
         <Typography level='subtitle-lg'>
           {type}
         </Typography>

@@ -81,7 +81,7 @@ export default function ProtegeProgram() {
 
       <Testimonials />
 
-      <Box pt={20} pb={35}>
+      <Box pt={10} pb={35}>
         <Typography level='subtitle-lg' pb={15}>
           Want to get involved in the Protege Program?
         </Typography>
@@ -92,14 +92,14 @@ export default function ProtegeProgram() {
           alignItems='center'
         >
           <ProtegeProgramCard 
-            icon='/programs/protege-program/BolivianGirl.svg'
-            type='Mentee'
-            description='Are you a new engineering student and want a little help settling into UNSW? This is the program for you!'
-          />
-          <ProtegeProgramCard 
             icon='/programs/protege-program/AmeliePoulain.svg'
             type='Mentor'
             description='Are you a 2nd year+ female engineering student looking to develop your skills? This is perfect for you!'
+          />
+          <ProtegeProgramCard 
+            icon='/programs/protege-program/BolivianGirl.svg'
+            type='Mentee'
+            description='Are you a new engineering student and want a little help settling into UNSW? This is the program for you!'
           />
         </Stack>
       </Box>
