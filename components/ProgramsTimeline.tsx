@@ -36,7 +36,7 @@ const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
 
 const Timeline = () => {
   return (
-    <Box className='bg-medium-blue' sx={{ justifyContent: 'center', pt: 8, pb: 8 }} mb={10} width='100%'>
+    <Box className='bg-medium-blue' sx={{boxSizing:'border-box', justifyContent: 'center', pt: 8, pb: 8 }} mb={10} width='100%'>
       <Typography level='subtitle-lg' className='light-white' sx={{ mb: 3, textAlign: 'center'}}>
       Checkpoint Events
       </Typography>
@@ -52,17 +52,17 @@ const Timeline = () => {
             <TextComponent text='Opening Ceremony' date='7th March 2024' />
             <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
             <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
-            <TextComponent text='Concluding Ceremony ' date='11th April 2024' />
+            <TextComponent text='Closing Ceremony ' date='11th April 2024' />
           </Box>
         </Box>
 
-        <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' },  flexDirection: { xs: 'column', sm: 'column'}, alignItems: 'center', flexGrow: 1 }}>
+        <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' },  flexDirection: { xs: 'row', sm: 'row'},justifyContent:'center', alignItems: 'center', flexGrow: 1 }}>
           <Box 
-            sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' }, mb: 0, mt: 0, mr: 30}}>
-            <Image src='/programs/protege-program/Verticaltimeline.svg' alt='Timeline' width={510} height={510} style={{ display: 'block' }} />
+            sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' }, mb: 0, mt: 0}}>
+            <Image src='/programs/protege-program/Verticaltimeline.svg' alt='Timeline' width={150} height={510} style={{ display: 'block' }} />
           </Box>
           <Box
-            sx={{ display: 'flex', flexDirection: {xs: 'column',  sm: 'column'}, mt: -65.5, mr: -30, justifyContent: 'center', gap: '63px'}}>
+            sx={{ display: 'flex', flexDirection: {xs: 'column',  sm: 'column'}, mt: -5, ml:20,justifyContent: 'center', gap: '63px'}}>
             <TextComponent text='Opening Ceremony' date='7th March 2024' />
             <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
             <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
