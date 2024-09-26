@@ -24,9 +24,8 @@ export default function IndustryMentoringProgram() {
       <HeadingBodyText heading='Industry Mentoring Program' body={bodyText} color='graphite'/>
 
       <Box sx={{ px: 10, mt: 5, mb: 20 }}>
-        <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
-
-          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
+        <Stack direction={{ md: 'column', lg: 'row-reverse' }} alignItems='center' spacing={{xl: 20, lg: 10}}>
+          <Stack direction='column' alignItems={{lg: 'start', md: 'center', sm: 'center', xs: 'center'}} sx={{ width: '100%' }}>
             <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px' }}>
               <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                 <Image src={'/programs/industry-mentoring-program/DeeperUnderstanding.jpg'} alt={'icon'} fill/>
@@ -35,7 +34,7 @@ export default function IndustryMentoringProgram() {
             </Box>
           </Stack>
 
-          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
+          <Stack direction='column' alignItems={{lg: 'end', md: 'center',  sm: 'center', xs: 'center'}} sx={{ width: '100%' }}>
             <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}} sx={{ display: 'flex', flexDirection: 'column'}}>
               <Box sx={{ order: { xs: 2, sm: 2, md: 2, lg: 1, xl: 1 } }}>
                 <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
