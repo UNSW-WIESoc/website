@@ -191,11 +191,15 @@ export default function Home() {
   }, []);
   
   const eventsCarouselText = 'WIESoc hold many events throughout the semester, with a great mix of industry and social events.\nCome and join us for our upcoming events!';
+
   return (
     <Box justifyContent='center'>
       <CoverImage/>
       <AboutUsOverview />
       <SponsorsPreview />
+      {/* {upcomingEvents.length > 0  && (
+        <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={upcomingEvents} size='large'/>
+      )} */}
       <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={upcomingEvents} size='large'/>
       <ProgramsOverview/>
     </Box>
