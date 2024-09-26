@@ -48,7 +48,7 @@ export default function CareersCard({ event }: any) {
       </CardOverflow>
       <CardContent sx={{ height: '100%' }}>
         <Stack alignItems='center' py={1} spacing={1} sx={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
-          <Box sx={{ flex:'0 0 70px', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
+          <Box sx={{ flex:'0 0 75px', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
             <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{title}</Typography>
           </Box>
           <Box sx={{ flex:'0 0 40px', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 2, textOverflow: 'ellipsis' }}>
