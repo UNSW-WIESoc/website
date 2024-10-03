@@ -1,5 +1,9 @@
 import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
 
+export const protegeTimelineData = [
+  {}
+]
+
 export const navData = [
   { text: 'About Us', href: '/about-us' },
   { text: 'Events', href: '/events' },
