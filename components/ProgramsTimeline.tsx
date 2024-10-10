@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import Typography from '@mui/joy/Typography';
 import {Stack} from "@mui/joy";
+import { protegeTimelineData } from '@/app/data';
 interface TextComponentProps {
   text: string;
   date: string;
@@ -13,7 +14,7 @@ const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
     sx={{
       textAlign: 'center',
       ml: { xs: -22, sm: -22, md: 0},
-      mt: { xs: 3, sm: 3, md: 0},
+      mt: { xs: 3, sm: 3, md: -4},
     }}
   >
     <Typography
@@ -45,12 +46,8 @@ const Timeline = () => {
       <Stack direction='column' justifyContent='center'>
         <Stack sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }} justifyContent='center' alignItems='center' width='100%'>
           <Image src='/programs/protege-program/Timeline.svg' alt='Timeline' width='900' height='200'/>
-          <Stack direction='row' justifyContent='center' gap='110px' alignItems='center' width='100%'>
-
-            <TextComponent text='Opening Ceremony' date='7th March 2024' />
-            <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
-            <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
-            <TextComponent text='Closing Ceremony ' date='11th April 2024' />
+          <Stack direction='row' justifyContent='center' gap='115x' alignItems='center' width='100%'>
+            {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} date={event.date} />))}
           </Stack>
         </Stack>
 
@@ -61,10 +58,7 @@ const Timeline = () => {
           </Box>
           <Box
             sx={{ display: 'flex', flexDirection: {xs: 'column',  sm: 'column'}, mt: -5, ml: 20 ,justifyContent: 'center', gap: '63px'}}>
-            <TextComponent text='Opening Ceremony' date='7th March 2024' />
-            <TextComponent text='Mid-term Checkpoint 1' date='14th March 2024' />
-            <TextComponent text='Mid-term Checkpoint 2' date='23rd March 2024' />
-            <TextComponent text='Closing Ceremony ' date='11th April 2024' />
+           {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} date={event.date} />))}
           </Box>
         </Box>
         </Stack>
