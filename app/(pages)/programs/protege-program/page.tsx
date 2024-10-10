@@ -4,6 +4,7 @@ import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
 import { protegeData } from '@/app/data';
+import Timeline from '@/components/ProgramsTimeline';
 import Testimonials from '@/components/Testimonials';
 import Interested from '@/components/Interested';
 
@@ -51,9 +52,9 @@ export default function ProtegeProgram() {
               </AspectRatio>              
             </Box>
           </Stack>
-
         </Stack>
       </Box>
+      <Timeline/> 
 
       <Testimonials data={protegeData} />
       <Interested />
