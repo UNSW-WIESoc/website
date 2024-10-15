@@ -2,8 +2,8 @@ import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMedi
 
 export const protegeTimelineData = [
   { text: 'Opening Ceremony', date: '7th March 2024' },
-  { text: 'Mid-term Checkpoint 1', date: '14th March 2024' },
-  { text: 'Mid-term Checkpoint 2', date: '23rd March 2024' },
+  { text: 'Midterm Checkpoint 1', date: '14th March 2024' },
+  { text: 'Midterm Checkpoint 2', date: '23rd March 2024' },
   { text: 'Closing Ceremony', date: '11th April 2024' }
 ];
 
