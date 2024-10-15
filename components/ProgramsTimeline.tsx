@@ -46,7 +46,7 @@ const Timeline = () => {
       <Stack direction='column' justifyContent='center'>
         <Stack sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }} justifyContent='center' alignItems='center' width='100%'>
           <Image src='/programs/protege-program/Timeline.svg' alt='Timeline' width='900' height='200'/>
-          <Stack direction='row' justifyContent='center' gap='115x' alignItems='center' width='100%'>
+          <Stack direction='row' justifyContent='center' gap='120px' alignItems='center' width='100%'>
             {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} date={event.date} />))}
           </Stack>
         </Stack>
