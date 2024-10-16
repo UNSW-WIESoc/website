@@ -25,10 +25,11 @@ export default function EventsCarousel({heading, body, slides, size} : EventsCar
         <Carousel slides={slides} options={OPTIONS} size={size} />
       )}
       {slides.length == 0 && (
-        <Typography className='dark-blue' level='body' textAlign='center' px={3} 
+        <Typography level='body' textAlign='center' px={3} 
         sx={{
           textWrap: 'wrap',
-          paddingBottom: '30px'
+          paddingBottom: '80px',
+          fontStyle: 'italic'
         }}>
           No upcoming events currently, check back later!
         </Typography>
