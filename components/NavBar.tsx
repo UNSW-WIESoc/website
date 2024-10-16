@@ -159,7 +159,7 @@ export default function NavBar() {
       height: 80,
       display: { xs: 'none', lg: 'flex' },
       transition: 'top 0.3s',
-      position: 'fixed',
+      position: 'sticky',
       top: visible ? 0 : -80,
       width: '100%',
       zIndex: 1000

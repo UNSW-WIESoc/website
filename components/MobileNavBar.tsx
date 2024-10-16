@@ -5,7 +5,7 @@ import {
 } from '@mui/joy';
 import Image from 'next/image';
 import NextLink from 'next/link';
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import {Menu as MenuIcon} from '@mui/icons-material';
 import {navData, socialsData} from '@/app/data';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -14,9 +14,40 @@ import {useRouter} from "next/navigation";
 
 const NavBar = () => {
   const [open, setOpen] = React.useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current) {
+        // scrolling down
+        setVisible(false);
+      } else {
+        // scrolling up
+        setVisible(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (<>
-    <Sheet sx={{boxShadow: 'md', height: 80, display: {lg: 'none'}}}>
+    <Sheet sx={{
+      boxShadow: 'md',
+      height: 80,
+      display: {lg: 'none'},
+      transition: 'top 0.3s',
+      position: 'sticky',
+      top: visible ? 0 : -80,
+      width: '100%',
+      zIndex: 1000
+    }}>
       <Stack direction='row' height='100%' width='100%' p={2} justifyContent='space-between' alignItems='center'>
         <Link component={NextLink} href='/'>
           <AspectRatio variant='plain' ratio='15/6' objectFit='contain' sx={{width: 200}}>
