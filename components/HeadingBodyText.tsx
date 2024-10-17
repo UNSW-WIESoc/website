@@ -8,7 +8,7 @@ interface HeadingBodyTextProps {
 }
 export default function HeadingBodyText({heading, body, color}: HeadingBodyTextProps) {
   return (
-    <Stack direction='column' alignItems='center' spacing={3} pt={4} pb={10} px={{ sm: 0, md: 5, lg: 10 }}>
+    <Stack direction='column' maxWidth='1800px' alignItems='center' margin='auto' spacing={3} pt={4} pb={10} px={{ sm: 0, md: 5, lg: 10 }}>
       <Typography className={color} level='h1' pt={3}>
         {heading}
       </Typography>
