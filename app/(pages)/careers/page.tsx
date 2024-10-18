@@ -13,9 +13,7 @@ export default function Careers() {
     async function fetchData() {
       const events = await getEvents();
 
-      const now = new Date();
-
-      const careerEvents = events.filter((event: any) => new Date(event.fields.dateTimeEnd) <= now || new Date(event.fields.dateTimeEnd) > now);
+      const careerEvents = events.filter((event: any) => new Date(event.fields.dateTimeEnd));
 
       setCareers(careerEvents);
     }
