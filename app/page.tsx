@@ -196,6 +196,7 @@ export default function Home() {
       <CoverImage/>
       <AboutUsOverview />
       <SponsorsPreview />
+      
       <EventsCarousel heading='Upcoming Events' body={eventsCarouselText} slides={upcomingEvents} size='large'/>
       <ProgramsOverview/>
     </Box>

@@ -39,7 +39,7 @@ const SubMenu: React.FC<{
   return (<List sx={{'--ListItem-paddingX': '2spx'}}
   >
     {subData.map(({text, href}, idx) => (
-      <Link component={NextLink} href={href} underline='none' sx={{color: 'inherit', fontSize: '20px'}}>
+      <Link key={idx} component={NextLink} href={href} underline='none' sx={{color: 'inherit', fontSize: '20px'}}>
         <ListItemButton
           key={idx}
           className='navbar-hover'
