@@ -3,6 +3,9 @@ import PageHeaderCard from '@/components/PageHeaderCard';
 import Image from 'next/image';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import ProgramsTitleDescription from '@/components/ProgramsTitleDescription';
+import ProtegeProgramCard from '@/components/ProtegeProgramCard';
+import HorizontalLine from '@/components/HorizontalLine';
+import Quote from '@/components/Quote';
 import { protegeData } from '@/app/data';
 import Testimonials from '@/components/Testimonials';
 import Interested from '@/components/Interested';
@@ -56,7 +59,30 @@ export default function ProtegeProgram() {
       </Box>
 
       <Testimonials data={protegeData} />
-      <Interested />
+
+      <Box pt={10} pb={35}>
+        <Typography level='subtitle-lg' pb={15}>
+          Want to get involved in the Protege Program?
+        </Typography>
+        <Stack 
+          direction={{ xs: 'column', md: 'row'}}
+          spacing={12}
+          justifyContent='center'
+          alignItems='center'
+        >
+          <ProtegeProgramCard 
+            icon='/programs/protege-program/AmeliePoulain.svg'
+            type='Mentor'
+            description='Are you a 2nd year+ female engineering student looking to develop your skills? This is perfect for you!'
+          />
+          <ProtegeProgramCard 
+            icon='/programs/protege-program/BolivianGirl.svg'
+            type='Mentee'
+            description='Are you a new engineering student and want a little help settling into UNSW? This is the program for you!'
+          />
+        </Stack>
+      </Box>
+
     </Box>
   );
 }
