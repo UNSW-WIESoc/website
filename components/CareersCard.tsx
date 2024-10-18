@@ -9,10 +9,9 @@ import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import Button from '@mui/joy/Button';
 import Stack from '@mui/material/Stack';
-import { FacebookIcon } from '@/components/SocialMediaIcons';
 import { formatEventDates } from '../lib/helpers/event';
 
-export default function EventsCard({ event }: any) {
+export default function CareersCard({ event }: any) {
   if (!event || !event.fields) {
     return null;
   }
@@ -49,22 +48,21 @@ export default function EventsCard({ event }: any) {
       </CardOverflow>
       <CardContent sx={{ height: '100%' }}>
         <Stack alignItems='center' py={1} spacing={1} sx={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
-          <Box sx={{ flex:'0 0 39%', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
+          <Box sx={{ flex:'0 0 75px', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
             <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{title}</Typography>
           </Box>
-          <Box sx={{ flex:'0 0 23%', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 2, textOverflow: 'ellipsis' }}>
+          <Box sx={{ flex:'0 0 40px', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 2, textOverflow: 'ellipsis' }}>
             <Typography level='title-sm' textAlign='center' sx={{ width: '100%' }}>{eventDateTimeStr}</Typography>
           </Box>
-          <Box sx={{ flex:'0 0 13%', width: '90%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          <Box sx={{ flex:'0 0 25px', width: '90%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             <Typography level='title-sm' textAlign='center' sx={{ pt: 0 }}>{location}</Typography>
           </Box>
           <Button 
             component='a' 
             href={facebookLink}
             target='_blank'
-            startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
             className='bg-purple button-border-round'
-            sx={{ mb: 'auto', width: '60%'}}
+            sx={{ mb: 'auto', width: '40%'}}
             >
             <Typography level='subtitle' pb={0.3} className='white' sx={{ mt: 'auto'}}>
               View Event
