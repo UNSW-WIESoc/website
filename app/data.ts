@@ -1,5 +1,12 @@
 import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
 
+export const protegeTimelineData = [
+  { text: 'Opening Ceremony', date: '7th March 2024' },
+  { text: 'Midterm Checkpoint 1', date: '14th March 2024' },
+  { text: 'Midterm Checkpoint 2', date: '23rd March 2024' },
+  { text: 'Closing Ceremony', date: '11th April 2024' }
+];
+
 export const navData = [
   { text: 'About Us', href: '/about-us' },
   { text: 'Events', href: '/events' },
@@ -31,7 +38,7 @@ export const protegeData = [
   },
   {
     quote: 'The Protégé Program was an amazing experience which made the start of uni so much easier through the guidance of a mentor. It was a great way to meet fellow girls in engineering through the fun events and activities. I met some of my closest friends at uni through the program too!',
-    by: 'Eeman Chaudhary (Former Protégé Program Mentee)'
+    by: 'Eeman Chaudhry (Former Protégé Program Mentee)'
   }
 ];
 
