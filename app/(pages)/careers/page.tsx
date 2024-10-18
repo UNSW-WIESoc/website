@@ -1,20 +1,21 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-
-import { Grid, Stack, Box } from '@mui/joy';
+import {Grid, Stack, Box} from '@mui/joy';
 import PageHeaderCard from "@/components/PageHeaderCard";
 import HeadingBodyText from '@/components/HeadingBodyText';
 import { getJobs } from "@/lib/api";
-import EventsCard from '@/components/EventsCard';
+import React, { useEffect, useState } from 'react';
+import CareersCard from '@/components/CareersCard';
 
 export default function Careers() {
-  const [currJobs, setCurrJobs] = useState([]);
+  const [careerEvents, setCareers] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const jobs = await getJobs();
-      const now = new Date();
-      setCurrJobs(jobs.filter((job: any) => new Date(job.fields.dateTimeEnd) > now));
+      const events = await getJobs();
+
+      const careerEvents = events.filter((event: any) => new Date(event.fields.dateTimeEnd));
+
+      setCareers(careerEvents);
     }
 
     fetchData();

@@ -16,7 +16,7 @@ const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashisht
 
 function AboutUsCard({image, cardName, cardText, link}: cardProps) {
   return (<Card className='shadow-hover' variant='plain'
-                sx={{width: '100%', height: {sm: '500px', md: '540px', lg: '580px'}}}>
+                sx={{width: '100%', height: {sm: '540px', md: '540px', lg: '600px', xl: 'auto'}}}>
       <CardOverflow>
         <AspectRatio ratio='2'>
           <Image
@@ -106,7 +106,7 @@ export default function AboutUs() {
             What We Do
           </Typography>
           <Grid container
-                spacing={10}
+                spacing={{xs: 10, sm: 5, md: 10}}
                 justifyContent='flex-end'
                 sx={{width: {xs: '100%', md: '90%'}}}
                 alignItems='center'
@@ -119,9 +119,9 @@ export default function AboutUs() {
             >
               <AboutUsCard image='/eventsCard.png'
                            cardName='Events'
-                           cardText='WIESoc hold many events throughout the year,
-                            with a great mix of industry and social events. Come and 
-                            join us for our upcoming events'
+                           cardText='WIESoc hosts a variety of events throughout the year
+                            with a great mix of industry and social activities. Come and 
+                            join us for our upcoming events.'
                            link='/events'
               />
             </Grid>
@@ -135,7 +135,7 @@ export default function AboutUs() {
               <AboutUsCard image='/programsCard.png'
                            cardName='Programs'
                            cardText='Our Industry Mentoring Program and Protege Program
-                            can cater to you personal and professional development'
+                           caters to your personal and professional development with support from experienced mentors.'
                            link='/programs'
               />
             </Grid>

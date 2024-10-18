@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Url } from 'next/dist/shared/lib/router/router';
 import { navData, socialsData } from '@/app/data';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Dropdown from '@mui/joy/Dropdown';
 import Menu from '@mui/joy/Menu';
@@ -131,8 +131,39 @@ function NavItem({ title, navigateTo, subData }: NavProps) {
 }
 
 export default function NavBar() {
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current) {
+        // scrolling down
+        setVisible(false);
+      } else {
+        // scrolling up
+        setVisible(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Sheet sx={{ height: 80, display: { xs: 'none', lg: 'flex' } }}>
+    <Sheet sx={{
+      height: 80,
+      display: { xs: 'none', lg: 'flex' },
+      transition: 'top 0.3s',
+      position: 'fixed',
+      top: visible ? 0 : -80,
+      width: '100%',
+      zIndex: 1000
+    }}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2} sx={{display: 'flex'}}>
         <Box sx={{flex: '0.5'}}>
           <Link href='/'>
