@@ -43,7 +43,7 @@ const NavBar = () => {
       height: 80,
       display: {lg: 'none'},
       transition: 'top 0.3s',
-      position: 'sticky',
+      position: 'fixed',
       top: visible ? 0 : -80,
       width: '100%',
       zIndex: 1000

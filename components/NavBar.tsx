@@ -159,11 +159,10 @@ export default function NavBar() {
       height: 80,
       display: { xs: 'none', lg: 'flex' },
       transition: 'top 0.3s',
-      position: 'sticky',
+      position: 'fixed',
       top: visible ? 0 : -80,
       width: '100%',
       zIndex: 1000
-
     }}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2} sx={{display: 'flex'}}>
         <Box sx={{flex: '0.5'}}>
