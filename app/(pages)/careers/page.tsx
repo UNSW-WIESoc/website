@@ -1,8 +1,8 @@
 'use client';
-import {Grid, Stack, Box} from '@mui/joy';
+import { Grid, Stack, Box } from '@mui/joy';
 import PageHeaderCard from "@/components/PageHeaderCard";
 import HeadingBodyText from '@/components/HeadingBodyText';
-import { getEvents } from "@/lib/api";
+import { getJobs } from "@/lib/api";
 import React, { useEffect, useState } from 'react';
 import CareersCard from '@/components/CareersCard';
 
@@ -11,7 +11,7 @@ export default function Careers() {
 
   useEffect(() => {
     async function fetchData() {
-      const events = await getEvents();
+      const events = await getJobs();
 
       const careerEvents = events.filter((event: any) => new Date(event.fields.dateTimeEnd));
 
