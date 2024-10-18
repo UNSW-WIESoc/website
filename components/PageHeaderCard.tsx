@@ -16,6 +16,7 @@ export default function PageHeaderCard({ imagePath, pageTitle }: PageHeaderCardP
         height: 'auto',
         position: 'relative',
         overflow: 'hidden',
+        marginTop: '80px'
       }}
     >
       <Image src={imagePath} alt="page-header-image" fill />

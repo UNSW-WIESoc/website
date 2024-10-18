@@ -163,7 +163,6 @@ export default function NavBar() {
       top: visible ? 0 : -80,
       width: '100%',
       zIndex: 1000
-
     }}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2} sx={{display: 'flex'}}>
         <Box sx={{flex: '0.5'}}>
