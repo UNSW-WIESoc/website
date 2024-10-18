@@ -1,6 +1,6 @@
 import HeadingBodyText from '@/components/HeadingBodyText';
 import Carousel from './Carousel';
-import { Box } from '@mui/joy';
+import { Box, Typography } from '@mui/joy';
 
 interface EventsCarouselProps {
   heading: string;
@@ -21,7 +21,22 @@ export default function EventsCarousel({heading, body, slides, size} : EventsCar
   return (
     <Box className='bg-medium-blue' sx={{justifyContent: 'center'}} pb={3} width='100%'>
       <HeadingBodyText heading={heading} body={body} color='light-white'/>
-      <Carousel slides={slides} options={OPTIONS} size={size} />
+      {slides.length > 0 ? (
+        <Carousel slides={slides} options={OPTIONS} size={size} />
+      ) : (
+        <Typography 
+          variant="soft"
+          color="primary"
+          className='dark-blue' 
+          level='body' 
+          textAlign='center' 
+          sx={{textWrap: 'wrap', mb: 15, '--Typography-gap': '0.5rem'}}
+        >
+          <Box sx={{ fontStyle: 'italic' }}>
+            There are currently no upcoming events. Stay tuned for future events!
+          </Box>
+        </Typography>
+      )}
     </Box>
   );
 }

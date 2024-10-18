@@ -28,9 +28,9 @@ export default function ProtegeProgram() {
       <HeadingBodyText heading='Protege Program' body={bodyText} color='graphite'/>
 
       <Box sx={{ px: 10, mt: 5, mb: 20 }}>
-        <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{ lg: 0, xl: 3 }} sx={{ margin: '0 auto' }} alignItems='center'>
+        <Stack direction={{ md: 'column', lg: 'row-reverse' }} spacing={{xl: 20, lg: 10}} alignItems='center'>
 
-          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
+          <Stack direction='column' alignItems={{lg: 'start', md: 'center', sm: 'center', xs: 'center'}} sx={{ width: '100%' }}>
             <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px'}}>
               <ProgramsTitleDescription title={title1} description={description1} marginTop={0} marginBottom={14} color='graphite'/>
               <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
@@ -40,7 +40,7 @@ export default function ProtegeProgram() {
             </Box>
           </Stack>
 
-          <Stack direction='column' spacing={2} alignItems='center' sx={{ width: '50%' }}>
+          <Stack direction='column' alignItems={{lg: 'end', md: 'center', sm: 'center', xs: 'center'}} sx={{ width: '100%' }}>
             <Box width={{ xl: '583px', lg: '496px', md: '800px', sm: '500px', xs: '300px' }}>
               <AspectRatio variant='plain' objectFit='cover' sx={{borderRadius: 'md'}}>
                 <Image src={'/programs/protege-program/MeetOthers.svg'} alt={'icon'} fill/>
