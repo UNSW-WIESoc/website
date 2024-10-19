@@ -20,7 +20,7 @@ export async function getEvents() {
 export async function getJobs() {
   const res = await client
     .getEntries({
-      content_type: 'jobs board'
+      content_type: 'jobsBoard'
     })
     .catch((error) => {
       console.error(error);

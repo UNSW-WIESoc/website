@@ -1,9 +1,10 @@
 'use client';
+import React, { useEffect, useState } from 'react';
+
 import { Grid, Stack, Box } from '@mui/joy';
 import PageHeaderCard from "@/components/PageHeaderCard";
 import HeadingBodyText from '@/components/HeadingBodyText';
 import { getJobs } from "@/lib/api";
-import React, { useEffect, useState } from 'react';
 import CareersCard from '@/components/CareersCard';
 
 export default function Careers() {
@@ -13,9 +14,11 @@ export default function Careers() {
     async function fetchData() {
       const events = await getJobs();
 
-      const careerEvents = events.filter((event: any) => new Date(event.fields.dateTimeEnd));
+      const now = new Date();
 
-      setCareers(careerEvents);
+      const upcoming = events.filter((event: any) => new Date(event.fields.dateTimeEnd) > now);
+
+      setCareers(upcoming);
     }
 
     fetchData();
