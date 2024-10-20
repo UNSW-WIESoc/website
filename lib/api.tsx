@@ -16,3 +16,14 @@ export async function getEvents() {
     });
   return res.items;
 }
+
+export async function getJobs() {
+  const res = await client
+    .getEntries({
+      content_type: 'jobsBoard'
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
