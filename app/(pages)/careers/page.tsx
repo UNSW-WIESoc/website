@@ -14,11 +14,7 @@ export default function Careers() {
     async function fetchData() {
       const events = await getJobs();
 
-      const now = new Date();
-
-      const upcoming = events.filter((event: any) => new Date(event.fields.dateTimeEnd) > now);
-
-      setCareers(upcoming);
+      setCareers(events);
     }
 
     fetchData();

@@ -28,3 +28,15 @@ export function formatEventDates(startDate: string, endDate: string): string {
 
   return `${start.toLocaleDateString('en-GB', options)}, ${formatTime(start)} - ${end.toLocaleDateString('en-GB', options)}, ${formatTime(end)}`;
 }
+
+export function formatSingleDate(date: string): string {
+  const date_value = new Date(date);
+
+  const options: Intl.DateTimeFormatOptions = { 
+    weekday: 'long', 
+    day: 'numeric', 
+    month: 'long' 
+  };
+
+  return `${date_value.toLocaleDateString('en-GB', options)}`;
+}
