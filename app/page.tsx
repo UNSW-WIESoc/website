@@ -160,7 +160,7 @@ function ProgramsOverview() {
           frontImageSrc='/programs/protege_card.jpg' 
           backContent={backContent_1}
           link='/programs/protege-program'
-          description='This program allows international women in engineering to connect, engage and support one another.'
+          description='This program allows for first-year women in engineering students to connect, engage and support one another.'
         />
         <ProgramsComponent 
           frontTitle='Industry Mentoring Program'

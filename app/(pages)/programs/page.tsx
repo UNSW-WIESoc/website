@@ -9,7 +9,7 @@ export default function Program() {
     'Our Industry Mentoring Program and Protege Program can cater to your personal and professional development.'
 
   const protegeDescription =
-    'This program helps new students adapt to engineering by pairing them with older student mentors.'
+    'This program helps new students to bridge the gap between students and industry by pairing them with older student mentors.'
 
   const protegeIcon1: IconTextProps = {
     icon: '/programs/Graduate.svg', text: 'Student Mentors',

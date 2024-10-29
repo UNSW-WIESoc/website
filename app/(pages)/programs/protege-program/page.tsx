@@ -13,13 +13,13 @@ import Interested from '@/components/Interested';
 
 export default function ProtegeProgram() {
 
-  const bodyText = 'The Protege Program is a mentoring program where female-identifying first-year engineering students will be grouped with a mentor studying engineering in their second year or higher to learn more about UNSW and engineering at UNSW. It is a great opportunity to make friends with other engineering girls and gain some useful advice from older students.'
+  const bodyText = 'The Protege Program is a mentoring program where women-identifying first-year engineering students will be grouped with a mentor studying engineering in their second year or higher to learn more about UNSW and engineering at UNSW. It is a great opportunity to make friends with other engineering girls and gain some useful advice from older students.'
 
-  const title1 = 'Meet other female engineers in your field'
-  const description1 = 'The Protege Program offers the chance for new female engineering students to meet and build a network with other female engineering students in first year and beyond through the course of a structured program.'
+  const title1 = 'Meet other women engineers in your field'
+  const description1 = 'The Protege Program offers the chance for new women engineering students to meet and build a network with other women engineering students in first year and beyond through the course of a structured program.'
 
   const title2 = 'Foster friendships'
-  const description2 = 'The Protege Program offers the chance for new female engineering students to meet and build a network with other female engineering students in first year and beyond through the course of a structured program.'
+  const description2 = 'The Protege Program offers the chance for new women engineering students to meet and build a network with other women engineering students in first year and beyond through the course of a structured program.'
 
   const title3 = 'Ease the transition'
   const description3 = 'The Protege Program helps ease the transition between high school and engineering at UNSW by providing an older student mentor who can help to navigate this new environment and overcome its challenges.'
@@ -74,7 +74,7 @@ export default function ProtegeProgram() {
           <ProtegeProgramCard 
             icon='/programs/protege-program/AmeliePoulain.svg'
             type='Mentor'
-            description='Are you a 2nd year+ female engineering student looking to develop your skills? This is perfect for you!'
+            description='Are you a 2nd year+ engineering student looking to develop your skills? This is perfect for you!'
           />
           <ProtegeProgramCard 
             icon='/programs/protege-program/BolivianGirl.svg'
