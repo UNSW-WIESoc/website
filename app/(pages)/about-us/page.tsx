@@ -89,7 +89,7 @@ function OurTeamProfiles() {
 export default function AboutUs() {
 
   const aboutWIEsocText = 'We are a UNSW student-run society that facilitates members from all \
-                          disciplines of engineering. We run many social and industry events \
+                          disciplines of engineering. Our aim is to empower women and gender-diverse students throughout their time at university. Our initiatives are specifically designed to connect, engage and empower women as they continue to navigate their way through engineering.  This includes many social and industry events \
                           throughout the year as well as two programs dedicated to mentoring \
                           and interpersonal development. Our society provides a supportive network \
                           for all our members, whether past, present or future students, to advocate \
