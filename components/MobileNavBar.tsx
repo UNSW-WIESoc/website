@@ -21,7 +21,9 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY.current) {
+      if (currentScrollY < 40) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
         // scrolling down
         setVisible(false);
       } else {
