@@ -4,9 +4,11 @@ import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import { CardCover } from '@mui/joy';
+import { useRouter } from 'next/navigation';
 
 export default function WIEInspireCard({ article }: any) {
-  console.log(article);
+  const router = useRouter();
+  
   if (!article || !article.fields) {
     return null;
   }
@@ -16,21 +18,23 @@ export default function WIEInspireCard({ article }: any) {
   const title = article.fields.title;
   const author = article.fields.author;
   const imgUrl = 'https:' + img.fields.file.url;
-  const pdfUrl = 'https' + pdf.fields.file.url;
+  const pdfUrl = 'https:' + pdf.fields.file.url;
+
+  const handleCardClick = () => {
+    // Navigate to the PDF viewer page
+    router.push(`/wie-inspire/${encodeURIComponent(pdfUrl.replace('https://', ''))}`);
+  };
 
   return (
     <Card
-      component="a"
-      href={pdfUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+      onClick={handleCardClick}
       variant='outlined'
       className='shadow-hover border-round'
       sx={{
         minWidth: '300px',
-        maxWidth: '600px',
-        height: '400px',
-        width: '400px'
+        maxHeight: '500px',
+        minHeight: '375px',
+        cursor: 'pointer'
       }}
     >
       <CardCover>

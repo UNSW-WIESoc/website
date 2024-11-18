@@ -31,7 +31,6 @@ export default function EventsCard({ event }: any) {
   } = event.fields;
   const imgUrl = 'https:' + img.fields.file.url;
   const eventDateTimeStr = formatEventDates(dateTimeStart, dateTimeEnd);
-  console.log(img.fields)
 
   return (
     <Card

@@ -97,7 +97,7 @@ function SponsorsPreview() {
             <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
           </Box>
           <Box className='relative' sx={{ width: '150', height: 'auto' }} pt={1}>
-            <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' width={150} height={100} />
+            <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
           </Box>
         </Stack>
         <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 5, sm: 10 }}>

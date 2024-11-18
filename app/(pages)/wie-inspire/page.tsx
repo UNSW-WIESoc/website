@@ -18,7 +18,6 @@ export default function WIEInspire() {
 
     fetchData();
   }, []);
-  console.log(articles);
 
   return(
     <Stack alignItems='center'>
