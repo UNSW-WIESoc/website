@@ -12,6 +12,7 @@ import Box from '@mui/joy/Box';
 import MenuButton from '@mui/joy/MenuButton';
 import MenuItem from '@mui/joy/MenuItem';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FilledButton from '@/components/FilledButton';
 
 interface NavProps {
   title: string;
@@ -175,6 +176,13 @@ export default function NavBar() {
             <NavItem title={text} navigateTo={href} subData={subData} key={idx}/>
           ))}
         </Stack>
+        <Box width='100%'sx={{display: 'flex', flex: '1.5', mr: 2 }}>
+          <FilledButton
+              link='/wie-inspire'
+              text="WIE Inspire"
+              width="100%"
+          />
+        </Box>
         <Stack direction='row' spacing={3} mx={3} sx={{flex:'0 0 auto'}}>
           {socialsData.map(({ Icon, href }, idx) => (
             <Link key={idx} href={href} target='_blank'>

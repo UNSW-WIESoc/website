@@ -11,6 +11,7 @@ import Button from '@mui/joy/Button';
 import Stack from '@mui/material/Stack';
 import { FacebookIcon } from '@/components/SocialMediaIcons';
 import { formatEventDates } from '../lib/helpers/event';
+import FilledButton from '@/components/FilledButton';
 
 export default function EventsCard({ event }: any) {
   if (!event || !event.fields) {
@@ -58,18 +59,13 @@ export default function EventsCard({ event }: any) {
           <Box sx={{ flex:'0 0 13%', width: '90%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             <Typography level='title-sm' textAlign='center' sx={{ pt: 0 }}>{location}</Typography>
           </Box>
-          <Button 
-            component='a' 
-            href={facebookLink}
-            target='_blank'
-            startDecorator={<FacebookIcon color='#FFFFFF' width={25} height={25}/>}
-            className='bg-purple button-border-round'
-            sx={{ mb: 'auto', width: '60%'}}
-            >
-            <Typography level='subtitle' pb={0.3} className='white' sx={{ mt: 'auto'}}>
-              View Event
-            </Typography>
-          </Button>
+          <FilledButton
+            link={facebookLink}
+            Icon={FacebookIcon}
+            text="View Event"
+            width="60%"
+            newTab={true}
+          />
         </Stack>
       </CardContent>
     </Card>
