@@ -70,7 +70,7 @@ const SubMenu: React.FC<{
   return (<List sx={{'--ListItem-paddingX': '2spx'}}
   >
     {subData.map(({text, href}, idx) => (
-      <Link key={idx} component={NextLink} href={href} underline='none' sx={{color: 'inherit', fontSize: '20px'}}>
+      <Link key={text} component={NextLink} href={href} underline='none' sx={{color: 'inherit', fontSize: '20px'}}>
         <ListItemButton
           key={idx}
           className='navbar-hover'
@@ -113,30 +113,36 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({open, setOpen}) => {
         flex: 'none', fontSize: 'xl', '& > div': {justifyContent: 'center'},
       }}
     >
-      {navData.map(({text, href, subData}, idx) => (<>
-        <ListItemButton
-          className='navbar-hover'
-          sx={{paddingX: '20px'}}
-          key={idx}
-          onClick={() => {
-            setOpen(false);
-            router.push(href);
-          }}
-        >
-          <Stack direction='row' justifyContent='space-between' width='100%'>
-            <Typography level='subtitle-lg' fontWeight={400}>
-              {text}
-            </Typography>
-            {Array.isArray(subData) && subData.length > 0 && (<IconButton onClick={e => {
-              e.stopPropagation();
-              setOpenSubMenuIndex(openSubMenuIndex === idx ? null : idx)
-            }}>
-              {openSubMenuIndex === idx ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
-            </IconButton>)}
-          </Stack>
-        </ListItemButton>
-        {openSubMenuIndex === idx && <SubMenu subData={subData || []} setOpen={setOpen}/>}
-      </>))}
+      {navData.map(({text, href, subData}, idx) => (
+        <React.Fragment key={idx}>
+          <ListItemButton
+            className='navbar-hover'
+            sx={{paddingX: '20px'}}
+            onClick={() => {
+              setOpen(false);
+              router.push(href);
+            }}
+          >
+            <Stack direction='row' justifyContent='space-between' width='100%'>
+              <Typography level='subtitle-lg' fontWeight={400}>
+                {text}
+              </Typography>
+              {Array.isArray(subData) && subData.length > 0 && (
+                <IconButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenSubMenuIndex(openSubMenuIndex === idx ? null : idx);
+                  }}
+                >
+                  {openSubMenuIndex === idx ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                </IconButton>
+              )}
+            </Stack>
+          </ListItemButton>
+          {openSubMenuIndex === idx && <SubMenu subData={subData || []} setOpen={setOpen} />}
+        </React.Fragment>
+      ))}
+
     </List>
     <Divider/>
     <Stack direction='row' spacing={4} justifyContent='center' py={4}>

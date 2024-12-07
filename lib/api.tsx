@@ -27,3 +27,14 @@ export async function getJobs() {
     });
   return res.items;
 }
+
+export async function getWIEInspire() {
+  const res = await client
+    .getEntries({
+      content_type: 'wieInspire'
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}

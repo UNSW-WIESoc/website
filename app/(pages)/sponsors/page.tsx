@@ -65,7 +65,7 @@ function SponsorRows ({ images }: sponsorRows) {
 export default function Sponsors() {
   return (
     <Stack>
-      <PageHeaderCard imagePath={'/sponsors/header.jpg'} pageTitle={'Sponsors'}/>
+      <PageHeaderCard imagePath={'/sponsors/header.png'} pageTitle={'Sponsors'}/>
       <HeadingBodyText heading='Our Sponsors' body='WIESoc is proudly supported by the UNSW Faculty of Engineering and our industry partners.' color='graphite'/>
       <Grid container justifyContent='center'>
         <Grid xs={7} sm={6} md={4} lg={3} pb={10}>  

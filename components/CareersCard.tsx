@@ -27,7 +27,6 @@ export default function CareersCard({ event }: any) {
   } = event.fields;
   const imgUrl = 'https:' + img.fields.file.url;
   const eventDateTimeStr = formatSingleDate(closeDate);
-  console.log(img.fields)
 
   return (
     <Card
