@@ -22,7 +22,7 @@ export default function Footer() {
           </Stack>
           <Stack direction='column' spacing={2} py={7}>
             <Typography level='body'>Have more questions? Contact us here:</Typography>
-            <Typography level='body'>admin@wiesoc.com.au</Typography>
+            <Typography level='body'>admin@wiesoc.com</Typography>
           </Stack>
         </center>
       </Box>
