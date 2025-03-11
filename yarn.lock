@@ -123,7 +123,15 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@contentful/content-source-maps@^0.6.0", "@contentful/content-source-maps@^0.6.1":
+"@contentful/content-source-maps@^0.11.0":
+  version "0.11.9"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.9.tgz#bb359478d6e0047c25bf3f489caa14e059468e8a"
+  integrity sha512-PZkvV46gmCuzc3Lbj+VyCTeE9rDCETHowzON8Vq3ZpDFXlcKn/vw4QLwq+IoEIIrcrPgwdn4i26Rv8iGlA8DGA==
+  dependencies:
+    "@vercel/stega" "^0.1.2"
+    json-pointer "^0.6.2"
+
+"@contentful/content-source-maps@^0.6.1":
   version "0.6.1"
   resolved "https://registry.npmjs.org/@contentful/content-source-maps/-/content-source-maps-0.6.1.tgz"
   integrity sha512-IjsyhakG17OC5xtIa5agVRsnjjxiJf9HZjpDIV6Ix036Pd5YHJrbyyiF4KNEmLlIqe3hQ0kHGWEs9S/HfECmRQ==
@@ -143,10 +151,15 @@
     json-pointer "^0.6.2"
     lodash.isequal "^4.5.0"
 
-"@contentful/rich-text-types@^16.0.2", "@contentful/rich-text-types@^16.2.0":
+"@contentful/rich-text-types@^16.2.0":
   version "16.6.1"
   resolved "https://registry.npmjs.org/@contentful/rich-text-types/-/rich-text-types-16.6.1.tgz"
   integrity sha512-Rb8QusSMSTMUP4dbpBDWgwGJoqKDYRxPcNXySP0URYTQ6pViJ2SXhVc81RJCgJ5Fb02n5ctbvDYGtcnBH8yhDw==
+
+"@contentful/rich-text-types@^16.6.1":
+  version "16.8.5"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.8.5.tgz#832c8b428612f5181908bc1033c6ef9f48f1ce83"
+  integrity sha512-q18RJuJCOuYveGiCIjE5xLCQc5lZ3L2Qgxrlg/H2YEobDFqdtmklazRi1XwEWaK3tMg6yVXBzKKkQfLB4qW14A==
 
 "@emotion/babel-plugin@^11.11.0":
   version "11.11.0"
@@ -936,10 +949,10 @@ axe-core@^4.9.1:
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.9.1.tgz"
   integrity sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==
 
-axios@~1.6.8:
-  version "1.6.8"
-  resolved "https://registry.npmjs.org/axios/-/axios-1.6.8.tgz"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+axios@^1.7.4:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.2.tgz#fabe06e241dfe83071d4edfbcaa7b1c3a40f7979"
+  integrity sha512-ls4GYBm5aig9vWx8AWDSGLpnpDQRtWAfrjU+EuytuODrFBkqesN2RkOQCBzrA1RQNHw1SmRMSDDDSwzNAYQ6Rg==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -1079,17 +1092,17 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-contentful-resolve-response@^1.8.1:
-  version "1.8.2"
-  resolved "https://registry.npmjs.org/contentful-resolve-response/-/contentful-resolve-response-1.8.2.tgz"
-  integrity sha512-F9oLqSkprxcvUVkzp8ZfVy98nfKv8cmdBIZ0RB1HFGU5xbPDyWYNb7D0CzhSeDVcMmwmsfBbM6DuR//Dq6Bmng==
+contentful-resolve-response@^1.9.0:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/contentful-resolve-response/-/contentful-resolve-response-1.9.2.tgz#a341e84aabb16c871fea37073e6d890e0e2513fb"
+  integrity sha512-VTY1hZGh29yspBeveJ62cuDf+cw9Iq/NcKWBdNHjTq8hvgxz+E19+Pej3LW/02o98+D0XcKfcPYXIpm4lHY+eg==
   dependencies:
     fast-copy "^2.1.7"
 
-contentful-sdk-core@^8.1.0:
-  version "8.3.1"
-  resolved "https://registry.npmjs.org/contentful-sdk-core/-/contentful-sdk-core-8.3.1.tgz"
-  integrity sha512-HYy4ecFA76ERxz7P0jW7hgDcL8jH+bRckv2QfAwQ4k1yPP9TvxpZwrKnlLM69JOStxVkCXP37HvbjbFnjcoWdg==
+contentful-sdk-core@^8.3.1:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-8.3.2.tgz#04807041633cc99b11065494389882185182afc5"
+  integrity sha512-L2LNWRXb1/5RLpLemCoP2Lzz6211xyE63GXh2nVXekvM4Dnswo+9N2D6JmWTne9zq89Izo88vOGAzzIAxb4Ukw==
   dependencies:
     fast-copy "^2.1.7"
     lodash.isplainobject "^4.0.6"
@@ -1097,16 +1110,16 @@ contentful-sdk-core@^8.1.0:
     p-throttle "^4.1.1"
     qs "^6.11.2"
 
-contentful@^10.12.7:
-  version "10.12.7"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-10.12.7.tgz#0b7ac48e393d76054328a4f0cfc1354f70d46cc2"
-  integrity sha512-qY2GyiwXK3Hb+QuyCSbNgvnF+Si7qlX0dG9KoqmJ3uiT8ga5jUikYw/BXjbZiqhsV5KI4IyXp2rhBcBKfj1YIQ==
+contentful@^10.12.8:
+  version "10.15.2"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-10.15.2.tgz#f36368e3b5c9e47088a7d7ec7b426c2005fe67c0"
+  integrity sha512-JJ+qFzxDtbQ4FfPdRF01OVFagy2ZGDHKakgsLTIj2sdnCRa6sAgTMW+jmbMkDX0B8nDRbUng6A7inRLRdLxHcw==
   dependencies:
-    "@contentful/content-source-maps" "^0.6.0"
-    "@contentful/rich-text-types" "^16.0.2"
-    axios "~1.6.8"
-    contentful-resolve-response "^1.8.1"
-    contentful-sdk-core "^8.1.0"
+    "@contentful/content-source-maps" "^0.11.0"
+    "@contentful/rich-text-types" "^16.6.1"
+    axios "^1.7.4"
+    contentful-resolve-response "^1.9.0"
+    contentful-sdk-core "^8.3.1"
     json-stringify-safe "^5.0.1"
     type-fest "^4.0.0"
 
