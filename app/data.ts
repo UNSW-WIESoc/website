@@ -20,6 +20,7 @@ export const navData = [
   { text: 'Careers', href: '/careers' },
   // { text: 'WIE Inspire', href: '/wie-inspire' },
   { text: 'Contact Us', href: '/contact-us' },
+  { text: 'Newsletter', href: '/newsletter' }
 ];
 
 export const socialsData = [
