@@ -6,12 +6,14 @@ import { CarouselArrowButton, usePrevNextButtons} from './CarouselArrowButtons';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import EventsCard from '../EventsCard';
+import NewsletterCard from '../NewsletterCard';
 import { Box, Stack } from '@mui/joy';
 
 interface CarouselProps {
   slides: Array<any>;
   options: any;
   size: 'large' | 'small';
+  type: 'events' | 'newsletter';
 }
 
 export default function Carousel ({slides, options, size} : CarouselProps) {
@@ -31,6 +33,7 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
   const {onPrevButtonClick, onNextButtonClick} = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi, onNavButtonClick)
+  console.log('slides:', slides)
   
   return (
     <Box mx={5} mb={6} justifyContent='center'>
@@ -52,7 +55,11 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
                     : '0 0 300px'
                 }}
               >
-                <EventsCard key={index} event={event}/>
+                type === 'events' ? (
+                <EventsCard event={event} />
+              ) : (
+                <NewsletterCard newsletter={event} />
+              )
               </Box>
             ))}
           </Stack>
