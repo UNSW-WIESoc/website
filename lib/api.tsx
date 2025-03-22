@@ -38,3 +38,14 @@ export async function getWIEInspire() {
     });
   return res.items;
 }
+
+export async function getNewsletter() {
+  const res = await client
+    .getEntries({
+      content_type: 'newsletter'
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
