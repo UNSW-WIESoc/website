@@ -1,33 +1,20 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-
-import {Stack} from '@mui/joy';
+import { Stack } from '@mui/joy';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import { getNewsletter } from '@/lib/api';
 import Carousel from '@/components/Carousel/Carousel';
+import NewsletterCarousel from '@/components/Carousel/NewsletterCarousel';
 
 export default function Newsletter() {
   const [pastNews, setPastNews] = useState([]);
-  const OPTIONS = {
-    loop: true, 
-    skipSnaps: true,
-    align: 'center',
-    slidesToScroll: 'large'
-  }
+  const desc = 'Keep up to date on event highlights and upcoming opportunities with our new monthly newsletter!';
   
   useEffect(() => {
     async function fetchData() {
       const items = await getNewsletter();
       console.log("Fetched Newsletters:", items);
-  
-      const slides = items.map((item: any) => ({
-        title: item.fields.title,
-        date: item.fields.date,
-        pdfUrl: item.fields.file.fields.url
-      }));
-      console.log("Slides:", slides);
-  
-      setPastNews(slides);
+      setPastNews(items);
     }
     fetchData();
   }, []);  
@@ -37,12 +24,7 @@ export default function Newsletter() {
         {/* TODO: CHANGE IMAGE */}
       <PageHeaderCard imagePath={'/events/header.jpg'} pageTitle={'Newsletter'}/> 
       {/* Add a current pub card? */}
-      <Carousel 
-        slides={pastNews} 
-        size='small'
-        options={OPTIONS}
-        type='newsletter'
-      />
+      <NewsletterCarousel size='small' slides={pastNews} heading="WIESoc O'Clock" body={desc} />
     </Stack>
   );
 };

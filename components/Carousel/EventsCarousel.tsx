@@ -22,7 +22,7 @@ export default function EventsCarousel({heading, body, slides, size} : EventsCar
     <Box className='bg-medium-blue' sx={{justifyContent: 'center'}} pb={3} width='100%'>
       <HeadingBodyText heading={heading} body={body} color='light-white'/>
       {slides.length > 0 ? (
-        <Carousel slides={slides} options={OPTIONS} size={size} />
+        <Carousel slides={slides} options={OPTIONS} size={size} type='events' />
       ) : (
         <Typography 
           variant="soft"

@@ -6,8 +6,8 @@ import { CarouselArrowButton, usePrevNextButtons} from './CarouselArrowButtons';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import EventsCard from '../EventsCard';
-import NewsletterCard from '../NewsletterCard';
 import { Box, Stack } from '@mui/joy';
+import NewsletterCard from '../NewsletterCard';
 
 interface CarouselProps {
   slides: Array<any>;
@@ -16,7 +16,7 @@ interface CarouselProps {
   type: 'events' | 'newsletter';
 }
 
-export default function Carousel ({slides, options, size} : CarouselProps) {
+export default function Carousel ({slides, options, size, type} : CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi: { plugins: () => { (): any; new(): any; autoplay: any } }) => {
@@ -33,7 +33,6 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
   const {onPrevButtonClick, onNextButtonClick} = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi, onNavButtonClick)
-  console.log('slides:', slides)
   
   return (
     <Box mx={5} mb={6} justifyContent='center'>
@@ -46,21 +45,21 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
               'backface-visibility': 'hidden',
               'touch-action': 'pan-y pinch-zoom'
             }}>
-            {slides?.map((event, index) => (
-              <Box
+            {slides?.map((item, index) => (
+              <Box 
+                className="embla__slide" 
                 key={index}
-                mr={2}
                 sx={{flex: size == 'large'
-                    ? {xs: '0 0 300px', sm: '0 0 400px'}
-                    : '0 0 300px'
+                  ? {xs: '0 0 300px', sm: '0 0 400px'}
+                  : '0 0 300px'
                 }}
               >
-                type === 'events' ? (
-                <EventsCard event={event} />
+              {type === 'events' ? (
+                <EventsCard event={item} />
               ) : (
-                <NewsletterCard newsletter={event} />
-              )
-              </Box>
+                <NewsletterCard newsletter={item} />
+              )}
+            </Box>
             ))}
           </Stack>
         </Box>
