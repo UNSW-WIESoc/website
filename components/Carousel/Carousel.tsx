@@ -49,6 +49,7 @@ export default function Carousel ({slides, options, size, type} : CarouselProps)
               <Box 
                 className="embla__slide" 
                 key={index}
+                mr={2}
                 sx={{flex: size == 'large'
                   ? {xs: '0 0 300px', sm: '0 0 400px'}
                   : '0 0 300px'
