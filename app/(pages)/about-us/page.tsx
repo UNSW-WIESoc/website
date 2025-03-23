@@ -11,8 +11,8 @@ interface cardProps {
   link: string;
 }
 
-const teamRoles = ['President', 'Secretary', 'Treasurer', 'EDI Officer', 'Arc Delegate', 'VP of Events', 'VP of Public Relations', 'VP of IT', 'VP of HR', 'VP of Programs'];
-const memberNames = ['Nityaa Jaidka', 'Fiona Hu', 'Thao Huynh', 'Arpita Vashishtha', 'Melissa Thein', 'Kieren Nguyen', 'Sofia De Bellis', 'Rebecca Hsu', 'Tara Hercz', 'Amar Kl'];
+const teamRoles = ['President', 'Treasurer', 'Admin Officer', 'VP of Events', 'VP of Industry Relations', 'VP of IT', 'VP of HR', 'VP of Programs', 'VP of Marketing'];
+const memberNames = ['Trisha Chari', 'Saniya Gadekar', 'Amar Kayyal', 'Adele Kim', 'Sabrina Zantua', 'Priya Leedman', 'Sheekha Chalise', 'Akanksha Sood', 'Adi Shah'];
 
 function AboutUsCard({image, cardName, cardText, link}: cardProps) {
   return (<Card className='shadow-hover' variant='plain'
@@ -45,14 +45,14 @@ function AboutUsCard({image, cardName, cardText, link}: cardProps) {
 
 function OurTeamProfiles() {
   return(
-    <Container sx={{width: '80%', paddingBottom: '20%'}}>
+    <Container sx={{width: '80%', paddingBottom: '5%'}}>
       <Grid
       container
       spacing={{ xs: 2, md: 2 }}  
       columns={{ xs: 1, sm: 2, md: 3 }}
       sx={{ flexGrow: 1, dipslay: 'flex', alignItems:'center', justifyContent:'center'}}
     >
-      {Array.from(Array(10)).map((_, index) => (
+      {Array.from(Array(9)).map((_, index) => (
         <Grid xs={1} sm={1} md={1} key={index}>
           <Container sx={{width: '90%'}}>
             <AspectRatio variant='outlined' ratio='1' objectFit='cover' sx={{borderRadius: '50%'}}>

@@ -1,4 +1,3 @@
-
 {
   "name": "wiesoc-website",
   "version": "0.1.0",
@@ -20,7 +19,7 @@
     "contentful": "^10.12.8",
     "embla-carousel-autoplay": "^8.1.3",
     "embla-carousel-react": "^8.1.5",
-    "next": "^14.2.3",
+    "next": "^14.2.25",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
