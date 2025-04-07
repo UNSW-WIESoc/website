@@ -168,7 +168,7 @@ export default function NavBar() {
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2} sx={{display: 'flex'}}>
         <Box sx={{flex: '0.5'}}>
           <Link href='/'>
-            <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={250} />
+            <Image src={'/wiesoc_logo_long.svg'} alt={'wiesoc-logo'} height={60} width={190} />
           </Link>
         </Box>
         <Stack direction='row' width='100%' height='100%' px={5} sx={{flexGrow:'1'}}>

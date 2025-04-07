@@ -19,8 +19,8 @@ export const navData = [
   { text: 'Sponsors', href: '/sponsors' },
   { text: 'Careers', href: '/careers' },
   // { text: 'WIE Inspire', href: '/wie-inspire' },
-  { text: 'Contact Us', href: '/contact-us' },
-  { text: 'Newsletter', href: '/newsletter' }
+  { text: 'Newsletter', href: '/newsletter' },
+  { text: 'Contact Us', href: '/contact-us' }
 ];
 
 export const socialsData = [
