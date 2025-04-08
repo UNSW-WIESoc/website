@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Stack, Grid } from '@mui/joy';
+import { AspectRatio, Box, Stack, Grid, Link } from '@mui/joy';
 import PageHeaderCard from '@/components/PageHeaderCard';
 import HeadingBodyText from '@/components/HeadingBodyText';
 import SponsorSection from '@/components/SponsorSection';
@@ -7,54 +7,62 @@ import Image from 'next/image';
 interface imageData {
   src: string;
   alt: string;
+  link: string;
 }
 
 interface sponsorRows {
   images: imageData[];
 }
 
-const premiumSponsors1 = [
-  { src: '/sponsors/atlassian.svg', alt: 'Atlassian' },
-  { src: '/sponsors/janeStreet_logo.jpg', alt: 'Jane Street' }
-];
+const premiumSponsors = [
+  { src: '/sponsors/Premium/SydneyWaters.jpg', alt: 'Sydney Waters', link:"https://www.sydneywater.com.au/" },
+  { src: '/sponsors/Premium/Cochlear.png', alt: 'Cochlear', link:"https://www.cochlear.com/au/en/home" },
+  { src: '/sponsors/Premium/JaneStreet.png', alt: 'Jane Street', link:"https://www.janestreet.com/" },
 
-const premiumSponsors2 = [
-  { src: '/sponsors/sydneyWaters.jpg', alt: 'Sydney Waters' }
 ];
 
 const advancedSponsors1 = [
-  { src: '/sponsors/cochlear.jpg', alt: 'Cochlear' },
-  { src: '/sponsors/aecom.jpg', alt: 'Aecom' },
-  { src: '/sponsors/dolby.jpg', alt: 'Dolby' }
+  { src: '/sponsors/Advanced/AECOM.png', alt: 'AECOM', link:"https://aecom.com/" },
+  { src: '/sponsors/Advanced/Atlassian.svg.png', alt: 'Atlassian', link:"https://www.atlassian.com/" },
+  { src: '/sponsors/Advanced/Jacobs.png', alt: 'Jacobs', link:"https://www.jacobs.com/" },
 ];
 
 const advancedSponsors2 = [
-  { src: '/sponsors/sportsGrid.jpg', alt: 'Sports Grid' },
-  { src: '/sponsors/systa.jpg', alt: 'Systra' }
+  { src: '/sponsors/Advanced/BC.webp', alt: 'Bouygues Construction', link:"https://www.bouygues-construction.com/en" },
+  { src: '/sponsors/Advanced/Dolby.webp', alt: 'Dolby', link:"https://www.dolby.com/" },
+  { src: '/sponsors/Advanced/Neara.png', alt: 'Neara', link:"https://neara.com/" },
 ];
 
 const advancedSponsors3 = [
-  { src: '/sponsors/appian.svg', alt: 'Appian' },
-  { src: '/sponsors/projectServices.jpg', alt: 'Project Services' },
-  { src: '/sponsors/stantec.jpg', alt: 'Stantec' }
+  { src: '/sponsors/Advanced/Egis.png', alt: 'Egis', link:"https://www.egis-group.com/" },
+  { src: '/sponsors/Advanced/GHD.png', alt: 'GHD', link:"https://www.ghd.com/en-au/" },
+  { src: '/sponsors/Advanced/HPE.png', alt: 'HPE', link:"https://www.hpeps.com/" },
+  { src: '/sponsors/Advanced/McKinsey.png', alt: 'McKinsey and Co', link:"https://www.mckinsey.com/" },
+
 ];
+
+const advancedSponsors5 = [
+  { src: '/sponsors/Advanced/Stantec.png', alt: 'Stantec', link:"https://www.stantec.com/en" },
+  { src: '/sponsors/Advanced/Unilever.svg.png', alt: 'Unilever', link:"https://www.unilever.com.au/" },
+  { src: '/sponsors/Advanced/aws.png', alt: 'Amazon Web Services', link:"https://aws.amazon.com/" },
+
+];
+
 
 const foundationSponsors1 = [
-  { src: '/sponsors/honeywell.jpg', alt: 'Honeywell' },
-  { src: '/sponsors/flowTraders.jpg', alt: 'Flow Traders' }
-];
-
-const foundationSponsors2 = [
-  { src: '/sponsors/youngEngineersAustralia.jpg', alt: 'Young Engineers Australia' }
+  { src: '/sponsors/Foundation/EngineersAustralia.png', alt: 'EngineersAustralia', link: "https://www.engineersaustralia.org.au/"},
+  { src: '/sponsors/Foundation/Arcadis.svg', alt: 'Arcadis', link:"https://www.arcadis.com/en" },
+  { src: '/sponsors/Foundation/Honeywell.svg.png', alt: 'Honeywell', link:"https://www.honeywell.com/us/en" },
+  { src: '/sponsors/Foundation/Lendlease.svg', alt: 'Lendlease', link:"https://www.lendlease.com/au/" },
 ];
 
 function SponsorRows ({ images }: sponsorRows) {
   return(
     <Grid container spacing={8} justifyContent='center' mx='auto'>
       {images.map((image, index) => (
-        <Grid xs={6} sm={5} md={4} lg={3} key={index}>
+        <Grid xs={6} sm={4} md={2} lg={2} key={index}>
           <AspectRatio variant='plain' objectFit='contain'>
-            <Image src={image.src} alt={image.alt} fill/>
+            <Link href={image.link}> <Image src={image.src} alt={image.alt} fill/></Link>
         </AspectRatio>
       </Grid>
       ))}
@@ -76,19 +84,18 @@ export default function Sponsors() {
       </Grid>
       <Box width='95%' mx='auto' mb={15}>
         <SponsorSection title='Premium Sponsors'/>
-        <SponsorRows images={premiumSponsors1}></SponsorRows>
-        <SponsorRows images={premiumSponsors2}></SponsorRows> 
+        <SponsorRows images={premiumSponsors}></SponsorRows>
       </Box>
       <Box width='95%' mx='auto' mb={15}>
         <SponsorSection title='Advanced Sponsors'/>
         <SponsorRows images={advancedSponsors1}></SponsorRows>
         <SponsorRows images={advancedSponsors2}></SponsorRows>
         <SponsorRows images={advancedSponsors3}></SponsorRows>
+        <SponsorRows images={advancedSponsors5}></SponsorRows>
       </Box>
       <Box width='95%' mx='auto' mb={15}>
         <SponsorSection title='Foundation Sponsors'/>
         <SponsorRows images={foundationSponsors1}></SponsorRows>
-        <SponsorRows images={foundationSponsors2}></SponsorRows>
       </Box>
     </Stack>
   );
