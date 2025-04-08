@@ -7,14 +7,16 @@ import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import EventsCard from '../EventsCard';
 import { Box, Stack } from '@mui/joy';
+import NewsletterCard from '../NewsletterCard';
 
 interface CarouselProps {
   slides: Array<any>;
   options: any;
   size: 'large' | 'small';
+  type: 'events' | 'newsletter';
 }
 
-export default function Carousel ({slides, options, size} : CarouselProps) {
+export default function Carousel ({slides, options, size, type} : CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi: { plugins: () => { (): any; new(): any; autoplay: any } }) => {
@@ -43,17 +45,22 @@ export default function Carousel ({slides, options, size} : CarouselProps) {
               'backface-visibility': 'hidden',
               'touch-action': 'pan-y pinch-zoom'
             }}>
-            {slides?.map((event, index) => (
-              <Box
+            {slides?.map((item, index) => (
+              <Box 
+                className="embla__slide" 
                 key={index}
                 mr={2}
                 sx={{flex: size == 'large'
-                    ? {xs: '0 0 300px', sm: '0 0 400px'}
-                    : '0 0 300px'
+                  ? {xs: '0 0 300px', sm: '0 0 400px'}
+                  : '0 0 300px'
                 }}
               >
-                <EventsCard key={index} event={event}/>
-              </Box>
+              {type === 'events' ? (
+                <EventsCard event={item} />
+              ) : (
+                <NewsletterCard newsletter={item} />
+              )}
+            </Box>
             ))}
           </Stack>
         </Box>
