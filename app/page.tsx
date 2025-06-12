@@ -97,15 +97,15 @@ function SponsorsPreview() {
             <Image src={'/sponsors/unsw_logo.jpg'} alt='UNSW Engineering' layout='intrinsic' width={200} height={100} />
           </Box>
           <Box className='relative' sx={{ width: '150', height: 'auto' }} pt={1}>
-            <Image src={'/sponsors/atlassian.svg'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
+            <Image src={'/sponsors/Advanced/Atlassian.svg.png'} alt='Atlassian' layout='intrinsic' width={150} height={100} />
           </Box>
         </Stack>
         <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 5, sm: 10 }}>
           <Box className='relative' sx={{ width: '100', height: 'auto' }}>
-            <Image src={'/sponsors/janeStreet_logo.jpg'} alt='Jane Street' layout='intrinsic' width={150} height={100} />
+            <Image src={'/sponsors/Premium/JaneStreet.png'} alt='Jane Street' layout='intrinsic' width={150} height={100} />
           </Box>
           <Box className='relative' sx={{ width: '150', height: 'auto' }}>
-            <Image src={'/sponsors/sydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={100} height={75} />
+            <Image src={'/sponsors/Premium/SydneyWaters.jpg'} alt='Sydney Water' layout='intrinsic' width={100} height={75} />
           </Box>
         </Stack>
       </Stack>
