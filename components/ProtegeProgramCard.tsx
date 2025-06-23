@@ -48,7 +48,7 @@ export default function ProtegeProgramCard({ icon, type, description }: any) {
           py: 1,
         }}>
           <Typography level='body-sm' textAlign='center' sx={{ color: 'white', fontWeight: 'medium' }}>
-            Come back later!
+            Come Back Later!
           </Typography>
         </Box>
       </Stack>
