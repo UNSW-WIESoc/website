@@ -1,6 +1,6 @@
 import {Box, Stack, Typography} from '@mui/joy';
 import Card from '@mui/joy/Card';
-import DarkOutlineButton from './DarkOutlineButton';
+// import DarkOutlineButton from './DarkOutlineButton';
 import Image from 'next/image';
 
 export default function ProtegeProgramCard({ icon, type, description }: any) {
