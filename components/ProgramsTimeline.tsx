@@ -6,10 +6,9 @@ import {Stack} from "@mui/joy";
 import { protegeTimelineData } from '@/app/data';
 interface TextComponentProps {
   text: string;
-  date: string;
 }
 
-const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
+const TextComponent: FC<TextComponentProps> = ({ text }) => (
   <Box
     sx={{
       textAlign: 'center',
@@ -25,13 +24,6 @@ const TextComponent: FC<TextComponentProps> = ({ text, date }) => (
       {text}
     </Typography>
 
-    <Typography
-      level="body-xs"
-      className="white"
-      sx={{ marginTop: { xs: '12px', sm: '12px', md: '16px' }, fontWeight: 'bold', fontSize: '0.875rem', whiteSpace: 'nowrap' }}
-    >
-      {date}
-    </Typography>
   </Box>
 );
 
@@ -47,7 +39,7 @@ const Timeline = () => {
         <Stack sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }} justifyContent='center' alignItems='center' width='100%'>
           <Image src='/programs/protege-program/Timeline.svg' alt='Timeline' width='900' height='200'/>
           <Stack direction='row' justifyContent='center' gap='120px' alignItems='center' width='100%'>
-            {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} date={event.date} />))}
+            {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} />))}
           </Stack>
         </Stack>
 
@@ -58,7 +50,7 @@ const Timeline = () => {
           </Box>
           <Box
             sx={{ display: 'flex', flexDirection: {xs: 'column',  sm: 'column'}, mt: -5, ml: 20 ,justifyContent: 'center', gap: '63px'}}>
-           {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} date={event.date} />))}
+           {protegeTimelineData.map((event, index) => (<TextComponent key={index} text={event.text} />))}
           </Box>
         </Box>
         </Stack>
