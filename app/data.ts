@@ -24,7 +24,7 @@ export const navData = [
 ];
 
 export const socialsData = [
-  { Icon: FacebookIcon, href: 'https://www.facebook.com/wieunsw/' },
+  { Icon: FacebookIcon, href: 'https://www.facebook.com/wiesocunsw' },
   { Icon: InstagramIcon, href: 'https://www.instagram.com/wiesocunsw/' },
   { Icon: LinkedInIcon, href: 'https://au.linkedin.com/company/unsw-wiesoc' },
 ];
