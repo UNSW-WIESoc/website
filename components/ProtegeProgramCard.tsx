@@ -39,15 +39,12 @@ export default function ProtegeProgramCard({ icon, type, description }: any) {
         </Typography>
         {/* <DarkOutlineButton text='Apply Now' link='sth'/> */}
         <Box sx={{
-          border: '3px solid #93AED3',
-          borderRadius: '12px',
-          backgroundColor: '#93AED3',
-          display: 'inline-block',
-          textAlign: 'center',
-          px: 1,
+          borderRadius: '999px',
+          backgroundColor: '#9999d9',
+          px: 3,
           py: 1,
         }}>
-          <Typography level='body-sm' textAlign='center' sx={{ color: 'white', fontWeight: 'medium' }}>
+          <Typography level='body-sm' textAlign='center' sx={{ color: 'white', fontWeight: 'bold' }}>
             Come Back Later!
           </Typography>
         </Box>
