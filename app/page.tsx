@@ -67,7 +67,7 @@ function AboutUsOverview() {
         <Typography level='body'>{aboutUsText}</Typography>
         <Stack direction='row' justifyContent='center'>
           <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-          <LabelledIcon icon='/landing-page/mentee.png' text='85 current mentees'/>
+          <LabelledIcon icon='/landing-page/mentor.png' text='85 current mentees'/>
           <LabelledIcon icon='/landing-page/event.png' text='27+ events held in 2024'/>
         </Stack>
       </Stack>
