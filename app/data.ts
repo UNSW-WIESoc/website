@@ -1,10 +1,10 @@
 import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
 
 export const protegeTimelineData = [
-  { text: 'Opening Ceremony', date: '7th March 2024' },
-  { text: 'Midterm Checkpoint 1', date: '14th March 2024' },
-  { text: 'Midterm Checkpoint 2', date: '23rd March 2024' },
-  { text: 'Closing Ceremony', date: '11th April 2024' }
+  { text: 'Opening Ceremony'},
+  { text: 'Midterm Checkpoint 1' },
+  { text: 'Midterm Checkpoint 2'},
+  { text: 'Closing Ceremony'}
 ];
 
 export const navData = [
@@ -24,7 +24,7 @@ export const navData = [
 ];
 
 export const socialsData = [
-  { Icon: FacebookIcon, href: 'https://www.facebook.com/wieunsw/' },
+  { Icon: FacebookIcon, href: 'https://www.facebook.com/wiesocunsw' },
   { Icon: InstagramIcon, href: 'https://www.instagram.com/wiesocunsw/' },
   { Icon: LinkedInIcon, href: 'https://au.linkedin.com/company/unsw-wiesoc' },
 ];

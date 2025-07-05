@@ -35,7 +35,6 @@ const advancedSponsors2 = [
 
 const advancedSponsors3 = [
   { src: '/sponsors/Advanced/Egis.png', alt: 'Egis', link:"https://www.egis-group.com/" },
-  { src: '/sponsors/Advanced/GHD.png', alt: 'GHD', link:"https://www.ghd.com/en-au/" },
   { src: '/sponsors/Advanced/HPE.png', alt: 'HPE', link:"https://www.hpeps.com/" },
   { src: '/sponsors/Advanced/McKinsey.png', alt: 'McKinsey and Co', link:"https://www.mckinsey.com/" },
 
@@ -44,7 +43,7 @@ const advancedSponsors3 = [
 const advancedSponsors5 = [
   { src: '/sponsors/Advanced/Stantec.png', alt: 'Stantec', link:"https://www.stantec.com/en" },
   { src: '/sponsors/Advanced/Unilever.svg.png', alt: 'Unilever', link:"https://www.unilever.com.au/" },
-  { src: '/sponsors/Advanced/aws.png', alt: 'Amazon Web Services', link:"https://aws.amazon.com/" },
+  { src: '/sponsors/Advanced/GHD.png', alt: 'GHD', link:"https://www.ghd.com/en-au/" },
 
 ];
 
