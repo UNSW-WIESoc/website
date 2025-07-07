@@ -14,7 +14,7 @@ import TypingAnimation from '@/components/TypingAnimation';
 function CoverImage() {
   return (
     <AspectRatio sx={{width: '100%', height: 'auto', overflow: 'hidden', marginTop: '80px'}} objectFit='cover'>
-      <Image src={'/landing-page/2024_group_photo.JPG'} alt={'group of people'} fill/>
+      <Image src={'/landing-page/2025team.jpg'} alt={'group of people'} fill/>
       <Box
         className='bg-dark-blue'
         sx={{
