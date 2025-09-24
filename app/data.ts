@@ -1,4 +1,4 @@
-import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
+import {FacebookIcon, InstagramIcon, LinkedInIcon, LinktreeIcon} from '@/components/SocialMediaIcons';
 
 export const protegeTimelineData = [
   { text: 'Opening Ceremony'},
@@ -27,6 +27,7 @@ export const socialsData = [
   { Icon: FacebookIcon, href: 'https://www.facebook.com/wiesocunsw' },
   { Icon: InstagramIcon, href: 'https://www.instagram.com/wiesocunsw/' },
   { Icon: LinkedInIcon, href: 'https://au.linkedin.com/company/unsw-wiesoc' },
+  { Icon: LinktreeIcon, href: 'https://linktr.ee/wiesocunsw?fbclid=PAZXh0bgNhZW0CMTEAAafuyPt_Y1LKwGW2P6pO6TW5GvMVS-JuHEQsIvb4-9FE1WEoWdUf10t6RhNqQA_aem_Fx5BWhmESOvrswBF2z76Mg' },
 ];
 
 export const protegeData = [
