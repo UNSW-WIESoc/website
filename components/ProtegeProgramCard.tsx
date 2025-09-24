@@ -1,6 +1,6 @@
 import {Box, Stack, Typography} from '@mui/joy';
 import Card from '@mui/joy/Card';
-import DarkOutlineButton from './DarkOutlineButton';
+// import DarkOutlineButton from './DarkOutlineButton';
 import Image from 'next/image';
 
 export default function ProtegeProgramCard({ icon, type, description }: any) {
@@ -37,7 +37,17 @@ export default function ProtegeProgramCard({ icon, type, description }: any) {
         <Typography level='body' textAlign='center' px={{xs: 2, sm: 3, md: 4, lg: 5}}>
           {description}
         </Typography>
-        <DarkOutlineButton text='Apply Now' link='sth'/>
+        {/* <DarkOutlineButton text='Apply Now' link='sth'/> */}
+        <Box sx={{
+          borderRadius: '999px',
+          backgroundColor: '#9999d9',
+          px: 3,
+          py: 1,
+        }}>
+          <Typography level='body-sm' textAlign='center' sx={{ color: 'white', fontWeight: 'bold' }}>
+            Come Back Later!
+          </Typography>
+        </Box>
       </Stack>
     </Card>
   );
