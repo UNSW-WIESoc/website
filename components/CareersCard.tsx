@@ -44,8 +44,8 @@ export default function CareersCard({ event }: any) {
         </AspectRatio>
       </CardOverflow>
       <CardContent sx={{ height: '100%' }}>
-        <Stack alignItems='center' py={1} spacing={0} sx={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
-          <Box sx={{ flex:'0 0 75px', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
+        <Stack alignItems='center' py={1} spacing={3} sx={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
+          <Box sx={{ flex:'0 0 25px', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
             <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{position}</Typography>
           </Box>
           <Box sx={{ flex:'0 0 25px', alignItems:'center', width:'90%'}}>

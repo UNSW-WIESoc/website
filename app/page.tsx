@@ -14,7 +14,7 @@ import TypingAnimation from '@/components/TypingAnimation';
 function CoverImage() {
   return (
     <AspectRatio sx={{width: '100%', height: 'auto', overflow: 'hidden', marginTop: '80px'}} objectFit='cover'>
-      <Image src={'/landing-page/2024_group_photo.JPG'} alt={'group of people'} fill/>
+      <Image src={'/landing-page/2025team.jpg'} alt={'group of people'} fill/>
       <Box
         className='bg-dark-blue'
         sx={{
@@ -67,8 +67,8 @@ function AboutUsOverview() {
         <Typography level='body'>{aboutUsText}</Typography>
         <Stack direction='row' justifyContent='center'>
           <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-          <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-          <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
+          <LabelledIcon icon='/landing-page/mentor.png' text='85 current mentees'/>
+          <LabelledIcon icon='/landing-page/event.png' text='27+ events held in 2024'/>
         </Stack>
       </Stack>
       <AspectRatio sx={{width: {xs: '90%', sm: '70%', md: '60%', lg: '50%'}, alignContent: 'center'}}>
