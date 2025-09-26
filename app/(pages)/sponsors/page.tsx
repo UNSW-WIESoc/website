@@ -40,19 +40,22 @@ const advancedSponsors3 = [
 
 ];
 
-const advancedSponsors5 = [
+const advancedSponsors4 = [
   { src: '/sponsors/Advanced/Stantec.png', alt: 'Stantec', link:"https://www.stantec.com/en" },
   { src: '/sponsors/Advanced/Unilever.svg.png', alt: 'Unilever', link:"https://www.unilever.com.au/" },
   { src: '/sponsors/Advanced/GHD.png', alt: 'GHD', link:"https://www.ghd.com/en-au/" },
-
+  { src: '/sponsors/Advanced/DTinfrastructure.png', alt: 'DT Infrastructure', link:"https://dtinfrastructure.com.au/" },
 ];
-
 
 const foundationSponsors1 = [
   { src: '/sponsors/Foundation/EngineersAustralia.png', alt: 'EngineersAustralia', link: "https://www.engineersaustralia.org.au/"},
   { src: '/sponsors/Foundation/Arcadis.svg', alt: 'Arcadis', link:"https://www.arcadis.com/en" },
   { src: '/sponsors/Foundation/Honeywell.svg.png', alt: 'Honeywell', link:"https://www.honeywell.com/us/en" },
+];
+
+const foundationSponsors2 = [
   { src: '/sponsors/Foundation/Lendlease.svg', alt: 'Lendlease', link:"https://www.lendlease.com/au/" },
+  { src: '/sponsors/Foundation/Systra.svg', alt: 'Systra', link:"https://www.systra.com/en/" },
 ];
 
 function SponsorRows ({ images }: sponsorRows) {
@@ -90,11 +93,12 @@ export default function Sponsors() {
         <SponsorRows images={advancedSponsors1}></SponsorRows>
         <SponsorRows images={advancedSponsors2}></SponsorRows>
         <SponsorRows images={advancedSponsors3}></SponsorRows>
-        <SponsorRows images={advancedSponsors5}></SponsorRows>
+        <SponsorRows images={advancedSponsors4}></SponsorRows>
       </Box>
       <Box width='95%' mx='auto' mb={15}>
         <SponsorSection title='Foundation Sponsors'/>
         <SponsorRows images={foundationSponsors1}></SponsorRows>
+        <SponsorRows images={foundationSponsors2}></SponsorRows>
       </Box>
     </Stack>
   );
