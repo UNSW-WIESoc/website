@@ -48,6 +48,9 @@ export default function CareersCard({ event }: any) {
           <Box sx={{ flex:'0 0 75px', alignItems:'center', width:'90%', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 3, textOverflow: 'ellipsis' }}>
             <Typography level='subtitle-lg' fontSize='xl' textAlign='center'>{position}</Typography>
           </Box>
+          <Box sx={{ flex:'0 0 25px', alignItems:'center', width:'90%'}}>
+            <Typography level='subtitle' textAlign='center'>{closeDate}</Typography> {/* check subtitle */}
+          </Box>
           <Box sx={{ flex:'0 0 25px', width: '90%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             <Typography level='title-sm' textAlign='center' sx={{ mb: 5 }}>{companyName}</Typography>
           </Box>
