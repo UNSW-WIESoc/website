@@ -44,6 +44,9 @@ const advancedSponsors4 = [
   { src: '/sponsors/Advanced/Stantec.png', alt: 'Stantec', link:"https://www.stantec.com/en" },
   { src: '/sponsors/Advanced/Unilever.svg.png', alt: 'Unilever', link:"https://www.unilever.com.au/" },
   { src: '/sponsors/Advanced/GHD.png', alt: 'GHD', link:"https://www.ghd.com/en-au/" },
+];
+
+const advancedSponsors5 = [
   { src: '/sponsors/Advanced/DTinfrastructure.png', alt: 'DT Infrastructure', link:"https://dtinfrastructure.com.au/" },
 ];
 
@@ -94,6 +97,7 @@ export default function Sponsors() {
         <SponsorRows images={advancedSponsors2}></SponsorRows>
         <SponsorRows images={advancedSponsors3}></SponsorRows>
         <SponsorRows images={advancedSponsors4}></SponsorRows>
+        <SponsorRows images={advancedSponsors5}></SponsorRows>
       </Box>
       <Box width='95%' mx='auto' mb={15}>
         <SponsorSection title='Foundation Sponsors'/>
