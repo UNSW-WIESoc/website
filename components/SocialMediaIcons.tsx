@@ -33,30 +33,19 @@ export function LinkedInIcon({color, width, height} : IconProps) {
   );
 }
 
-export function LinktreeIcon({ color, width, height }: IconProps) {
+
+export function LinktreeIcon({ color = "currentColor", width = 40, height = 39 }: IconProps) {
   return (
     <svg
+      role="img"
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="1.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Outer circle */}
-      <circle cx="12" cy="12" r="10" />
-
-      {/* Vertical "tree" of three circles */}
-      <circle cx="12" cy="8" r="1.5" />
-      <circle cx="12" cy="12" r="1.5" />
-      <circle cx="12" cy="16" r="1.5" />
-
-      {/* Connecting lines */}
-      <line x1="12" y1="9.5" x2="12" y2="10.5" />
-      <line x1="12" y1="13.5" x2="12" y2="14.5" />
+      <title>Linktree</title>
+      <path d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z"/>
     </svg>
   );
 }
