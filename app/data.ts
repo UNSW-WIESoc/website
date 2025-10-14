@@ -1,4 +1,4 @@
-import {FacebookIcon, InstagramIcon, LinkedInIcon} from '@/components/SocialMediaIcons';
+import {FacebookIcon, InstagramIcon, LinkedInIcon, LinktreeIcon} from '@/components/SocialMediaIcons';
 
 export const protegeTimelineData = [
   { text: 'Opening Ceremony'},
