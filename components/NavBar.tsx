@@ -178,9 +178,10 @@ export default function NavBar() {
         </Stack>
         <Box width='100%'sx={{display: 'flex', flex: '1.5', mr: 2 }}>
           <FilledButton
-              link='/wie-inspire'
-              text="WIE Inspire"
+              link='https://campus.hellorubric.com/?s=12764&tab=memberships'
+              text="Sign Up"
               width="100%"
+              newTab={true}
           />
         </Box>
         <Stack direction='row' spacing={3} mx={3} sx={{flex:'0 0 auto'}}>
