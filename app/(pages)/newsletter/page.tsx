@@ -9,7 +9,7 @@ import NewsletterCarousel from '@/components/Carousel/NewsletterCarousel';
 export default function Newsletter() {
   const [pastNews, setPastNews] = useState([]);
   const desc = 'Keep up to date on event highlights and upcoming opportunities with our new monthly newsletter!';
-  
+
   useEffect(() => {
     async function fetchData() {
       const items = await getNewsletter();
