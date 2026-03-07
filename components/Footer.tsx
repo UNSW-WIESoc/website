@@ -34,7 +34,7 @@ export default function Footer() {
             </Link>
           </Stack>
           <Stack direction='column' spacing={2} py={6}>
-            <Typography level='body'>General enquiries: admin@wiesoc.com:</Typography>
+            <Typography level='body'>General enquiries: admin@wiesoc.com</Typography>
             <Typography level='body'>Industry-related enquiries: vicepresidentindustryrelations@wiesoc.com</Typography>
           </Stack>
         </center>
