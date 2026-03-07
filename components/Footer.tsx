@@ -13,17 +13,13 @@ export default function Footer() {
 
   return (
     <Sheet>
-      <Box className='bg-light-blue' py={4}>
+      <Box className='bg-light-blue' py={1}>
         <center>
           <Typography level='h2'>Join Us Here</Typography>
                     
-          {/* LinktreeIcon above other icons */}
           <Stack direction='column' spacing={3} alignItems='center'>
-            <Link href="https://linktr.ee/wiesocunsw?fbclid=PAZXh0bgNhZW0CMTEAAafuyPt_Y1LKwGW2P6pO6TW5GvMVS-JuHEQsIvb4-9FE1WEoWdUf10t6RhNqQA_aem_Fx5BWhmESOvrswBF2z76Mg" target='_blank'>
-              <LinktreeIcon color={darkBlue} width={120} height={30}/>
-            </Link>
             
-            {/* Other social media icons below */}
+            {/* Other social media icons above */}
             <Stack direction='row' justifyContent='center' spacing={{xs: 8, md: 10}}>
               {socialsData.filter(({ Icon }) => Icon !== LinktreeIcon).map(({ Icon, href }, idx) => (
                 <Link key={idx} href={href} target='_blank'>
@@ -31,8 +27,13 @@ export default function Footer() {
                 </Link>
               ))}
             </Stack>
+
+            {/* LinktreeIcon below other icons */}
+            <Link href="https://linktr.ee/wiesocunsw?fbclid=PAZXh0bgNhZW0CMTEAAafuyPt_Y1LKwGW2P6pO6TW5GvMVS-JuHEQsIvb4-9FE1WEoWdUf10t6RhNqQA_aem_Fx5BWhmESOvrswBF2z76Mg" target='_blank'>
+              <LinktreeIcon color={darkBlue} width={120} height={30}/>
+            </Link>
           </Stack>
-          <Stack direction='column' spacing={2} py={7}>
+          <Stack direction='column' spacing={2} py={6}>
             <Typography level='body'>Have more questions? Contact us here:</Typography>
             <Typography level='body'>admin@wiesoc.com</Typography>
           </Stack>
