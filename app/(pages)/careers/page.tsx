@@ -25,16 +25,16 @@ export default function Careers() {
     <PageHeaderCard imagePath={'/careers/header.jpg'} pageTitle={'Careers'}/>
     <HeadingBodyText heading='Jobs and Opportunities' body='Discover corporate 
       sponsored events and activities to expand your professional networks and skills.' color='graphite'/>
-    <Grid
+      <Grid
         container
         justifyContent='center'
-        sx={{ 'width': {xs: '100%', sm: '90%', md: '80%', lg: '70%', xl: '60%'} }}
-        spacing={10}
+        sx={{ 'width': {xs: '100%', sm: '95%', md: '90%', lg: '85%', xl: '80%'} }}
+        spacing={5}
         mb={10}
       >
         {careerEvents && careerEvents?.map((event: any, index: number) => (
           <Grid
-            xs={12} sm={12} md={6}
+            xs={10} sm={8} md={4}
             key={index}
             display='flex'
             justifyContent='center'
