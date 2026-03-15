@@ -51,6 +51,9 @@ export default function CareersCard({ event }: any) {
           <Box sx={{ flex:'0 0 25px', width: '90%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             <Typography level='title-sm' textAlign='center' sx={{ mb: 5 }}>{companyName}</Typography>
           </Box>
+          <Box sx={{ flex:'0 0 75px', width: '90%', overflow: 'auto', textOverflow: 'ellipsis' }}>
+            <Typography level='body-xs' textAlign='left' sx={{ mb: 0 }}>{summary}</Typography>
+          </Box>
           <Button 
             component='a' 
             href={link}
@@ -62,6 +65,9 @@ export default function CareersCard({ event }: any) {
               Learn More
             </Typography>
           </Button>
+          <Box sx={{ flex:'0 0 25px', width: '90%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <Typography level='body-xs' textAlign='center' sx={{ mb: 5 }}>{closeDate}</Typography>
+          </Box>
         </Stack>
       </CardContent>
     </Card>
