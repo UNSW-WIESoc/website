@@ -34,6 +34,9 @@ export default function Footer() {
               ))}
             </Stack>
           </Stack>
+          <Stack direction='column' spacing={2} py={7}>
+            <Typography level='body'>General enquiries: admin@wiesoc.com:</Typography>
+            <Typography level='body'>Industry-related enquiries: vicepresidentindustryrelations@wiesoc.com</Typography>
           <Box sx={{ my: 4 }}>
             <RectangleButton
               link="https://wiesoc.us4.list-manage.com/subscribe?u=e95b211468bdcfd709f05aa4c&id=d0e8493c10"
