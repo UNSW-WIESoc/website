@@ -6,6 +6,8 @@ import { LinktreeIcon } from './SocialMediaIcons';
 
 
 import React from 'react';
+import FilledButton from './FilledButton';
+import RectangleButton from './RectangleButton';
 
 export default function Footer() {
   const darkBlue = '#063776';
@@ -15,7 +17,7 @@ export default function Footer() {
     <Sheet>
       <Box className='bg-light-blue' py={1}>
         <center>
-          <Typography level='h2'>Join Us Here</Typography>
+          <Typography level='h2'>Join Us Here!</Typography>
                     
           <Stack direction='column' spacing={3} alignItems='center'>
             
@@ -27,25 +29,30 @@ export default function Footer() {
                 </Link>
               ))}
             </Stack>
-
-            {/* LinktreeIcon below other icons */}
-            <Link href="https://linktr.ee/wiesocunsw?fbclid=PAZXh0bgNhZW0CMTEAAafuyPt_Y1LKwGW2P6pO6TW5GvMVS-JuHEQsIvb4-9FE1WEoWdUf10t6RhNqQA_aem_Fx5BWhmESOvrswBF2z76Mg" target='_blank'>
-              <LinktreeIcon color={darkBlue} width={120} height={30}/>
-            </Link>
           </Stack>
-          <Stack direction='column' spacing={2} py={6}>
-            <Typography level='body'>General enquiries: admin@wiesoc.com</Typography>
-            <Typography level='body'>Industry-related enquiries: vicepresidentindustryrelations@wiesoc.com</Typography>
-          </Stack>
+          <Box sx={{ my: 4 }}>
+            <RectangleButton
+              link="https://wiesoc.us4.list-manage.com/subscribe?u=e95b211468bdcfd709f05aa4c&id=d0e8493c10"
+              text="Subscribe to our newsletter!"
+              width="100"
+            />
+          </Box>
         </center>
       </Box>
       <Box className='bg-dark-blue' py={2} px={4}>
-        <Stack direction='row' sx={{alignItems: 'center'}}>
-          <Image src={'/wiesoc_logo_short.svg'} alt={'wiesoc-logo'} height={60} width={60}/>
-          <Box p={1}>
-            <Typography level='subtitle' className='light-white' sx={{textAlign: 'left'}}>UNSW</Typography>
-            <Typography level='subtitle' className='medium-blue' sx={{textAlign: 'left'}}>Women In Engineering Society</Typography>
-          </Box>
+        <Stack direction='row' justifyContent='space-between' alignItems='center'>
+          <Stack direction='row' sx={{alignItems: 'center'}}>
+            <Image src={'/wiesoc_logo_short.svg'} alt={'wiesoc-logo'} height={60} width={60}/>
+            <Box p={1}>
+              <Typography level='subtitle' className='light-white' sx={{textAlign: 'left'}}>UNSW</Typography>
+              <Typography level='subtitle' className='medium-blue' sx={{textAlign: 'left'}}>Women In Engineering Society</Typography>
+            </Box>
+          </Stack>
+
+          <Stack direction='column' sx={{ textAlign: 'right' }}>
+              <Typography level='body' sx={{ color: '#fff', fontSize: '0.7rem' }}>General enquiries: admin@wiesoc.com</Typography>
+              <Typography level='body' sx={{ color: '#fff', fontSize: '0.7rem' }}>Sponsors: vicepresidentindustryrelations@wiesoc.com</Typography>
+          </Stack>
         </Stack>
       </Box>
     </Sheet>
