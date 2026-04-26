@@ -166,7 +166,7 @@ function ProgramsOverview() {
           frontTitle='Industry Mentoring Program'
           frontImageSrc='/programs/Industry_Mentoring.svg' 
           backContent={backContent_2}
-          link='/programs/imp-program'
+          link='/programs/industry-mentoring-program'
           description='This program helps new students adapt to engineering by pairing them with industry mentors.'
         />
       </Stack>
