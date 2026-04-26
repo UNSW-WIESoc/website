@@ -51,7 +51,7 @@ export default function Footer() {
 
           <Stack direction='column' sx={{ textAlign: 'right' }}>
               <Typography level='body' sx={{ color: '#fff', fontSize: '0.7rem' }}>General enquiries: admin@wiesoc.com</Typography>
-              <Typography level='body' sx={{ color: '#fff', fontSize: '0.7rem' }}>Sponsors: vicepresidentindustryrelations@wiesoc.com</Typography>
+              <Typography level='body' sx={{ color: '#fff', fontSize: '0.7rem' }}>Sponsor and industry related enquires: vicepresidentindustryrelations@wiesoc.com</Typography>
           </Stack>
         </Stack>
       </Box>
