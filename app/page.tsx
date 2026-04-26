@@ -66,9 +66,9 @@ function AboutUsOverview() {
         <Typography level='h1' textAlign={'left'}>About Us</Typography>
         <Typography level='body'>{aboutUsText}</Typography>
         <Stack direction='row' justifyContent='center'>
-          <LabelledIcon icon='/landing-page/People.svg' text='2000+ members'/>
-          <LabelledIcon icon='/landing-page/mentor.png' text='85 current mentees'/>
-          <LabelledIcon icon='/landing-page/event.png' text='27+ events held in 2024'/>
+          <LabelledIcon icon='/landing-page/People.svg' text='3500+ members'/>
+          <LabelledIcon icon='/landing-page/mentor.png' text='90 current mentees'/>
+          <LabelledIcon icon='/landing-page/event.png' text='50+ events held in 2024'/>
         </Stack>
       </Stack>
       <AspectRatio sx={{width: {xs: '90%', sm: '70%', md: '60%', lg: '50%'}, alignContent: 'center'}}>
