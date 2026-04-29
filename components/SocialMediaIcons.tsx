@@ -59,3 +59,20 @@ export function LinktreeIcon({ color, width, height }: IconProps) {
     </svg>
   );
 }
+
+export function EmailIcon({ color, width, height }: IconProps) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 40 40"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 12c0-2.21 1.79-4 4-4h20c2.21 0 4 1.79 4 4v16c0 2.21-1.79 4-4 4H10c-2.21 0-4-1.79-4-4V12zm4 0l10 7 10-7H10zm20 16V16.25l-9.4 6.58a2 2 0 0 1-2.2 0L10 16.25V28h20z"
+        fillOpacity="0.9"
+      />
+    </svg>
+  );
+}
