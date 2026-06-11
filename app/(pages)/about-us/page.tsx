@@ -188,8 +188,8 @@ export default function AboutUs() {
               <AboutUsCard image='/eventsCard.png'
                            cardName='Events'
                            cardText='WIESoc hosts a variety of events throughout the year
-                            with a great mix of industry and social activities. Come and 
-                            join us for our upcoming events.'
+                            with a great mix of industry, development and social activities. Come and 
+                            join us for our upcoming events!'
                            link='/events'
               />
             </Grid>
