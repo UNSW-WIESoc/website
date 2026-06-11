@@ -189,7 +189,7 @@ export default function AboutUs() {
                            cardName='Events'
                            cardText='WIESoc hosts a variety of events throughout the year
                             with a great mix of industry, development and social activities. Come and 
-                            join us for our upcoming events.'
+                            join us for our upcoming events!'
                            link='/events'
               />
             </Grid>
